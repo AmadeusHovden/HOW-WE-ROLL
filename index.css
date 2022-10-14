@@ -1,0 +1,45 @@
+body{
+    margin: auto;
+    padding: 0%;
+    background-color:cornsilk;
+    
+    
+    
+    }
+    
+    .navbar {
+    height: 100px;
+    width: 100%;
+    background-color:darkcyan;
+    }
+    
+    ul{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-top: 0%;
+    
+    
+    }
+    
+    
+    li{
+    margin-top: 40px;
+    display: inline-block;
+    font-size: large;
+    
+    }
+    
+    a{
+    text-decoration: none;
+    
+    
+    }
+    
+    a:hover{
+    font-size: larger;
+    
+    
+    }
+    
