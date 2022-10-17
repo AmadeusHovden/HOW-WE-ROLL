@@ -15,25 +15,25 @@
       <h1>Submit the form</h1>
 
       <fieldset>
-        <legend><span>1</span> Your basic info</legend>
+        <legend><span class="number">1</span> Your basic info</legend>
 
-        <input type="text" name="user_name" id="name" placeholder="Your Name" />
+        <input type="text" name="user_name" id="name" placeholder="Your Name*" />
         <input
           type="text"
           name="user_surname"
           id="surname"
-          placeholder="Your Surname"
+          placeholder="Your Surname*"
         />
         <input
           type="email"
           name="user_email"
           id="email"
-          placeholder="Your Email"
+          placeholder="Your Email*"
         />
       </fieldset>
 
-      <fieldset>
-        <legend><span>2</span> Your Profile</legend>
+      <fieldset class="profile">
+        <legend><span class="number">2</span> Your Profile</legend>
 
         <label for="job">Your Goal</label>
         <select name="user_job" id="job">
