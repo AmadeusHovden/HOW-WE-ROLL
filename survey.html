@@ -1,59 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey</title>
-</head>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-<body style="margin-left:40%">
-    <h2>FELLESKAPET</h2>
-    <br>
-    <h3>Hvordan jobber du best i et felleskap?</h3>
-    <br>
+  <body>
+    <h1>STUDENT SURVEY FORM</h1>
 
-<form>
-    <div>
-    
-            <label for="fname">First Name:</label>
-            <input type="Text" id="fname" name="fname" placeholder="Barack" required>
-    
-    </div>
-    <br>
+    <form class="form">
+      <h1>Submit the form</h1>
 
-    <div>
-        <label for="lname">Last Name:</label>
-        <input type="Text" id="lname" name="lname" placeholder="Obama" required>
-    </div>
-    <br>
+      <fieldset>
+        <legend><span class="number">1</span> Your basic info</legend>
 
-    <div>
-        <label for="bdate">Fødselssdato:</label>
-        <input type="date" id="bdate" name="bdate">
-    </div>
-    <br>
+        <input type="text" name="user_name" id="name" placeholder="Your Name*" />
+        <input
+          type="text"
+          name="user_surname"
+          id="surname"
+          placeholder="Your Surname*"
+        />
+        <input
+          type="email"
+          name="user_email"
+          id="email"
+          placeholder="Your Email*"
+        />
+      </fieldset>
 
-    <div>
-        <label for="title">Title:</label>
-        <label for="Mr">Mr.</label>
-        <input type="radio" id="Mr" name="title" value="Mr">
-    
-        <label for="Mrs">Mrs.</label>
-        <input type="radio" id="Mrs" name="title" value="Mrs">
-    </div>
-    <br>
+      <fieldset class="profile">
+        <legend><span class="number">2</span> Your Profile</legend>
 
-    <div>
-        <input type="reset">
-    </div>
-    <br>
+        <label for="job">Your Goal</label>
+        <select name="user_job" id="job">
+          <optgroup label="Web">
+            <option value="web_designer">Web Designer</option>
+            <option value="frontend_developer">Front-End Developer</option>
+            <option value="php_developer">Back-End Developer</option>
+            <option value="python_developer">Python Developer</option>
+            <option value="rails_developer">PHP Developer</option>
+            <option value="wordpress_developer">WordPress Developer</option>
+          </optgroup>
+          <optgroup label="Mobile">
+            <option value="android_developer">Android Developer</option>
+            <option value="ios_developer">iOS Developer</option>
+            <option value="mobile_designer">Mobile Designer</option>
+          </optgroup>
+          <optgroup label="Business">
+            <option value="business_owner">Business Owner</option>
+            <option value="freelancer">Freelancer</option>
+          </optgroup>
+        </select>
 
-    <div>
-        <input type="submit">
-    </div>
+        <label for="Your Class"></label>
+        <input
+          type="checkbox"
+          name="user_class"
+          id="freshman"
+          value="class_freshman"
+        />
+        <label class="light" for="freshman">Freshman</label><br />
+        <input
+          type="checkbox"
+          name="user_class"
+          id="sophomores"
+          value="class_sophomores"
+        />
+        <label class="light" for="sophomores">Sophomores</label><br />
+        <input
+          type="checkbox"
+          name="user_class"
+          id="juniors"
+          value="class_juniors"
+        />
+        <label class="light" for="juniors">Juniors</label><br />
+        
+        <input
+          type="checkbox"
+          name="user_class"
+          id="senior"
+          value="class_senior"
+        />
+        <label class="light" for="senior">Senior</label>
+      </fieldset>
 
-</form>
-    
-</body>
+      <button type="submit">Submit</button>
+    </form>
+
+
+
+    <script>
+
+        /* connected form to js */
+        const formEl = document.querySelector(".form");
+
+        /* addEventListener wakens upon submitting */
+      formEl.addEventListener("submit", (event) => {
+
+        /* prevents refreshing */
+        event.preventDefault();
+
+        /* passing formEl, we have the object */
+        /* makes it easier to work with the object */
+        const formData = new FormData(formEl);
+
+        /* JS form data */
+        const data = Object.fromEntries(formData);
+        console.log(data);
+
+
+        /* fetch data method to POST */
+        fetch("https://bacit.info/", {
+          method: "POST", 
+          headers: {
+            "Content-Type": "application/json", /* the format i want to have */
+          },
+          body: JSON.stringify(data), /* the actual data i want to send */
+        }).then((res) => res.json()); /* the response i want */
+      });
+    </script>
+
+
+  </body>
 </html>
