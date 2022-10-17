@@ -90,5 +90,40 @@
 
       <button type="submit">Submit</button>
     </form>
+
+
+
+    <script>
+
+        /* connected form to js */
+        const formEl = document.querySelector(".form");
+
+        /* addEventListener wakens upon submitting */
+      formEl.addEventListener("submit", (event) => {
+
+        /* prevents refreshing */
+        event.preventDefault();
+
+        /* passing formEl, we have the object */
+        /* makes it easier to work with the object */
+        const formData = new FormData(formEl);
+
+        /* JS form data */
+        const data = Object.fromEntries(formData);
+        console.log(data);
+
+
+        /* fetch data method to POST */
+        fetch("https://bacit.info/", {
+          method: "POST", 
+          headers: {
+            "Content-Type": "application/json", /* the format i want to have */
+          },
+          body: JSON.stringify(data), /* the actual data i want to send */
+        }).then((res) => res.json()); /* the response i want */
+      });
+    </script>
+
+
   </body>
 </html>
