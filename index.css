@@ -1,20 +1,92 @@
 body{
     margin: auto;
     padding: 0%;
-    background-color:cornsilk;
+
     
     
     
     }
     
-    .navbar {
-    height: 100px;
-    width: 100%;
-    background-color:darkcyan;
-    }
-    
+
     ul{
-    text-decoration: none;
+        list-style-type: none;
+        margin: 0%;
+        padding: 0%;
+        overflow: hidden;
+        background-color: #1abc9c;
+
+
+    }
+
+    li{
+        float: left;
+
+
+    }
+
+    li a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 20px 24px;
+        text-decoration: none;
+
+
+    }
+
+    li a:hover{
+        background-color: #111;
+    }
+
+
+    .flip-card {
+        margin-left: 10%;
+        margin-top: 10%;
+        background-color: transparent;
+        width: 300px;
+        height: 500px;
+        perspective: 1000px;
+        overflow: hidden;
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 2s;
+        transform-style: preserve-3d;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,0.5);
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        
+      }
+      
+      .flip-card-front {
+        background-color: white;
+        color: black;
+      }
+      
+      .flip-card-back {
+        background-color: #1abc9c;
+        color: white;
+        transform: rotateY(180deg);
+      }
+
+
+
+
+   /** text-decoration: none;
     display: flex;
     flex-direction: row;
     gap: 100px;
@@ -25,6 +97,7 @@ body{
     
     
     li{
+        
     margin-top: 40px;
     display: inline-block;
     font-size: large;
@@ -32,6 +105,8 @@ body{
     }
     
     a{
+
+        
     text-decoration: none;
     
     
@@ -43,3 +118,4 @@ body{
     
     }
     
+*/
