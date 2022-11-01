@@ -26,3 +26,19 @@ nav {
   display: flex;
   align-items: center;
 }
+
+.logo{
+  width: 320px;
+  cursor: pointer;
+
+}
+
+nav ul {
+  flex: 1;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 10px;
+}
