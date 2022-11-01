@@ -39,3 +39,17 @@ header {
     z-index: 2;
     width: 100%;
 }
+
+header a{
+  color: inherit;
+}
+
+header nav a {
+  text-decoration: none;
+  padding:5px 20px;
+  opacity: none;
+}
+
+header nav.navn{
+  text-align: center;
+}
