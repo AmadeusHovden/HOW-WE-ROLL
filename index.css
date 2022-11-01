@@ -18,15 +18,15 @@ img.logo{
   height: 30px;
   width: 250px;
   color:inherit;
-  
+}
   
 .desktop{
     display:none;
 }
 
-   @media (min width: 1200px) {
+   @media (min-width: 1200px) {
         .desktop{
-            display: initial;
+            display:initial;
         }
     }
 
