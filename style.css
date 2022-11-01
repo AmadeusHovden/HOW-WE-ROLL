@@ -16,6 +16,7 @@
   background-position: center;
   background-size: cover;
   padding: 0 7%;
+  transition: background-image 1s;
 }
 
 nav {

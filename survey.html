@@ -20,6 +20,8 @@
         <a href="#" class="btn">Order Now</a>
       </nav>
 
+      
+
       <div class="info">
         <div>
           <h2>1.9 s</h2>
@@ -35,7 +37,7 @@
         </div>
         <div class="line"> </div>
         <div>
-          <h2>Model S</h2>
+          <h2 id="model">Model S</h2>
         </div>
       </div>
     </div>
@@ -46,10 +48,25 @@
       var m3 = document.getElementById("model3");
       var mx = document.getElementById("modelx");
       var my = document.getElementById("modely");
+      var model = document.getElementById("model");
 
       ms.onclick = function () {
         header.style.backgroundImage = "url(images/image-1.png)"
+        model.innerHTML = "Model S";
       }
+      m3.onclick = function () {
+        header.style.backgroundImage = "url(images/image-2.png)"
+        model.innerHTML = "Model 3";
+      }
+      mx.onclick = function () {
+        header.style.backgroundImage = "url(images/image-3.png)"
+        model.innerHTML = "Model X";
+      }
+      my.onclick = function () {
+        header.style.backgroundImage = "url(images/image-4.png)"
+        model.innerHTML = "Model Y";
+      }
+      
       
     </script>
   </body>
