@@ -86,3 +86,36 @@ img.pb{
     border-radius: 50%;
 
 }
+
+section .buttons a{
+    display: block;
+    background-color: #eee;
+    color: inherit;
+    padding: 15px 50px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 200;
+    height: 40px;
+}
+
+section .buttons a:first-child{
+    background-color: #444;
+    color: #fff;
+}
+
+section .buttons{
+    display: grid;
+    row-gap: 10px;
+    margin:0 60px;
+}
+
+@media (min-width: 768px) {
+    section .buttons{
+        max-width: 640px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+}
