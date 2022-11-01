@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="header">
+    <div class="header" id="header">
       <nav>
         <img src="images/logo.png" class="logo" />
         <ul>
-          <li><a href="#">Model S</a></li>
-          <li><a href="#">Model 3</a></li>
-          <li><a href="#">Model X</a></li>
-          <li><a href="#">Model Y</a></li>
+          <li><a href="#" id="models">Model S</a></li>
+          <li><a href="#" id="model3">Model 3</a></li>
+          <li><a href="#" id="modelx">Model X</a></li>
+          <li><a href="#" id="modely">Model Y</a></li>
         </ul>
         <a href="#" class="btn">Order Now</a>
       </nav>
@@ -39,5 +39,18 @@
         </div>
       </div>
     </div>
+
+    <script>
+      var header = document.getElementById("header");
+      var ms = document.getElementById("models");
+      var m3 = document.getElementById("model3");
+      var mx = document.getElementById("modelx");
+      var my = document.getElementById("modely");
+
+      ms.onclick = function () {
+        header.style.backgroundImage = "url(images/image-1.png)"
+      }
+      
+    </script>
   </body>
 </html>
