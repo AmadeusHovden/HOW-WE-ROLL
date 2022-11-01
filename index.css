@@ -17,6 +17,14 @@ img.logo{
   width: 250px;
   color:inherit;
   
-    
+  
+.desktop{
+    display:none;
+}
 
-    
+   @media (min width: 1200px) {
+        .desktop{
+            display: initial;
+        }
+    }
+
