@@ -42,3 +42,22 @@ nav ul li {
   display: inline-block;
   margin: 10px;
 }
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+
+nav .btn {
+
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  margin-right: 7%;
+  
+}
+
