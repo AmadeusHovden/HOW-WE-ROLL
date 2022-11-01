@@ -1,3 +1,4 @@
+
 * {
     padding:0;
     margin: 0;
@@ -11,6 +12,7 @@ body{
     font-style: initial;
     
     }
+
 
 img.logo{
   height: 30px;
@@ -28,3 +30,12 @@ img.logo{
         }
     }
 
+header {
+    display: grid; 
+    grid-template-columns: auto 1fr auto;
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
