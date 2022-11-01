@@ -75,3 +75,14 @@ display: grid;
 grid-template-rows: min-content auto;
 
 }
+
+section a{
+    color: inherit;
+}
+
+img.pb{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+}
