@@ -1,11 +1,11 @@
-body{
-    margin: auto;
-    padding: 0%;
-
-    
-    
-    
-    }
-    
+header {
+    display: grid; 
+    grid-template-columns: auto 1fr auto;
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
 
     
