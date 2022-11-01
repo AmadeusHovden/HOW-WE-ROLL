@@ -1,11 +1,10 @@
-body{
-    margin: auto;
-    padding: 0%;
+.desktop{
+    display:none;
+}
 
-    
-    
-    
+    @media (min width: 1200px) {
+        .desktop{
+            display: initial;
+        }
     }
-    
 
-    
