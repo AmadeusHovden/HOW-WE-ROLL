@@ -76,6 +76,12 @@ grid-template-rows: min-content auto;
 
 }
 
+section h1{
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: initial;
+}
+
 section a{
     color: inherit;
 }
