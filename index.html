@@ -1,88 +1,123 @@
+<!-- Kilder som er generelt brukt til programmeringen:
+* https://www.orbitmedia.com/blog/what-to-put-on-your-homepage/ 
+forklarer hva som er viktig å ha i en hjemmeside.
+* https://www.pexels.com/search/4k%20light/
+brukt til ulike bakgrunnsbilder for bra kvalitet og free too use.
+* https://www.youtube.com/playlist?list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3
+sett disse videone for en generell forståelse, og eksempler på hva skriver for ulike elementer
+* https://www.tesla.com
+brukt som inpsirasjon til hvordan vi vil få en stylish nettside. 
+* https://developer.mozilla.org/en-US/
+for eksempler og hjelp til nesten alt vi lurer på.
+*https://stackoverflow.com
+hjelp fra "community" til ulike løsninger-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- Legger til flere skrifttyper -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Linkes til index.css, slik at det blir mer oversiktlig -->
     <link rel="stylesheet" href="index.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>HOME</title>
   </head>
 
+  <!-- HTML for headeren som brukes til hver html side -->
   <body>
     <div class="boks">
-      <header style="background-color:rgba(255, 255, 255, 0.5);">
+      <header style="background-color: rgba(255, 255, 255, 0.9)">
         <a href="index.html" class="logo">
-          <img class="logo" src="logo-removebg-kopi.png" />
+          <img class="logo" src="logo.png" />
         </a>
         <nav class="navn desktop">
-          <a href="">Amadeus</a>
+          <a href="amadeus.html">Amadeus</a>
           <a href="">Burak</a>
           <a href="">Maria</a>
           <a href="">Malin</a>
           <a href="">Nicolai</a>
-          <a href="">Sindre</a>
+          <a href="sindre.html">Sindre</a>
         </nav>
         <nav class="right">
-          <a href="">Survey</a>
+          <a href="survey.html">Survey</a>
           <a href="kalender.html" class="desktop">Kalender</a>
           <a href="" class="desktop">Noe</a>
         </nav>
       </header>
     </div>
 
+    <!-- De ulike sekjsonene som fremviser gruppemedlemmene -->
     <section style="background-image: url('bakgrunner/bygninger.jpg')">
       <div class="content">
-        <h1>Amadeus</h1>
-        <p>Gruppas Quickscoper</p>
+        <h1 style="font-weight: 400;">Gruppe 3A</h1>
+        <p style="font-weight:400;">Fellesskap</p>
 
         <div>
-          <img class="pb" src="dyr/ama.jpg" />
+          <img class="pb" src="pb/IMG_0111.JPG" />
         </div>
 
         <div class="buttons">
-          <a href="">Se Mer</a>
+          <a href="https://github.com/bxn0/flaggopgaven">Flaggoppgaven</a>
+          <a href="https://github.com/AmadeusHovden/HOW-WE-ROLL">Github</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-image: url('bakgrunner/beach.jpg')">
+      <div class="content">
+        <h1>Amadeus</h1>
+        <p>Gruppas Explorer</p>
+
+        <div>
+          <img class="pb" src="pb/amasurf.jpg" />
+        </div>
+
+        <div class="buttons">
+          <a href="amadeus.html">Se Mer</a>
           <a href="mailto:amadeusmh@uia.no">Send Mail</a>
         </div>
       </div>
     </section>
 
-
-    <section style="background-image:url('bakgrunner/jada.jpg')">
-        <div class="content">
-            <h1>Maria</h1>
-            <p>Gruppas tiger</p>
-
-            <div>
-            <img class="pb" src="dyr/tiger-kopi.jpg">
-            </div>
-
-            <div class="buttons">
-                <a href="">Se Mer</a>
-                <a href="mailto:marief17@uia.no">Send Mail</a>
-            </div>
-        </div>
-    </section>
-
-
-    <section style="background-image: url('bakgrunner/sand.jpg')">
+    <section style="background-image: url('bakgrunner/jada.jpg')">
       <div class="content">
-        <h1>Sindre</h1>
-        <p>Gruppas And</p>
+        <h1>Maria</h1>
+        <p>Gruppas sørlending</p>
 
         <div>
-          <img class="pb" src="dyr/and-kopi.jpg" />
+          <img class="pb" src="tesst.png" />
         </div>
 
         <div class="buttons">
           <a href="">Se Mer</a>
-          <a href="mailto:sindreln@uia.no">Send Mail</a>
+          <a href="mailto:marief17@uia.no">Send Mail</a>
         </div>
       </div>
     </section>
 
+    <section style="background-image: url('bakgrunner/skiløype2.jpeg')">
+      <div class="content">
+        <h1>Sindre</h1>
+        <p>Gruppas Businessmann</p>
+
+        <div>
+          <img class="pb" src="pb/sindrebilde.png" />
+        </div>
+
+        <div class="buttons">
+          <a href="sindre.html">Se Mer</a>
+          <a href="mailto:sindreln@uia.no">Send Mail</a>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

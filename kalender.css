@@ -1,0 +1,199 @@
+/* Dette er kun basic style på siden, deisgnet */
+* {
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: black;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-style: initial;
+  background-color: skyblue;
+  
+  }
+/*  */
+
+/* Logoen sin style */
+img.logo{
+height: 30px;
+width: 250px;
+color:inherit;
+}
+
+/* Gjør om dispalyet slik, at noen knapper forsvinner når siden minimeres */
+.desktop{
+  display:none;
+}
+
+ @media (min-width: 1200px) {
+      .desktop{
+          display:initial;
+      }
+  }
+
+/* css til designet og opsett av header */
+header {
+  display: grid; 
+  grid-template-columns: auto 1fr auto;
+  padding: 20px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+header a{
+color: inherit;
+}
+
+header nav a {
+text-decoration: none;
+padding:5px 20px;
+opacity: none;
+}
+
+header nav.navn{
+text-align: center;
+}
+
+header nav.right{
+  text-align: right;
+  font-weight: 350;
+}
+/* Alle styles over ^går igjen på hver side slik at man kan navigere
+seg rundt hele tiden. */
+
+
+/* KALENDER. Koden er inspiret av of hentet fra: https://github.com/portexe/VanillaCalendar/blob/master/style.css */
+#kalender  {
+  display: flex;
+  margin-top: 55px;
+  justify-content: center;
+  background-color:none;
+}
+
+  button {
+    width: 75px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  #headerkalender {
+    padding: 10px;
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+  }
+  #headerkalender button {
+    background-color:#92a1d1;
+  }
+  #container {
+    width: 770px;
+  }
+  #weekdays {
+    width: 100%;
+    display: flex;
+    color: #247BA0;
+    justify-content: space-between;
+  }
+  #weekdays div {
+    width: 100px;
+    padding: 10px;
+  }
+  #calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .day:hover {
+    background-color: #e8faed;
+  }
+  
+  .day + #currentDay {
+    background-color:#e8f4fa;
+  }
+  .event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: #58bae4;
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+  }
+
+  .padding {
+    cursor: default !important;
+    background-color: #FFFCFF !important;
+    box-shadow: none !important;
+  }
+  #newEventModal, #deleteEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 350px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: absolute;
+    font-family: sans-serif;
+  }
+  #eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+  }
+  #eventTitleInput.error {
+    border: 2px solid red;
+  }
+  #cancelButton, #deleteButton {
+    background-color: #d36c6c;
+  }
+  #saveButton, #closeButton {
+    background-color: #92a1d1;
+  }
+  #eventText {
+    font-size: 14px;
+  }
+  #modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+
