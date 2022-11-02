@@ -1,3 +1,5 @@
+// Dette er javascripten til kalenderen
+// Koden er inspirert av og hentet fra: https://github.com/portexe/VanillaCalendar/blob/master/script.js 
 let nav = 0;
 let clicked = null;
 let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
