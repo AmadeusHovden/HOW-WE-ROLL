@@ -99,7 +99,7 @@ section a{
 }
 
 img.pb{
-    height: 150px;
+    height: auto;
     width: 200px;
     border-radius: 30%;
     filter: drop-shadow(0 0 8px black);
@@ -138,3 +138,4 @@ section .buttons{
         column-gap: 20px;
     }
 }
+
