@@ -109,5 +109,20 @@ nav .btn {
 
 }
 
+#survey-form {
+
+
+  /* ?????? */
+ 
+
+}
+
+.submit-button {
+ text-decoration: none;
+ border: 1px solid #fff;
+ padding: 10px 30px;
+ border-radius: 30px;
+ margin-right: 7%;
+}
 
 
