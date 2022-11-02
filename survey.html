@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Legger til flere skrifttyper -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Linkes til index.css, slik at det blir mer oversiktlig -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="survey.css"/>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Survey</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SURVEY</title>
   </head>
 
+  <!-- HTML for headeren som brukes til hver html side -->
   <body>
+    <div class="boks">
+      <header style="background-color:rgba(255, 255, 255, 0.5);">
+        <a href="index.html" class="logo">
+          <img class="logo" src="logo-removebg-kopi.png" />
+        </a>
+        <nav class="navn desktop">
+          <a href="amadeus.html">Amadeus</a>
+          <a href="">Burak</a>
+          <a href="">Maria</a>
+          <a href="">Malin</a>
+          <a href="">Nicolai</a>
+          <a href="">Sindre</a>
+        </nav>
+        <nav class="right">
+          <a href="survey.html">Survey</a>
+          <a href="kalender.html" class="desktop">Kalender</a>
+          <a href="" class="desktop">Noe</a>
+        </nav>
+      </header>
+    </div>
+
+<!-- Survey-->
+  <div id="survey">
     <h1>STUDENT SURVEY FORM</h1>
 
     <form class="form">
@@ -124,6 +156,11 @@
       });
     </script>
 
+  </div>
 
+  <section>
+    <br>
+    <h1>Fremvise Data?</h1>
+  </section>
   </body>
 </html>
