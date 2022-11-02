@@ -95,8 +95,9 @@ section a{
 
 img.pb{
     height: 150px;
-    width: 150px;
-    border-radius: 50%;
+    width: 200px;
+    border-radius: 30%;
+    filter: drop-shadow(0 0 8px black);
 
 }
 /* Knappene i ulike seksjonene, "media" endrer knappene når siden minskes */
