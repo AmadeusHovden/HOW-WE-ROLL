@@ -1,9 +1,79 @@
-body {
-    display: flex;
-    margin-top: 50px;
-    justify-content: center;
-    background-color: lightgray;
+/* Dette er kun basic style på siden, deisgnet */
+* {
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: black;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-style: initial;
+  background-color: skyblue;
+  
   }
+/*  */
+
+/* Logoen sin style */
+img.logo{
+height: 30px;
+width: 250px;
+color:inherit;
+}
+
+/* Gjør om dispalyet slik, at noen knapper forsvinner når siden minimeres */
+.desktop{
+  display:none;
+}
+
+ @media (min-width: 1200px) {
+      .desktop{
+          display:initial;
+      }
+  }
+
+/* css til designet og opsett av header */
+header {
+  display: grid; 
+  grid-template-columns: auto 1fr auto;
+  padding: 20px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+header a{
+color: inherit;
+}
+
+header nav a {
+text-decoration: none;
+padding:5px 20px;
+opacity: none;
+}
+
+header nav.navn{
+text-align: center;
+}
+
+header nav.right{
+  text-align: right;
+  font-weight: 350;
+}
+/* Alle styles over ^går igjen på hver side slik at man kan navigere
+seg rundt hele tiden. */
+
+
+/* KALENDER */
+#kalender  {
+  display: flex;
+  margin-top: 55px;
+  justify-content: center;
+  background-color:none;
+}
+
   button {
     width: 75px;
     cursor: pointer;
@@ -15,7 +85,7 @@ body {
     color: white;
   }
   
-  #header {
+  #headerkalender {
     padding: 10px;
     color: #d36c6c;
     font-size: 26px;
@@ -23,7 +93,7 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  #header button {
+  #headerkalender button {
     background-color:#92a1d1;
   }
   #container {
@@ -33,6 +103,7 @@ body {
     width: 100%;
     display: flex;
     color: #247BA0;
+    justify-content: space-between;
   }
   #weekdays div {
     width: 100px;
@@ -73,6 +144,7 @@ body {
     max-height: 55px;
     overflow: hidden;
   }
+
   .padding {
     cursor: default !important;
     background-color: #FFFCFF !important;

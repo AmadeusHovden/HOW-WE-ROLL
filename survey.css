@@ -1,9 +1,4 @@
 
-
-
-
-
-
 /* SURVEY PAGE DECORATION */
 *,
 *:before,
@@ -13,8 +8,13 @@
   box-sizing: border-box;
 }
 
+#survey{
+  margin-top: 100px;
+}
+
 body {
   font-family: "Nunito", sans-serif;
+  background-color: skyblue;
 }
 
 form {
@@ -97,12 +97,12 @@ select {
     padding: 19px 39px 18px 39px;
     color: #FFF;
     margin: 0 auto;
-    background: #1abc9c;
+    background: skyblue;
     font-size: 18px;
     text-align: center;
     font-style: normal;
     width: 100%;
-    border: 1px solid #16a085;
+    border: 1px solid skyblue;
     border-width: 1px 1px 3px;
     margin-bottom: 10px;
     transition: .4s;
@@ -139,7 +139,7 @@ select {
   }
 
   .number {
-    background: #1abc9c;
+    background:skyblue;
     color: #fff;
     height: 30px;
     width: 30px;
