@@ -16,7 +16,7 @@
 
   <body>
     <div class="boks">
-      <header style="background-color:rgba(255, 255, 255, 0.9);">
+      <header style="background-color: rgba(255, 255, 255, 0.9)">
         <a href="index.html" class="logo">
           <img class="logo" src="logo.png" />
         </a>
@@ -35,60 +35,58 @@
         </nav>
       </header>
     </div>
-    <br>
+    <br />
 
-
-<!-- Kalender -->
-  <div id="kalender">
-    <div id="container">
-      <div id="headerkalender">
-        <div id="monthDisplay"></div>
-        <div>
-          <button id="backButton">Back</button>
-          <button id="nextButton">Next</button>
+    <!-- Kalender. Koden er inspirert av og hentet fra: https://github.com/portexe/VanillaCalendar/blob/master/index.html -->
+    <div id="kalender">
+      <div id="container">
+        <div id="headerkalender">
+          <div id="monthDisplay"></div>
+          <div>
+            <button id="backButton">Back</button>
+            <button id="nextButton">Next</button>
+          </div>
         </div>
+
+        <div id="weekdays">
+          <div>Sunday</div>
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
+        </div>
+
+        <div id="calendar"></div>
       </div>
 
-      <div id="weekdays">
-        <div>Sunday</div>
-        <div>Monday</div>
-        <div>Tuesday</div>
-        <div>Wednesday</div>
-        <div>Thursday</div>
-        <div>Friday</div>
-        <div>Saturday</div>
+      <div id="newEventModal">
+        <h2>New Event</h2>
+
+        <input id="eventTitleInput" placeholder="Event Title" />
+
+        <button id="saveButton">Save</button>
+        <button id="cancelButton">Cancel</button>
       </div>
 
-      <div id="calendar"></div>
+      <div id="deleteEventModal">
+        <h2>Event</h2>
+
+        <p id="eventText"></p>
+
+        <button id="deleteButton">Delete</button>
+        <button id="closeButton">Close</button>
+      </div>
+
+      <div id="modalBackDrop"></div>
+
+      <script src="scriptkalender.js"></script>
     </div>
 
-    <div id="newEventModal">
-      <h2>New Event</h2>
-
-      <input id="eventTitleInput" placeholder="Event Title" />
-
-      <button id="saveButton">Save</button>
-      <button id="cancelButton">Cancel</button>
-    </div>
-
-    <div id="deleteEventModal">
-      <h2>Event</h2>
-
-      <p id="eventText"></p>
-
-      <button id="deleteButton">Delete</button>
-      <button id="closeButton">Close</button>
-    </div>
-
-    <div id="modalBackDrop"></div>
-
-    <script src="scriptkalender.js"></script>
-  </div>
-
-  
-  <section>
-    <br>
-    <h1>NOE MER UNDER HER?</h1>
-  </section>
+    <section>
+      <br />
+      <h1>NOE MER UNDER HER?</h1>
+    </section>
   </body>
 </html>
