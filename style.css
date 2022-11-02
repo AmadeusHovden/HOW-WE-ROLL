@@ -94,6 +94,20 @@ nav .btn {
   height: 9px;
 }
 
+.form {
+  width: 100%;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+  bottom: 170px;
+  left: 500px;
+  
+
+
+
+}
 
 
 
