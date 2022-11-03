@@ -10,6 +10,7 @@ body{
     font-family:'Nunito';
     font-weight: 300;
     font-style: initial;
+    background-color:rgb(201, 224, 231);
     
     }
 /*  */
@@ -143,7 +144,7 @@ section .buttons{
 
 
 
-/* Styles til info som vises på profil */
+/* Styles til info som vises på profil på første section */
 .info {
     width: 100%;
     padding: 0 7%;
@@ -170,4 +171,26 @@ section .buttons{
     flex: 1;
     background: black;
     height: 9px;
+  }
+
+
+  /* Styles til andre seksjon på egen profil html */
+
+  .tekst{
+    display:flex;
+    padding-top: 15vh;
+    padding-bottom:5vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+  }
+
+  aside.text-section{
+    width:40%;
+    
+  }
+
+  section.image-section {
+    width: 60%;
+    height: 600px;
+
   }
