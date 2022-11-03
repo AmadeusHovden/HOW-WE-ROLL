@@ -54,10 +54,12 @@ header nav a {
 }
 
 header nav.navn{
+margin-top: 5px;
   text-align: center;
 }
 
 header nav.right{
+    margin-top: 5px;
     text-align: right;
     font-weight: 350;
 }
