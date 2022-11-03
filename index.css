@@ -163,14 +163,14 @@ section .buttons{
   
   }
   .info div h2 {
-    font-size: 44px;
-    font-weight: 400;
+    font-size: 35px;
+    font-weight: 300;
   }
   
   .info .line {
     flex: 1;
     background: black;
-    height: 9px;
+    height: 5px;
   }
 
 
