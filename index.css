@@ -55,10 +55,12 @@ header nav a {
 }
 
 header nav.navn{
+margin-top: 5px;
   text-align: center;
 }
 
 header nav.right{
+    margin-top: 5px;
     text-align: right;
     font-weight: 350;
 }
@@ -106,6 +108,13 @@ img.pb{
 
 }
 
+img.nb{
+    height: auto;
+    width: 400px;
+    border-radius: 0%;
+    filter: drop-shadow(0 0 8px black);
+
+}
 
 
 /* Knappene i ulike seksjonene, "media" endrer knappene når siden minskes */

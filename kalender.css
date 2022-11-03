@@ -71,7 +71,7 @@ seg rundt hele tiden. */
   display: flex;
   margin-top: 55px;
   justify-content: center;
-  background-color:none;
+  background-color:#FAE8EB;
 }
 
   button {
@@ -87,14 +87,14 @@ seg rundt hele tiden. */
   
   #headerkalender {
     padding: 10px;
-    color: #d36c6c;
+    color: #63264A;
     font-size: 26px;
     font-family: sans-serif;
     display: flex;
     justify-content: space-between;
   }
   #headerkalender button {
-    background-color:#92a1d1;
+    background-color:#63264A;
   }
   #container {
     width: 770px;
@@ -102,7 +102,7 @@ seg rundt hele tiden. */
   #weekdays {
     width: 100%;
     display: flex;
-    color: #247BA0;
+    color: #3D0B37;
     justify-content: space-between;
   }
   #weekdays div {
@@ -138,7 +138,7 @@ seg rundt hele tiden. */
   .event {
     font-size: 10px;
     padding: 3px;
-    background-color: #58bae4;
+    background-color: #FAE8EB;
     color: white;
     border-radius: 5px;
     max-height: 55px;
