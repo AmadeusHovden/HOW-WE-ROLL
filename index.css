@@ -144,7 +144,9 @@ section .buttons{
 
 
 
-/* Styles til info som vises på profil på første section */
+
+
+/* Styles til info som vises på egen profil html på første section */
 .info {
     width: 100%;
     padding: 0 7%;
@@ -194,3 +196,32 @@ section .buttons{
     height: 600px;
 
   }
+
+  /* styles til knapper på egen side */
+  section .knapper a{
+    display: block;
+    background-color:white;
+    color: inherit;
+    padding: 15px 50px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 200;
+    height: 40px;
+}
+
+
+section .knapper{
+    display: grid;
+    row-gap: 10px;
+    margin:0 60px;
+}
+@media (min-width: 768px) {
+  section .knapper{
+      max-width: 640px;
+      margin: 0 auto;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+  }
+}
