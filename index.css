@@ -116,6 +116,16 @@ img.nb{
 
 }
 
+iframe{
+display: block;
+margin: auto;
+padding: auto;
+width: 500px;
+height: 300px;
+}
+
+
+
 
 /* Knappene i ulike seksjonene, "media" endrer knappene når siden minskes */
 section .buttons a{
