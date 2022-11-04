@@ -1,0 +1,133 @@
+/* Dette er kun basic style på siden, deisgnet */
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    color: black;
+    font-family:'Nunito';
+    font-weight: 300;
+    font-style: initial;
+    background-color: #CBEAA6;
+    
+    }
+  /*  */
+  
+  /* Logoen sin style */
+  img.logo{
+  height: 30px;
+  width: 250px;
+  color:inherit;
+  }
+  
+  /* Gjør om dispalyet slik, at noen knapper forsvinner når siden minimeres */
+  .desktop{
+    display:none;
+  }
+  
+   @media (min-width: 1200px) {
+        .desktop{
+            display:initial;
+        }
+    }
+  
+  /* css til designet og opsett av header */
+  header {
+    display: grid; 
+    grid-template-columns: auto 1fr auto;
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+  }
+  
+  header a{
+  color: inherit;
+  }
+  
+  header nav a {
+  text-decoration: none;
+  padding:5px 20px;
+  opacity: none;
+  }
+  
+  header nav.navn{
+  text-align: center;
+  }
+  
+  header nav.right{
+    text-align: right;
+    font-weight: 350;
+  }
+  /* Alle styles over ^går igjen på hver side slik at man kan navigere
+  seg rundt hele tiden. */
+
+  /* Her begynner post-it lappene. Inspirert og hentet fra: https://www.youtube.com/watch?v=_B-54mvPup4&t=365s */
+
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    background: #c68c53a8;
+    font-family: "Architects Daughter";   
+    font-size: 24px; 
+  }
+
+  .main-container{
+    width: 95%;
+    margin: auto;
+    margin-top: 5%;
+  }
+
+  .container1{
+    margin-left: 5%;
+  }
+
+  .container2{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 5%;
+  }
+
+  .container3{
+   display: none;
+   position: absolute;
+   top: 26%;
+   left: 40%;
+  }
+
+  textarea{
+    box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+    outline: none;
+    border: none;
+    width: 275px;
+    height: 275px;
+    padding: 40px 25px 25px 25px;
+  }
+
+  svg{
+    color: gray;
+  }
+
+  #check-icon{
+    position: absolute;
+    right: 17%;
+    top: 4%;
+  }
+
+  #x-icon{
+    position: absolute;
+    right: 5%;
+    top: 4%;
+  }
+
+
+
+
+  
