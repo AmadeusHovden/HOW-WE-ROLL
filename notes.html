@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Architects+Daughter"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="notes.css" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post-it Lapper</title>
+  </head>
+
+  <body>
+    <div class="boks">
+      <header style="background-color: rgba(255, 255, 255, 0.9)">
+        <a href="index.html" class="logo">
+          <img class="logo" src="logo.png" />
+        </a>
+        <nav class="navn desktop">
+          <a href="amadeus.html">Amadeus</a>
+          <a href="">Burak</a>
+          <a href="">Maria</a>
+          <a href="">Malin</a>
+          <a href="">Nicolai</a>
+          <a href="sindre.html">Sindre</a>
+        </nav>
+        <nav class="right">
+          <a href="survey.html">Survey</a>
+          <a href="kalender.html" class="desktop">Kalender</a>
+          <a href="notes.html" class="desktop">Tanker</a>
+        </nav>
+      </header>
+    </div>
+    <br />
+    <!--Her begynner post it lapp koden-->
+    <div class="main-container">
+      <div class="container1">
+        <button class="btn btn-success" onclick="typeNote()">
+          Legg til en lapp...
+        </button>
+      </div>
+      <div class="container2"></div>
+      <div class="container3">
+        <form>
+          <textarea
+            id="note-text"
+            placeholder="Skriv Lapp..."
+            maxlength="96"
+          ></textarea>
+          <svg
+            id="check-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-check-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
+            />
+          </svg>
+          <svg
+            id="x-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-x-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </form>
+      </div>
+    </div>
+    <script src="notes.js"></script>
+  </body>
+</html>
