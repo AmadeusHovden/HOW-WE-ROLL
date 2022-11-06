@@ -70,20 +70,14 @@
 
   /* Her begynner post-it lappene. Inspirert og hentet fra: https://www.youtube.com/watch?v=_B-54mvPup4&t=365s */
 
-  *{
-    padding: 0;
-    margin: 0;
-  }
-  body{
-    background-color:rgb(201, 224, 231);
-    font-family: "Nunito";
-  }
 
   .main-container{
     width: 95%;
     margin: auto;
     margin-top: 5%;
+    justify-content: center;
   }
+
 
   .container1{
     margin-left: 5%;
@@ -111,6 +105,7 @@
     width: 275px;
     height: 275px;
     padding: 40px 25px 25px 25px;
+    margin-top: 700px;
   }
 
   svg{
@@ -121,12 +116,14 @@
     position: absolute;
     right: 17%;
     top: 4%;
+    margin-top: 700px;
   }
 
   #x-icon{
     position: absolute;
     right: 5%;
     top: 4%;
+    margin-top: 700px;
   }
 
 
