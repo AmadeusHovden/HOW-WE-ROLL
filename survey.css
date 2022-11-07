@@ -645,3 +645,21 @@
 .form .icon-prepend {
 	color: #ccc;
 }
+
+
+.form .input:hover input,
+.form .select:hover select,
+.form .textarea:hover textarea,
+.form .radio:hover i,
+.form .checkbox:hover i,
+.form .toggle:hover i {
+	border-color: #8dc9e5;
+}
+.form .rating input + label:hover,
+.form .rating input + label:hover ~ label {
+	color: #2da5da;
+}
+.form .button:hover {
+	opacity: 1;
+}
+
