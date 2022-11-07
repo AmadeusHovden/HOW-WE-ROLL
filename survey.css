@@ -14,3 +14,61 @@
 }
 
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+.form {
+	margin: 0;
+	outline: none;
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	font: 13px/1.55 'Open Sans', Helvetica, Arial, sans-serif;
+	color: #666;
+}
+.form * {
+	margin: 0;
+	padding: 0;
+}
+.form header {
+	display: block;
+	padding: 20px 30px;	
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	background: rgba(248,248,248,.9);
+	font-size: 25px;
+	font-weight: 300;
+	color: #232323;
+}
+.form fieldset {
+	display: block;	
+	padding: 25px 30px 5px;
+	border: none;
+	background: rgba(255,255,255,.9);
+}
+
+.form fieldset + fieldset {
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+.form section {
+	margin-bottom: 20px;
+}
+.form footer {
+	display: block;
+	padding: 15px 30px 25px;
+	border-top: 1px solid rgba(0,0,0,.1);
+	background: rgba(248,248,248,.9);
+}
+.form footer:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.form a {
+	color: #2da5da;
+}
+.form .label {
+	display: block;
+	margin-bottom: 6px;
+	line-height: 19px;
+}
+.form .label.col {
+	margin: 0;
+	padding-top: 10px;
+}
