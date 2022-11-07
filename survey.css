@@ -530,3 +530,49 @@
 	white-space: nowrap;
 	margin-left: 15px;
 }
+
+
+
+.form .tooltip-right:after {
+	top: 6px;
+	right: 100%;
+	border-top: 4px solid transparent;
+	border-right: 4px solid rgba(0,0,0,0.9);
+	border-bottom: 4px solid transparent;
+}
+.form .input input:focus + .tooltip-right,
+.form .textarea textarea:focus + .tooltip-right {
+	left: 100%;
+	margin-left: 5px;
+}
+
+.form .tooltip-left {
+	top: 9px;
+	white-space: nowrap;
+	margin-right: 15px;
+}
+.form .tooltip-left:after {
+	top: 6px;
+	left: 100%;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 4px solid rgba(0,0,0,0.9);
+}
+.form .input input:focus + .tooltip-left,
+.form .textarea textarea:focus + .tooltip-left {
+	right: 100%;
+	left: auto;
+	margin-right: 5px;
+}
+
+.form .tooltip-bottom-right {
+	top: 100%;
+	margin-top: 15px;
+}
+.form .tooltip-bottom-right:after {
+	bottom: 100%;
+	right: 16px;	
+	border-right: 4px solid transparent;
+	border-bottom: 4px solid rgba(0,0,0,0.9);
+	border-left: 4px solid transparent;
+}
