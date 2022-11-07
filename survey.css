@@ -490,3 +490,43 @@
 	bottom: 100%;
 	margin-bottom: 15px;
 }
+
+
+
+.form .tooltip-top-right:after {
+	top: 100%;
+	right: 16px;	
+	border-top: 4px solid rgba(0,0,0,0.9);
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+.form .input input:focus + .tooltip-top-right,
+.form .textarea textarea:focus + .tooltip-top-right {
+	right: 0;
+	left: auto;
+	margin-bottom: 5px;
+}
+
+.form .tooltip-top-left {
+	bottom: 100%;
+	margin-bottom: 15px;
+}
+.form .tooltip-top-left:after {
+	top: 100%;
+	left: 16px;
+	border-top: 4px solid rgba(0,0,0,0.9);
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+.form .input input:focus + .tooltip-top-left,
+.form .textarea textarea:focus + .tooltip-top-left {
+	right: auto;
+	left: 0;
+	margin-bottom: 5px;
+}
+
+.form .tooltip-right {
+	top: 9px;
+	white-space: nowrap;
+	margin-left: 15px;
+}
