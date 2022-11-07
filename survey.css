@@ -688,5 +688,33 @@
 	color: #2da5da;	
 }
 
+.form .state-error input,
+.form .state-error select,
+.form .state-error textarea,
+.form .radio.state-error i,
+.form .checkbox.state-error i,
+.form .toggle.state-error i {
+	background: #fff0f0;
+}
+.form .state-error select + i {
+	background: #fff0f0;
+	box-shadow: 0 0 0 12px #fff0f0;
+}
+.form .toggle.state-error input:checked + i {
+	background: #fff0f0;
+}
+.form .state-error + em {
+	display: block;
+	margin-top: 6px;
+	padding: 0 1px;
+	font-style: normal;
+	font-size: 11px;
+	line-height: 15px;
+	color: #ee9393;
+}
+.form .rating.state-error + em {
+	margin-top: -4px;
+	margin-bottom: 4px;
+}
 
 
