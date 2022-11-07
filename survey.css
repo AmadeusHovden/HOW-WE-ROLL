@@ -212,7 +212,7 @@
 }
 
 
-}
+
 .form .radio input + i:after,
 .form .checkbox input + i:after {
 	position: absolute;
@@ -246,4 +246,20 @@
 }
 .form .inline-group {
 	margin: 0 -30px -4px 0;
+}
+
+
+.form .inline-group:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.form .inline-group .radio,
+.form .inline-group .checkbox {
+	float: left;
+	margin-right: 30px;
+}
+.form .inline-group .radio:last-child,
+.form .inline-group .checkbox:last-child {
+	margin-bottom: 4px;
 }
