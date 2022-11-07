@@ -159,3 +159,18 @@
 .form .select-multiple select {
 	height: auto;
 }
+
+
+.form .textarea textarea {
+	height: auto;
+	resize: none;
+}
+.form .textarea-resizable textarea {
+	resize: vertical;	
+}
+.form .textarea-expandable textarea {
+	height: 39px;
+}
+.form .textarea-expandable textarea:focus {
+	height: auto;
+}
