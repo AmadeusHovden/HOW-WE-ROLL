@@ -174,3 +174,39 @@
 .form .textarea-expandable textarea:focus {
 	height: auto;
 }
+
+
+.form .radio,
+.form .checkbox {
+	margin-bottom: 4px;
+	padding-left: 27px;
+	font-size: 15px;
+	line-height: 27px;
+	color: #404040;
+	cursor: pointer;
+}
+.form .radio:last-child,
+.form .checkbox:last-child {
+	margin-bottom: 0;
+}
+.form .radio input,
+.form .checkbox input {
+	position: absolute;
+	left: -9999px;
+}
+.form .radio i,
+.form .checkbox i {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	display: block;
+	width: 13px;
+	height: 13px;
+	outline: none;
+	border-width: 2px;
+	border-style: solid;
+	background: #fff;
+}
+.form .radio i {
+	border-radius: 50%;
+}
