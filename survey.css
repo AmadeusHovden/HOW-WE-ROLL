@@ -576,3 +576,28 @@
 	border-bottom: 4px solid rgba(0,0,0,0.9);
 	border-left: 4px solid transparent;
 }
+
+.form .input input:focus + .tooltip-bottom-right,
+.form .textarea textarea:focus + .tooltip-bottom-right {
+	right: 0;
+	left: auto;
+	margin-top: 5px;
+}
+
+.form .tooltip-bottom-left {
+	top: 100%;
+	margin-top: 15px;
+}
+.form .tooltip-bottom-left:after {
+	bottom: 100%;
+	left: 16px;
+	border-right: 4px solid transparent;
+	border-bottom: 4px solid rgba(0,0,0,0.9);
+	border-left: 4px solid transparent;
+}
+.form .input input:focus + .tooltip-bottom-left,
+.form .textarea textarea:focus + .tooltip-bottom-left {
+	right: auto;
+	left: 0;
+	margin-top: 5px;
+}
