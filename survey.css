@@ -1,3 +1,32 @@
+
+.form .message {
+	display: none;
+	color: #6fb679;
+}
+.form .message i {
+	display: block;
+	margin: 0 auto 20px;
+	width: 81px;
+	height: 81px;
+	border: 1px solid #6fb679;
+	border-radius: 50%;
+	font-size: 30px;
+	line-height: 81px;
+}
+.form.submited fieldset,
+.form.submited footer {
+	display: none;
+}
+.form.submited .message {
+	display: block;
+	padding: 25px 30px;
+	background: rgba(255,255,255,.9);
+	font: 300 18px/27px 'Open Sans', Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+
+
 .form .radio input + i:after {
 	background-color: #6dc5dd;	
 }
