@@ -717,4 +717,21 @@
 	margin-bottom: 4px;
 }
 
+.form .state-success input,
+.form .state-success select,
+.form .state-success textarea,
+.form .radio.state-success i,
+.form .checkbox.state-success i,
+.form .toggle.state-success i {
+	background: #f0fff0;
+}
+.form .state-success select + i {
+	background: #f0fff0;
+	box-shadow: 0 0 0 12px #f0fff0;
+}
+.form .toggle.state-success input:checked + i {
+	background: #f0fff0;
+}
+
+
 
