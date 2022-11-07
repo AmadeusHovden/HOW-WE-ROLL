@@ -601,3 +601,47 @@
 	left: 0;
 	margin-top: 5px;
 }
+
+
+.form .input input,
+.form .select select,
+.form .textarea textarea,
+.form .radio i,
+.form .checkbox i,
+.form .toggle i,
+.form .icon-append,
+.form .icon-prepend {
+	border-color: #e5e5e5;
+	transition: border-color 0.3s;
+	-o-transition: border-color 0.3s;
+	-ms-transition: border-color 0.3s;
+	-moz-transition: border-color 0.3s;
+	-webkit-transition: border-color 0.3s;
+}
+.form .toggle i:before {
+	background-color: #2da5da;	
+}
+.form .rating label {
+	color: #ccc;
+	transition: color 0.3s;
+	-o-transition: color 0.3s;
+	-ms-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	-webkit-transition: color 0.3s;
+}
+.form .button {
+	background-color: #2da5da;
+	opacity: 0.8;
+	transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+}
+.form .button.button-secondary {
+	background-color: #b3b3b3;
+}
+.form .icon-append,
+.form .icon-prepend {
+	color: #ccc;
+}
