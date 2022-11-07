@@ -129,3 +129,33 @@
 	cursor: pointer;
 	opacity: 0;
 }
+
+
+.form .select i {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	width: 1px;
+	height: 11px;
+	background: #fff;
+	box-shadow: 0 0 0 12px #fff;
+}
+.form .select i:after,
+.form .select i:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+.form .select i:after {
+	bottom: 0;
+	border-top: 4px solid #404040;
+}
+.form .select i:before {
+	top: 0;
+	border-bottom: 4px solid #404040;
+}
+.form .select-multiple select {
+	height: auto;
+}
