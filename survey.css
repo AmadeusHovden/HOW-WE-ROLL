@@ -663,3 +663,30 @@
 	opacity: 1;
 }
 
+.form .input input:focus,
+.form .select select:focus,
+.form .textarea textarea:focus,
+.form .radio input:focus + i,
+.form .checkbox input:focus + i,
+.form .toggle input:focus + i {
+	border-color: #2da5da;
+}
+
+
+.form .radio input + i:after {
+	background-color: #2da5da;	
+}
+.form .checkbox input + i:after {
+	color: #2da5da;
+}
+.form .radio input:checked + i,
+.form .checkbox input:checked + i,
+.form .toggle input:checked + i {
+	border-color: #2da5da;	
+}
+.form .rating input:checked ~ label {
+	color: #2da5da;	
+}
+
+
+
