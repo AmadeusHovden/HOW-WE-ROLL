@@ -210,3 +210,40 @@
 .form .radio i {
 	border-radius: 50%;
 }
+
+
+}
+.form .radio input + i:after,
+.form .checkbox input + i:after {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.1s;
+	-o-transition: opacity 0.1s;
+	-ms-transition: opacity 0.1s;
+	-moz-transition: opacity 0.1s;
+	-webkit-transition: opacity 0.1s;
+}
+.form .radio input + i:after {
+	content: '';
+	top: 4px;
+	left: 4px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+}
+.form .checkbox input + i:after {
+	content: '\f00c';
+	top: -1px;
+	left: -1px;
+	width: 15px;
+	height: 15px;
+	font: normal 12px/16px FontAwesome;
+	text-align: center;
+}
+.form .radio input:checked + i:after,
+.form .checkbox input:checked + i:after {
+	opacity: 1;
+}
+.form .inline-group {
+	margin: 0 -30px -4px 0;
+}
