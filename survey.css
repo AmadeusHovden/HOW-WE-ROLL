@@ -414,3 +414,47 @@
 .form .textarea .icon-prepend + .icon-append + textarea {
 	padding-left: 46px;
 }
+
+.form .row {
+	margin: 0 -15px;
+}
+.form .row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.form .col {
+	float: left;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.form .col-1 {
+	width: 8.33%;
+}
+.form .col-2 {
+	width: 16.66%;
+}
+.form .col-3 {
+	width: 25%;
+}
+.form .col-4 {
+	width: 33.33%;
+}
+.form .col-5 {
+	width: 41.66%;
+}
+.form .col-6 {
+	width: 50%;
+}
+.form .col-8 {
+	width: 66.67%;
+}
+.form .col-9 {
+	width: 75%;
+}
+.form .col-10 {
+	width: 83.33%;
+}
