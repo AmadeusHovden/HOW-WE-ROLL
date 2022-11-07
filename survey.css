@@ -733,5 +733,76 @@
 	background: #f0fff0;
 }
 
+.form .message {
+	display: none;
+	color: #6fb679;
+}
+.form .message i {
+	display: block;
+	margin: 0 auto 20px;
+	width: 81px;
+	height: 81px;
+	border: 1px solid #6fb679;
+	border-radius: 50%;
+	font-size: 30px;
+	line-height: 81px;
+}
+.form.submited fieldset,
+.form.submited footer {
+	display: none;
+}
+.form.submited .message {
+	display: block;
+	padding: 25px 30px;
+	background: rgba(255,255,255,.9);
+	font: 300 18px/27px 'Open Sans', Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+.ui-datepicker-calendar a,
+.ui-datepicker-calendar span {
+	display: block;
+	width: 31px;
+	margin: auto;
+	text-decoration: none;
+	color: #404040;
+}
+
+.ui-datepicker-calendar span {
+	color: #bfbfbf;
+}
+
+
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+a {
+	text-decoration: underline;
+}
+
+
+.body {
+
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 40px;
+}
+
+ .label{
+	text-align: center;
+}
+header {
+text-align: center;
+
+}
+
+
+
 
 
