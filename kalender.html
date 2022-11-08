@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="kalender.css" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="notes.css"/>
+    <link rel="stylesheet" href="notes.css" />
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -89,70 +89,330 @@
 
       <div id="modalBackDrop"></div>
 
-      <script src="scriptkalender.js"></script>
+      <script>
+        // Dette er javascripten til kalenderen
+        // Koden er inspirert av og hentet fra: https://github.com/portexe/VanillaCalendar/blob/master/script.js
+        let nav = 0;
+        let clicked = null;
+        let events = localStorage.getItem("events")
+          ? JSON.parse(localStorage.getItem("events"))
+          : [];
+
+        const calendar = document.getElementById("calendar");
+        const newEventModal = document.getElementById("newEventModal");
+        const deleteEventModal = document.getElementById("deleteEventModal");
+        const backDrop = document.getElementById("modalBackDrop");
+        const eventTitleInput = document.getElementById("eventTitleInput");
+        const weekdays = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+
+        function openModal(date) {
+          clicked = date;
+
+          const eventForDay = events.find((e) => e.date === clicked);
+
+          if (eventForDay) {
+            document.getElementById("eventText").innerText = eventForDay.title;
+            deleteEventModal.style.display = "block";
+          } else {
+            newEventModal.style.display = "block";
+          }
+
+          backDrop.style.display = "block";
+        }
+
+        function load() {
+          const dt = new Date();
+
+          if (nav !== 0) {
+            dt.setMonth(new Date().getMonth() + nav);
+          }
+
+          const day = dt.getDate();
+          const month = dt.getMonth();
+          const year = dt.getFullYear();
+
+          const firstDayOfMonth = new Date(year, month, 1);
+          const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+          const dateString = firstDayOfMonth.toLocaleDateString("en-us", {
+            weekday: "long",
+            year: "numeric",
+            month: "numeric",
+            day: "numeric",
+          });
+          const paddingDays = weekdays.indexOf(dateString.split(", ")[0]);
+
+          document.getElementById(
+            "monthDisplay"
+          ).innerText = `${dt.toLocaleDateString("en-us", {
+            month: "long",
+          })} ${year}`;
+
+          calendar.innerHTML = "";
+
+          for (let i = 1; i <= paddingDays + daysInMonth; i++) {
+            const daySquare = document.createElement("div");
+            daySquare.classList.add("day");
+
+            const dayString = `${month + 1}/${i - paddingDays}/${year}`;
+
+            if (i > paddingDays) {
+              daySquare.innerText = i - paddingDays;
+              const eventForDay = events.find((e) => e.date === dayString);
+
+              if (i - paddingDays === day && nav === 0) {
+                daySquare.id = "currentDay";
+              }
+
+              if (eventForDay) {
+                const eventDiv = document.createElement("div");
+                eventDiv.classList.add("event");
+                eventDiv.innerText = eventForDay.title;
+                daySquare.appendChild(eventDiv);
+              }
+
+              daySquare.addEventListener("click", () => openModal(dayString));
+            } else {
+              daySquare.classList.add("padding");
+            }
+
+            calendar.appendChild(daySquare);
+          }
+        }
+
+        function closeModal() {
+          eventTitleInput.classList.remove("error");
+          newEventModal.style.display = "none";
+          deleteEventModal.style.display = "none";
+          backDrop.style.display = "none";
+          eventTitleInput.value = "";
+          clicked = null;
+          load();
+        }
+
+        function saveEvent() {
+          if (eventTitleInput.value) {
+            eventTitleInput.classList.remove("error");
+
+            events.push({
+              date: clicked,
+              title: eventTitleInput.value,
+            });
+
+            localStorage.setItem("events", JSON.stringify(events));
+            closeModal();
+          } else {
+            eventTitleInput.classList.add("error");
+          }
+        }
+
+        function deleteEvent() {
+          events = events.filter((e) => e.date !== clicked);
+          localStorage.setItem("events", JSON.stringify(events));
+          closeModal();
+        }
+
+        function initButtons() {
+          document
+            .getElementById("nextButton")
+            .addEventListener("click", () => {
+              nav++;
+              load();
+            });
+
+          document
+            .getElementById("backButton")
+            .addEventListener("click", () => {
+              nav--;
+              load();
+            });
+
+          document
+            .getElementById("saveButton")
+            .addEventListener("click", saveEvent);
+          document
+            .getElementById("cancelButton")
+            .addEventListener("click", closeModal);
+          document
+            .getElementById("deleteButton")
+            .addEventListener("click", deleteEvent);
+          document
+            .getElementById("closeButton")
+            .addEventListener("click", closeModal);
+        }
+
+        initButtons();
+        load();
+      </script>
     </div>
 
     <section>
-      <br>
-      <br>
-      <br>
+      <br />
+      <br />
+      <br />
 
-      <div style="text-align: center";>
+      <div style="text-align: center" ;>
         <h1>Ideer og Påminnelser</h1>
       </div>
 
-       <!--Her begynner post it lapp koden-->
-    <div class="main-container">
-      <div class="container1">
-        <button class="btn btn-success" onclick="typeNote()" style="background-color:rgb(100, 26, 75)">
-          Legg til en lapp...
-        </button>
-      </div>
-      <div class="container2"></div>
-      <div class="container3">
-        <form>
-          <textarea
-            id="note-text"
-            placeholder="Skriv Lapp..."
-            maxlength="96"
-          ></textarea>
-          <svg
-            id="check-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-check-circle"
-            viewBox="0 0 16 16"
+      <!--Her begynner post it lapp koden-->
+      <div class="main-container">
+        <div class="container1">
+          <button
+            class="btn btn-success"
+            onclick="typeNote()"
+            style="background-color: rgb(100, 26, 75)"
           >
-            <path
-              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-            />
-            <path
-              d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
-            />
-          </svg>
-          <svg
-            id="x-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-x-circle"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-            />
-            <path
-              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-            />
-          </svg>
-        </form>
+            Legg til en lapp...
+          </button>
+        </div>
+        <div class="container2"></div>
+        <div class="container3">
+          <form>
+            <textarea
+              id="note-text"
+              placeholder="Skriv Lapp..."
+              maxlength="96"
+            ></textarea>
+            <svg
+              id="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-check-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
+              />
+            </svg>
+            <svg
+              id="x-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </form>
+        </div>
       </div>
-    </div>
-    <script src="notes.js"></script>
-    
+      <script>
+        var container2 = document.getElementsByClassName("container2")[0];
+        var container3 = document.getElementsByClassName("container3")[0];
+        var checkIcon = document.getElementById("check-icon");
+        var xIcon = document.getElementById("x-icon");
+        var i = 0;
+
+        xIcon.addEventListener("click", function () {
+          typeNote();
+        });
+
+        checkIcon.addEventListener("click", function () {
+          createNote();
+        });
+
+        function typeNote() {
+          if (container3.style.display == "none") {
+            container3.style.display = "block";
+          } else {
+            container3.style.display = "none";
+          }
+        }
+
+        function createNote() {
+          var noteText = document.getElementById("note-text").value;
+          var node0 = document.createElement("div");
+          var node1 = document.createElement("h1");
+
+          node1.innerHTML = noteText;
+
+          node1.setAttribute(
+            "style",
+            "width:250px; height:250px; font-size:26px, padding:25px; margin-top:10px; overflow:hidden; box-shadow:0px, 10px, 24px, 0px, rgba(0,0,0,0.75)"
+          );
+
+          node1.style.margin = margin();
+          node1.style.transform = rotate();
+          node1.style.background = color();
+
+          node0.appendChild(node1);
+
+          container2.insertAdjacentElement("beforeend", node0);
+
+          node0.addEventListener("mouseenter", function () {
+            node0.style.transform = "scale(1.1)";
+          });
+
+          node0.addEventListener("mouseleave", function () {
+            node0.style.transform = "scale(1)";
+          });
+
+          node0.addEventListener("dblclick", function () {
+            node0.remove();
+          });
+          document.getElementById("note-text").value = "";
+        }
+
+        function margin() {
+          var random_margin = ["-5px", "1px", "5px", "10px", "15px", "20px"];
+
+          return random_margin[
+            Math.floor(Math.random() * random_margin.length)
+          ];
+        }
+
+        function rotate() {
+          var random_rotate = [
+            "rotate(3deg)",
+            "rotate(1deg)",
+            "rotate(-1deg)",
+            "rotate(-3deg)",
+            "rotate(-5deg)",
+            "rotate(-10deg)",
+          ];
+
+          return random_rotate[
+            Math.floor(Math.random() * random_rotate.length)
+          ];
+        }
+
+        function color() {
+          var random_color = [
+            "#c2ff3d",
+            "#ff3de8",
+            "#3dc2ff",
+            "#04e022",
+            "#bc83e6",
+            "#ebb328",
+          ];
+
+          if (i > random_color.length - 1) {
+            i = 0;
+          }
+          return random_color[i++];
+        }
+      </script>
     </section>
   </body>
 </html>
