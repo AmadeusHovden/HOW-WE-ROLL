@@ -15,19 +15,12 @@ hjelp fra "community" til ulike løsninger-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+     <!-- Legger til en ny skrifttype -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Legger til flere skrifttyper -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- Linkes til index.css, slik at det blir mer oversiktlig -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"rel="stylesheet"/>
+   
+    <!-- Linkes til index.css, slik at det blir mer oversiktlig-->
     <link rel="stylesheet" href="index.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -35,7 +28,19 @@ hjelp fra "community" til ulike løsninger-->
     <title>HOME</title>
   </head>
 
-  <!-- HTML for headeren som brukes til hver html side -->
+  <!-- HTML for headeren som brukes til hver html side. 
+  Slik kan man lette navigere seg rundt og dette er noe alle moderne nettsider har. 
+Dette gjør ogsaå at man lett for oversikt over alle gruppemedlemene. Vi har valgt å i
+kke bruke vissitkort som mange andre grupper gjør. Vi bruker heller headeren for å lett set medlemene, 
+så er mer informasjon slik som bilde, fullt navn og mail tilgjengelig. Dette er kun en kort fremsvining av 
+medlemmene og mer informasjon kan ses under "se mer" eller ved å trykke på et navn i headeren. Dette 
+er ganske annerledes men stylish og lettvint og gjør at vi kan vise mer informasjon fra hvert gruppemedlem som 
+ville vært ganske nødvendig iet prosjektarbeid. Mer tekst om dette i (amadeus.html)
+Logoen har vi laget slev og fungerer som en "hjem knapp" og tar deg til forsiden.
+Funksjonen <div> gåt mye ogjen og er det vi bruker for å plassere de ulike tingene der de skal og ikke rett uner hverandre. 
+  I headeren har vi en div med logo, en med alle navnene og en med survey osv til høyre. Når nettsiden minimeres forsvinner 
+nesten alt i headeren utenom logo og "survey.html" dette for at ikke gjenstandenen skal bli skvist sammen og ødelegge uteseende. 
+Dette via '@media' som kan ses i index.css filen-->
   <body>
     <div class="boks">
       <header style="background-color: rgba(255, 255, 255, 0.9)">
@@ -53,12 +58,22 @@ hjelp fra "community" til ulike løsninger-->
         <nav class="right">
           <a href="survey.html">Survey</a>
           <a href="kalender.html" class="desktop">Kalender</a>
-          <a href="YourPage.html" class="desktop">Your Page</a>
+          <a href="raport.html" class="desktop">Rapport</a>
         </nav>
       </header>
     </div>
 
-    <!-- De ulike sekjsonene som fremviser gruppemedlemmene -->
+
+    <!-- De ulike sekjsonene som fremviser gruppemedlemmene
+    For å fremvise de ulike medlemmene har vi egen "sections" til hvert medlem. Her velger medlemmet et bakgrunnsbilde, 
+  enten et personloig eller et fra internett. De velger også et "profilbilde" eller et dyr hvis ansikt ikke vil vises.
+personen sin mail er linket på deres seksjon, noe som er nyttig i et gruppearbeid for å lett nå ut til medlemmen. 
+Den første sekjsonen viser selve gruppen med et bilde av oss og gruppenavn. Her er også flaggoppgave.html siden linket. 
+samt github repositorien våres. 
+Gruppen syns en slik løsning var kul og annerledes og vi droppet vissitkort slik vi først planla. Problemet her med dette
+er kanskje at noen gruppemedlemmer blir visst sist og har mindre sjans for å bli sett. Men er ikke et problem for oss.
+Den samme sectionen og koden blir brukt, men informasjonen inni blir spesifisert hvert gruppemedlem.  -->
+
     <section style="background-image: url('bakgrunner/bygninger.jpg')">
       <div class="content">
         <h1 style="font-weight: 400">Gruppe 3A</h1>
@@ -138,5 +153,7 @@ hjelp fra "community" til ulike løsninger-->
         </div>
       </div>
     </section>
+
+
   </body>
 </html>

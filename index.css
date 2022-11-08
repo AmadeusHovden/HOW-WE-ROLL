@@ -1,4 +1,11 @@
-/* Dette er kun basic style på siden, deisgnet */
+/* Noe av denne css filen går igjen på alle html sidene. dette for å få et likt design og for å beholde "headeren". 
+Section styles går igjen på alle "navn.html" sidene. 
+Inspirasjon til designet er tesla, men css'en bruker kun simple funkjsoner for stilen den har. Det har opstått noen 
+problemer med designet og utseende. dette har gruppen teste ut og løst sammen i gruppe timene samt brukt hjelpe midler som: stackoverflow 
+og w3schools til hjelp.*/
+
+
+/* Dette er kun basic style på hele deisgnet */
 * {
     padding:0;
     margin: 0;
@@ -13,7 +20,8 @@ body{
     background-color:rgb(201, 224, 231);
     
     }
-/*  */
+
+
 
 /* Logoen sin style */
 img.logo{
@@ -33,7 +41,8 @@ img.logo{
         }
     }
 
-/* css til designet og opsett av header */
+
+/* gjør at headeren legger elementene på langs og bruker hele siden, men også med mellomrom.*/
 header {
     display: grid; 
     grid-template-columns: auto 1fr auto;
@@ -44,42 +53,53 @@ header {
     width: 100%;
 }
 
+/* Angir fargen på skriften i header */
 header a{
   color: inherit;
 }
-
+/* fjerner linjer og fargeendringer til "href" */
 header nav a {
   text-decoration: none;
   padding:5px 20px;
   opacity: none;
 }
-
+/* legger på en skygge under hovering */
+header nav a:hover{
+  background-color:lightgrey;
+  border-radius: 5px;
+}
+/* Flytter navnene litt ned og sentrerer de */
 header nav.navn{
 margin-top: 5px;
   text-align: center;
 }
-
+/* Denne gjør det samme som over^ bare med teksten til høyre. */
 header nav.right{
     margin-top: 5px;
     text-align: right;
-    font-weight: 350;
 }
 /* Alle styles over ^går igjen på hver side slik at man kan navigere
 seg rundt hele tiden. */
 
 
-/* Style til seksjonene som fremviser gruppemedlemmene */
+
+/* Style til seksjonene som fremviser gruppemedlemmene på hovedsiden*/
+/* Denne setter hvor stor sectionen skal være og bestmmer at bakgrunnsbilde skal dekke hele samt være i
+"center center" så det er riktig formatert */
 section{
     height: 100vh;
     background-size: cover;
     background-position: center center;
 }
+/* Bestemmer skriften på navnene. */
 section h1{
     font-family: 'Nunito';
     font-size: 3rem;
     font-weight: 300;
 }
 
+/* Bestmmer hvor informasjone på hver section skal stå, altså i senter og det skal "fade in" 
+ved besøk på siden */
 section .content{
 width: 100%;
 height: 100vh;
@@ -89,8 +109,8 @@ text-align: center;
 display: grid;
 grid-template-rows: min-content auto;
 animation:fadeIn 3s;
-
 }
+/* Gjør at informasjonen fader in */
 @keyframes fadeIn{
     0%{opacity:0;}
     100% {opacity:1;}
@@ -100,6 +120,7 @@ section a{
     color: inherit;
 }
 
+/* Velger størrelse på bildet, får lik bredde men hlyde avhenger av eget bilde, legger også til skygge */
 img.pb{
     height: auto;
     width: 200px;
@@ -108,26 +129,9 @@ img.pb{
 
 }
 
-img.nb{
-    height: auto;
-    width: 400px;
-    border-radius: 0%;
-    filter: drop-shadow(0 0 8px black);
 
-}
-
-iframe{
-display: block;
-margin: auto;
-padding: auto;
-width: 500px;
-height: 300px;
-}
-
-
-
-
-/* Knappene i ulike seksjonene, "media" endrer knappene når siden minskes */
+/* Knappene i ulike seksjonene, "media" endrer knappene når siden minskes
+gir knappene en viss stil og ulike farge, knappene blir plassert over hvernadre npr siden minskes */
 section .buttons a{
     display: block;
     background-color: lightgrey;
@@ -160,12 +164,14 @@ section .buttons{
         column-gap: 20px;
     }
 }
+/*  */
 
 
 
 
-
-/* Styles til info som vises på egen profil html på første section */
+/* Styles til info som vises på egen profil html på første section. bestemmer hvor dette skal plasseres
+og skal også "fade in" her vil ulike arbeidsmteoder og ting slik som "early bird" og personilghestrekke vises, 
+mtp hva en har svart på surveyen. */
 .info {
     width: 100%;
     padding: 0 7%;
@@ -175,10 +181,7 @@ section .buttons{
     left: 0;
     animation:fadeIn 3s;
     margin-top: -120px;
-  
-  
   }
-  
   .info div {
     margin: 0 20px;
   
@@ -187,15 +190,17 @@ section .buttons{
     font-size: 35px;
     font-weight: 300;
   }
-  
   .info .line {
     flex: 1;
     background: black;
     height: 5px;
   }
+  /*  */
 
 
-  /* Styles til andre seksjon på egen profil html */
+
+  /* Dette er styles til den nedre del av personlig side, section nummer 2. 
+  Sekjsonen er delt i to, en side med et bilde, og en med informasjon*/
 
   .tekst{
     display:flex;
@@ -204,12 +209,12 @@ section .buttons{
     padding-left: 10vh;
     padding-right: 10vh;
   }
-
+/* bestemmer hvor mye av section teksten skal være. */
   aside.text-section{
     width:40%;
     
   }
-
+/*  Bestmmer hvor mye av secytion bilde skal være, og hvor stort bilde blir*/
   section.image-section {
     width: 60%;
     height: 600px;
@@ -230,12 +235,13 @@ section .buttons{
     height: 40px;
 }
 
-
+/* lager plass rundt knappene, så de ikke er skvist sammen.  */
 section .knapper{
     display: grid;
     row-gap: 10px;
     margin:0 60px;
 }
+/* legger knappene inder hverandre når siden minskes */
 @media (min-width: 768px) {
   section .knapper{
       max-width: 640px;
