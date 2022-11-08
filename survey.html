@@ -1,55 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <!-- Legger til flere skrifttyper -->
+    <meta charset="utf-8" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans"rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-
-    <!-- Linkes til index.css, slik at det blir mer oversiktlig -->
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="survey.css"/>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AMADEUS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>  <!-- Legger til flere skrifttyper -->
+    <title>Survey</title>
   </head>
+  <style>
+   
 
-  <!-- HTML for headeren som brukes til hver html side -->
+   * {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: black;
+    font-family:'Nunito';
+    font-weight: 300;
+    font-style: initial;
+    background-color:rgb(201, 224, 231);
+    
+    }
+/*  */
+
+/* Logoen sin style */
+img.logo{
+  height: 30px;
+  width: 250px;
+  color:inherit;
+}
+  
+/* Gjør om dispalyet slik, at noen knapper forsvinner når siden minimeres */
+.desktop{
+    display:none;
+}
+
+   @media (min-width: 1200px) {
+        .desktop{
+            display:initial;
+        }
+    }
+
+/* css til designet og opsett av header */
+header {
+    display: grid; 
+    grid-template-columns: auto 1fr auto;
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+header a{
+  color: inherit;
+}
+
+header nav a {
+  text-decoration: none;
+  padding:5px 20px;
+  opacity: none;
+}
+
+header nav.navn{
+margin-top: 5px;
+  text-align: center;
+}
+
+header nav.right{
+    margin-top: 5px;
+    text-align: right;
+    font-weight: 350;
+}
+/* Alle styles over ^går igjen på hver side slik at man kan navigere
+seg rundt hele tiden. */
+
+
+/* Style til seksjonene som fremviser gruppemedlemmene */
+section{
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+section h1{
+    font-family: 'Nunito';
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+section .content{
+width: 100%;
+height: 100vh;
+padding-top: 15vh;
+padding-bottom: 15vh;
+text-align: center;
+display: grid;
+grid-template-rows: min-content auto;
+animation:fadeIn 3s;
+
+}
+@keyframes fadeIn{
+    0%{opacity:0;}
+    100% {opacity:1;}
+}
+
+section a{
+    color: inherit;
+}
+
+
+  
+ 
+  
+h2 {
+    font-size: 20px;
+  }
+  
+  
+ 
+  #main {
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    height: 80vh;
+    border-radius: 15px;
+    margin: 7% 19%;
+    overflow: auto;
+  }
+  
+ 
+  label {
+    width: 240px;
+    display: inline-block;
+    text-align: right;
+  }
+
+  textarea {
+    display: inline-block;
+    align-items: right;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 10%;
+    height: 5px;
+    background: #2A9D8F;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+header, section  {
+  display: flexbox;
+
+}
+
+
+
+  </style>
   <body>
-    <div class="boks">
-      <header style="background-color: rgba(255, 255, 255, 0.9)">
-        <a href="index.html" class="logo">
-          <img class="logo" src="logo.png" />
-        </a>
-        <nav class="navn desktop">
-          <a href="amadeus.html">Amadeus</a>
-          <a href="burak.html">Burak</a>
-          <a href="maria.html">Maria</a>
-          <a href="malin.html">Malin</a>
-          <a href="nicolai.html">Nicolai</a>
-          <a href="sindre.html">Sindre</a>
-        </nav>
-        <nav class="right">
-          <a href="survey.html">Survey</a>
-          <a href="kalender.html" class="desktop">Kalender</a>
-          <a href="YourPage.html" class="desktop">Your Page</a>
-        </nav>
-      </header>
-    </div>
+      
+    <header style="background-color: rgba(255, 255, 255, 0.9)">
+      <a href="index.html" class="logo">
+        <img class="logo" src="logo.png" />
+      </a>
+      <nav class="navn desktop">
+        <a href="amadeus.html">Amadeus</a>
+        <a href="burak.html">Burak</a>
+        <a href="maria.html">Maria</a>
+        <a href="malin.html">Malin</a>
+        <a href="nicolai.html">Nicolai</a>
+        <a href="sindre.html">Sindre</a>
+      </nav>
+      <nav class="right">
+        <a href="survey.html">Survey</a>
+        <a href="kalender.html" class="desktop">Kalender</a>
+        <a href="YourPage.html" class="desktop">Your Page</a>
+      </nav>
+    </header>
+  
 
     <section id="main">
       <h1>Fyll ut sjemaet</h1>
       <hr />
-      <!--Add your form below:-->
+      
       <form action="story.html" method="GET" class="form">
         <label for="name">Your Name:</label>
         <input
@@ -123,7 +267,7 @@
           class="slider"
         />
         <br />
-        <label for="hjem">Hjemmekontor</label>
+        <label for="hjem">Hjemmekontor:</label>
         <input
           type="range"
           name="hjem"
@@ -134,7 +278,7 @@
           class="slider"
         />
         <br />
-        <label for="Kul">Kul</label>
+        <label for="Kul">Kul:</label>
         <input
           type="range"
           name="kul"
@@ -161,26 +305,23 @@ You can write about ur opinions here</textarea
     </section>
 
     <script>
-      //Sjekker om skjemaet er fylt ut fra før og skriver ut en melding til div-elementet med ID "localstorage-tekst".
+      
 
-      // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
-      // Example POST method implementation using fetch:
-      async function postData(url = "", data = {}) {
-        // Default options are marked with *
+      
+      
+      async function postData(url = "", data = {}) { //sending the data
         const response = await fetch(url, {
-          method: "POST", // *GET, POST, PUT, DELETE, etc.
-          mode: "cors", // no-cors, *cors, same-origin
-          cache: "no-cache", // *default, no-cache, reload, force-cache,only-if-cached
-          credentials: "same-origin", // include, *same-origin, omit
+          method: "POST", 
+          mode: "cors", //cors by defeault
+          cache: "no-cache", // no-cache by default
+          credentials: "same-origin", //same origin by default
           headers: {
-            "Content-Type": "application/json",
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          redirect: "follow", // manual, *follow, error
-          referrerPolicy: "no-referrer", // no-referrer,*no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-          body: JSON.stringify(data), // body data type must match"Content-Type"header
+            "Content-Type": "application/json",}, //JSON
+          redirect: "follow", 
+          referrerPolicy: "no-referrer", 
+          body: JSON.stringify(data), 
         });
-        return response.json(); // parses JSON response into native JavaScriptobjects
+        return response.json(); // RETURNS JSON
       }
 
       function handleSubmit(event) {
@@ -201,12 +342,8 @@ You can write about ur opinions here</textarea
       }
       const form = document.querySelector("form");
       form.addEventListener("submit", handleSubmit);
-      // just an alert message for when users try to use the search bar
-      function OnlyAPlaceHolder() {
-        alert(
-          "this item doesn't have much functionality yet and is only a placeholder"
-        );
-      }
+      
+      
 
       function ScrollDown() {
         window.scrollTo(0, document.body.scrollHeight);

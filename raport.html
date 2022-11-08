@@ -4,12 +4,123 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Raport</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans"rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>  <!-- Legger til flere skrifttyper -->
+
+
+    <title>Raporten</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
+
+
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: black;
+    font-family:'Nunito';
+    font-weight: 300;
+    font-style: initial;
+    background-color:rgb(201, 224, 231);
+    
+    }
+/*  */
+
+/* Logoen sin style */
+img.logo{
+  height: 30px;
+  width: 250px;
+  color:inherit;
+}
+  
+/* Gjør om dispalyet slik, at noen knapper forsvinner når siden minimeres */
+.desktop{
+    display:none;
+}
+
+   @media (min-width: 1200px) {
+        .desktop{
+            display:initial;
+        }
+    }
+
+/* css til designet og opsett av header */
+header {
+    display: grid; 
+    grid-template-columns: auto 1fr auto;
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+header a{
+  color: inherit;
+}
+
+header nav a {
+  text-decoration: none;
+  padding:5px 20px;
+  opacity: none;
+}
+
+header nav.navn{
+margin-top: 5px;
+  text-align: center;
+}
+
+header nav.right{
+    margin-top: 5px;
+    text-align: right;
+    font-weight: 350;
+}
+/* Alle styles over ^går igjen på hver side slik at man kan navigere
+seg rundt hele tiden. */
+
+
+/* Style til seksjonene som fremviser gruppemedlemmene */
+section{
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+section h1{
+    font-family: 'Nunito';
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+section .content{
+width: 100%;
+height: 100vh;
+padding-top: 15vh;
+padding-bottom: 15vh;
+text-align: center;
+display: grid;
+grid-template-rows: min-content auto;
+animation:fadeIn 3s;
+
+}
+@keyframes fadeIn{
+    0%{opacity:0;}
+    100% {opacity:1;}
+}
+
+section a{
+    color: inherit;
+}
+
+
+  
+
+      
       .chartMenu {
         width: 100vw;
         height: 40px;
@@ -38,35 +149,70 @@
     </style>
   </head>
   <body>
+
+    <div>
+      <header style="background-color: rgba(255, 255, 255, 0.9)">
+        <a href="index.html" class="logo">
+          <img class="logo" src="logo.png" />
+        </a>
+        <nav class="navn desktop">
+          <a href="amadeus.html">Amadeus</a>
+          <a href="burak.html">Burak</a>
+          <a href="maria.html">Maria</a>
+          <a href="malin.html">Malin</a>
+          <a href="nicolai.html">Nicolai</a>
+          <a href="sindre.html">Sindre</a>
+        </nav>
+        <nav class="right">
+          <a href="survey.html">Survey</a>
+          <a href="kalender.html" class="desktop">Kalender</a>
+          <a href="YourPage.html" class="desktop">Your Page</a>
+        </nav>
+      </header>
+    </div>
     <div class="chartMenu">
      
     </div>
     <div class="chartCard">
       <div class="chartBox">
-        <canvas id="myChart"></canvas>
-        <button onclick="fetchData()">Fetch now</button>
+        <canvas id="myChart" width="500px" height="400px"></canvas>
+        
       </div>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
 
-        //Fetch Block
-        async function fetchData() {
-            const url = 'https://bacit.info/hwr/20221107214150-921aa5523102d574daba74b0c29c974f.json';
-            const response = await fetch (url)
-            //wait until the request has been completed)
-            const datapoints = await response.json();
-            console.log(datapoints);
-            return datapoints;
-        }
+     
+     let urls = [
+          'https://bacit.info/hwr/20221108173955-80aae3b6170bec8e991b3c25387e7472.json',
+          'https://bacit.info/hwr/20221108174401-7a69992fba469aed0de67319199ead62.json',
+          'https://bacit.info/hwr/20221108174648-ed8fda68c71cef0bd4b37b7d6aec7832.json',
+          'https://bacit.info/hwr/20221108175041-484731356d18df6bf8577cb04b338a27.json',
+          'https://bacit.info/hwr/20221108175253-f15c4ff00536fc505068e94e227ca024.json',
+          'https://bacit.info/hwr/20221108175455-ac91985e9f8d8a40314b994ea1c10e09.json',
+          
+      ]
 
-        const selv = [];
-        fetchData().then(datapoints => {
-            selv = [fys, hjem, kul, message, morg, sama, selv, time, trxid, user_email, user_name] ;
-            
-        });
+      // gets multiple inputs and returns a single promise
+      Promise.all
+      //.map() creates a new array from the input
+      (urls.map(url => 
+      //fetches a resource from the external network
+      fetch(url)
+            //getting a response as json
+      .then(response => response.json()))).then((dataJSON) => {
+          
+          let burak = dataJSON[0]; 
+          let amadeus = dataJSON[1]; 
+          let maria = dataJSON[2];          //getting data from jsonS to variables
+          let nicolai = dataJSON[3];
+          let sindre = dataJSON[4];
+          let malin = dataJSON[5];
+          console.log(burak);
 
-
+      
+        
+      
             
             
 
@@ -74,15 +220,15 @@
     const data = {
       labels: ['Selvstendig', 'Mornengful', 'Hjemmekontor', 'Samarbeid', 'Kul', 'Fysisk'],
       datasets: [{
-        label: 'Burak',
-        data: [32, 12, 6, 9, 12, 3, 9],
+        label: `${burak.user_name}`,
+        data: [burak.selv, burak.morg, burak.hjem, burak.sama, burak.kul, burak.fys],
         backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
+          'rgba(253, 255, 44, 0.2)',
+          'rgba(253, 255, 44, 0.2)',
+          'rgba(253, 255, 44, 0.2)',
+          'rgba(253, 255, 44, 0.2)',
+          'rgba(253, 255, 44, 0.2)',
+          'rgba(253, 255, 44, 0.2)',
           'rgba(0, 0, 0, 0.2)'
         ],
         borderColor: [
@@ -96,15 +242,15 @@
         ],
         borderWidth: 1
       } , {
-        label: 'Amadeus',
-        data: [18, 12, 6, 9, 12, 3, 9],
+        label: `${amadeus.user_name}`,
+        data: [amadeus.selv, amadeus.morg, amadeus.hjem, amadeus.sama, amadeus.kul, amadeus.fys],
         backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
+          'rgba(253, 143, 220, 0.65)',
+          'rgba(253, 143, 220, 0.65)',
+          'rgba(253, 143, 220, 0.65)',
+          'rgba(253, 143, 220, 0.65)',
+          'rgba(253, 143, 220, 0.65)',
+          'rgba(253, 143, 220, 0.65)',
           'rgba(0, 0, 0, 0.2)'
         ],
         borderColor: [
@@ -118,15 +264,15 @@
         ],
         borderWidth: 1
       } , {
-        label: 'Sindre',
-        data: [18, 12, 6, 9, 12, 3, 9],
+        label: `${sindre.user_name}`,
+        data: [sindre.selv, sindre.morg, sindre.hjem, sindre.sama, sindre.kul, sindre.fys],
         backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
           'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
           'rgba(0, 0, 0, 0.2)'
         ],
         borderColor: [
@@ -140,16 +286,16 @@
         ],
         borderWidth: 1
       } , {
-        label: 'Maria',
-        data: [32, 12, 6, 9, 12, 3, 9],
+        label: `${maria.user_name}`,
+        data: [maria.selv, maria.morg, maria.hjem, maria.sama, maria.kul, maria.fys],
         backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-          'rgba(0, 0, 0, 0.2)'
+          'rgba(227, 20, 20, 0.65)',
+          'rgba(227, 20, 20, 0.65)',
+          'rgba(227, 20, 20, 0.65)',
+          'rgba(227, 20, 20, 0.65)',
+          'rgba(227, 20, 20, 0.65)',
+          'rgba(227, 20, 20, 0.65)',
+          'rgba(227, 20, 20, 0.65)'
         ],
         borderColor: [
           'rgba(255, 26, 104, 1)',
@@ -162,16 +308,16 @@
         ],
         borderWidth: 1
       }, {
-        label: 'Nicolai',
-        data: [32, 12, 6, 9, 12, 3, 9],
+        label: `${nicolai.user_name}`,
+        data: [nicolai.selv, nicolai.morg, nicolai.hjem, nicolai.sama, nicolai.kul, nicolai.fys],
         backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-          'rgba(0, 0, 0, 0.2)'
+          'rgba(0, 248, 248, 0.86)',
+          'rgba(0, 248, 248, 0.86)',
+          'rgba(0, 248, 248, 0.86)',
+          'rgba(0, 248, 248, 0.86)',
+          'rgba(0, 248, 248, 0.86)',
+          'rgba(0, 248, 248, 0.86)',
+          'rgba(0, 248, 248, 0.86)',
         ],
         borderColor: [
           'rgba(255, 26, 104, 2)',
@@ -184,15 +330,15 @@
         ],
         borderWidth: 1
       }, {
-        label: 'Malin',
-        data: [32, 12, 6, 9, 12, 3, 9],
+        label: `${malin.user_name}`,
+        data: [malin.selv, malin.morg, malin.hjem, malin.sama, malin.kul, malin.fys],
         backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
+          'rgba(132, 139, 248, 0.79)',
+          'rgba(132, 139, 248, 0.79)',
+          'rgba(132, 139, 248, 0.79)',
+          'rgba(132, 139, 248, 0.79)',
+          'rgba(132, 139, 248, 0.79)',
+          'rgba(132, 139, 248, 0.79)',
           'rgba(0, 0, 0, 0.2)'
         ],
         borderColor: [
@@ -217,9 +363,9 @@
           y: {
             beginAtZero: true,
             min: 0,
-            max: 100,
+            max: 100, //max value in the chart. Cant see 100 though ?????
             ticks: {
-                stepSize: 1
+                stepSize: 1   //stepsize in chart. 
             }
             
           }
@@ -239,7 +385,7 @@
     
 
   
-
+});
        
 
     
