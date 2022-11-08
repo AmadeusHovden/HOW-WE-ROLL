@@ -1,217 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form</title>
-  <link rel="stylesheet" href="survey.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-</head>
-<body>
-
-  <div class="body">
-
-
-<form  class="form" />
-    <header>Student Survey Form</header>
-				
-    <fieldset>
-      <section>
-        
-        <label class="input">
-                        <label  for="name" id="name-label" >Name: </label>
-                        <input id="name" type="text" name="name"  placeholder="Enter your name" required> </input>
-                        <label for="email" id="email-label" class="input">Email: </label>
-      <input id="email" type="email" name="email"  placeholder=" Enter your Email" required> </input>
-        </label>
-                   
-        
-      
-             
-      </section>
-                <section>
-                       </section>
-                      </fieldset>
-
-    <fieldset></fieldset>
-
-
-    <fieldset>
-      <section>
-          <label class="label">Choose some!</label>
-          <div class="row">
-              <span>
-              <div class="col col-4">
-                  <label class="radio">
-                      <input type="radio" name="radio"  /><i></i>Click me</label>
-                  </span> <span>
-                  <label class="radio">
-                      <input type="radio" name="radio" /><i></i>Wooow</label>
-                  </span>
-                  <label class="radio">
-                      <input type="radio" name="radio" /><i></i>Ahaaaa</label>
-                      <label class="radio">
-                          <input type="radio" name="radio" /><i></i>Yehuu</label>
-                          <label class="radio">
-                              <input type="radio" name="radio" /><i></i>Batman</label>
-
-              </div>
-              <div class="col col-4">
-                  
-              </div>
-              <div class="col col-4">
-                  <label class="radio">
-                      <input type="radio" name="radio" /><i></i>Working</label>
-                  <label class="radio">
-                      <input type="radio" name="radio" /><i></i>Hohooh</label>
-                  <label class="radio">
-                      <input type="radio" name="radio" /><i></i>Ronaldo</label>
-                      <label class="radio">
-                          <input type="radio" name="radio" /><i></i>Christian Bale</label>
-                          <label class="radio">
-                              <input type="radio" name="radio" /><i></i>Ahao</label>
-              </div>
-          </div>
-      </section>
-      
-  </fieldset>
-
-  <fieldset>
-    <section>
-        <label class="label">Check some boxes!</label>
-        <div class="row">
-            <div class="col col-4">
-                <label class="checkbox">
-                    <input type="checkbox" name="checkbox"  /><i></i>hoho</label>
-                <label class="checkbox">
-                    <input type="checkbox" name="checkbox" /><i></i>Yehuu</label>
-                <label class="checkbox">
-                    <input type="checkbox" name="checkbox" /><i></i>Undeaaad</label>
-
-                    <label class="checkbox">
-                        <input type="checkbox" name="checkbox" /><i></i>Texas</label>
-                    
-            </div>
-            <div class="col col-4">
-               
-                
-            </div>
-            <div class="col col-4">
-                <label class="checkbox">
-                    <input type="checkbox" name="checkbox" /><i></i>Social</label>
-                <label class="checkbox">
-                    <input type="checkbox" name="checkbox" /><i></i>Outgoing</label>
-                <label class="checkbox">
-                    <input type="checkbox" name="checkbox" /><i></i>Perfect</label>
-                    <label class="checkbox">
-                        <input type="checkbox" name="checkbox" /><i></i>Wow</label>
-            </div>
-        </div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <title>Form a Story</title>
+  </head>
+  <body>
+    <section id="top">
+      <img src="https://i.ibb.co/YXNJhRB/logo.png" alt="Form A Story Logo" />
     </section>
-    
-</fieldset>
 
-<fieldset>					
-  <section>
-      <label class="label">You can type your thoughts: </label>
-      <label class="textarea">
-          <textarea rows="3"></textarea>
-      </label>
-    
-  </section>
-  
-  
-  
-  
-</fieldset>
+    <section id="main">
+      <h1>Fyll ut sjemaet</h1>
+      <hr />
+      <!--Add your form below:-->
+      <form action="story.html" method="GET" class="form">
+        <label for="name">Your Name:</label>
+        <input
+          type="text"
+          name="user_name"
+          id="name"
+          placeholder="Your Name*"
+          class=""
+        />
+        <br />
 
-<fieldset>
-  <section>
-      <label class="label">Give some stars</label>
-      <div class="rating">
-          <input type="radio" name="stars-rating" id="stars-rating-5" />
-          <label for="stars-rating-5"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-4" />
-          <label for="stars-rating-4"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-3" />
-          <label for="stars-rating-3"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-2" />
-          <label for="stars-rating-2"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-1" />
-          <label for="stars-rating-1"><i class="fa fa-star"></i></label>
-          Give Stars
+        <label for="surname">Your Surname:</label>
+        <input
+          type="text"
+          name="user_surname"
+          id="surname"
+          placeholder="Your Surname*"
+        />
+        <br />
+        <label for="email">Your email:</label>
+        <input
+          type="email"
+          name="user_email"
+          id="email"
+          placeholder="Your Email*"
+        />
+
+        <br />
+
+        <label for="selv">Selvstendig:</label>
+        <input
+          type="range"
+          name="selv"
+          id="selv"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+        <label for="morg">Mornengful:</label>
+        <input
+          type="range"
+          name="morg"
+          id="morg"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+        <label for="sama">Samarbeid:</label>
+        <input
+          type="range"
+          name="sama"
+          id="sama"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+        <label for="fys">Fysisk:</label>
+        <input
+          type="range"
+          name="fys"
+          id="fys"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+        <label for="hjem">Hjemmekontor</label>
+        <input
+          type="range"
+          name="hjem"
+          id="hjem"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+        <label for="Kul">Kul</label>
+        <input
+          type="range"
+          name="kul"
+          id="kul"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+
+        <textarea id="message" name="message" required rows="8" cols="51">
+You can write about ur opinions here</textarea
+        >
+        <br />
+
+        <input type="submit" value="Submit" />
+      </form>
+
+      <div class="results">
+        The results:<br />
+        <pre></pre>
       </div>
+    </section>
 
-      <div class="rating">
-          <input type="radio" name="stars-rating" id="stars-rating-5" />
-          <label for="stars-rating-5"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-4" />
-          <label for="stars-rating-4"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-3" />
-          <label for="stars-rating-3"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-2" />
-          <label for="stars-rating-2"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-1" />
-          <label for="stars-rating-1"><i class="fa fa-star"></i></label>
-          Give Stars
-          
-      </div>
-      <div class="rating">
-          <input type="radio" name="stars-rating" id="stars-rating-5" />
-          <label for="stars-rating-5"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-4" />
-          <label for="stars-rating-4"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-3" />
-          <label for="stars-rating-3"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-2" />
-          <label for="stars-rating-2"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-1" />
-          <label for="stars-rating-1"><i class="fa fa-star"></i></label>
-          Give Stars
-      </div>
-      <div class="rating">
-          <input type="radio" name="stars-rating" id="stars-rating-5" />
-          <label for="stars-rating-5"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-4" />
-          <label for="stars-rating-4"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-3" />
-          <label for="stars-rating-3"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-2" />
-          <label for="stars-rating-2"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-1" />
-          <label for="stars-rating-1"><i class="fa fa-star"></i></label>
-          Give Stars
-      </div>
-      <div class="rating">
-          <input type="radio" name="stars-rating" id="stars-rating-5" />
-          <label for="stars-rating-5"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-4" />
-          <label for="stars-rating-4"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-3" />
-          <label for="stars-rating-3"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-2" />
-          <label for="stars-rating-2"><i class="fa fa-star"></i></label>
-          <input type="radio" name="stars-rating" id="stars-rating-1" />
-          <label for="stars-rating-1"><i class="fa fa-star"></i></label>
-          Give Stars
-      </div>
-      
-     
-  </section>
-  </fieldset>
+    <script>
+      //Sjekker om skjemaet er fylt ut fra før og skriver ut en melding til div-elementet med ID "localstorage-tekst".
 
-  <footer>
-    <button type="submit" class="button">Submit</button>
-    <button type="reset"  class="button button-secondary">Reset</button>
-</footer>
-</form>
+      // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
+      // Example POST method implementation using fetch:
+      async function postData(url = "", data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache,only-if-cached
+          credentials: "same-origin", // include, *same-origin, omit
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer,*no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: JSON.stringify(data), // body data type must match"Content-Type"header
+        });
+        return response.json(); // parses JSON response into native JavaScriptobjects
+      }
 
+      function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const formJSON = Object.fromEntries(data.entries());
+        const results = document.querySelector(".results pre");
+        postData("https://bacit.info/", formJSON).then((data) => {
+          let trxid = JSON.stringify(data.trxid, null, 2).replace(/"/g, "");
+          let time = JSON.stringify(data.time, null, 2).replace(/"/g, "");
+          localStorage.setItem("trxid", trxid);
+          localStorage.setItem("time", time);
+          results.innerText = JSON.stringify(data, null, 2);
+          document.getElementById("form").reset();
+          ScrollDown();
+          return false;
+        });
+      }
+      const form = document.querySelector("form");
+      form.addEventListener("submit", handleSubmit);
+      // just an alert message for when users try to use the search bar
+      function OnlyAPlaceHolder() {
+        alert(
+          "this item doesn't have much functionality yet and is only a placeholder"
+        );
+      }
 
-
-
-
-  </div>
-  
-</body>
+      function ScrollDown() {
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+    </script>
+  </body>
 </html>
