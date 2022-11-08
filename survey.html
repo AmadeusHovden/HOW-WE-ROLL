@@ -1,165 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <!-- Legger til flere skrifttyper -->
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="survey.css" />
     <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- Linkes til index.css, slik at det blir mer oversiktlig -->
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="survey.css"/>
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design your Tesla</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Survey</title>
   </head>
   <body>
-    <div class="header" id="header">
-      <nav>
-        <img src="images/logo.png" class="logo" />
-        <ul>
-          <li><a href="#" id="models">Model S</a></li>
-          <li><a href="#" id="model3">Model 3</a></li>
-          <li><a href="#" id="modelx">Model X</a></li>
-          <li><a href="#" id="modely">Model Y</a></li>
-        </ul>
-        <!-- <a href="#" class="btn">Order Now</a> -->
-      </nav>
+    <section id="top">
+      <img src="https://i.ibb.co/YXNJhRB/logo.png" alt="logo" />
+    </section>
 
-      <div class="form">
+    <section id="main">
+      <h1>Fyll ut sjemaet</h1>
+      <hr />
+      <!--Add your form below:-->
+      <form action="story.html" method="GET" class="form">
+        <label for="name">Your Name:</label>
+        <input
+          type="text"
+          name="user_name"
+          id="name"
+          placeholder="Your Name*"
+          class=""
+        />
+        <br />
 
-        
+        <label for="surname">Your Surname:</label>
+        <input
+          type="text"
+          name="user_surname"
+          id="surname"
+          placeholder="Your Surname*"
+        />
+        <br />
+        <label for="email">Your email:</label>
+        <input
+          type="email"
+          name="user_email"
+          id="email"
+          placeholder="Your Email*"
+        />
 
-          <form id="survey-form">
-            <h1 id="title">Design and Order Your Tesla!</h1>
-            <p id="description"> Fill your details to complete your Dodge order
-          
-          </p>
-            
-            <label for="name" id="name-label">Name: </label>
-            <input id="name" type="text" name="name" placeholder="Enter your name" required> </input>
-          <br>
-          <label for="email" id="email-label">Email: </label>
-          <input id="email" type="email" name="email" placeholder=" Enter your Email" required> </input><br>
-          <br>
-          
-          
-          <label for="dropdown" id="dropdown"> <b>Select your model :</b></label>
-          <br>
-          <select id="dropdown">
-            <option value="Select your car">---Select your car---</option>
-            <option value="Dodge Challenger">Model S</option>
-            <option value="Dodge Charger">Model 3</option>
-            <option value="Dodge Durengo">Model X</option>
-            <option value="Dodge Dakota">Model Y</option>
-            
-          </select>
-          <br>
-          <br>
-          <label for="Car_color" id="Car_color"><b>Car color</b></label>
-          <br>
-          <input id="Car_color" type="radio" id="black" name="color" value="black">
-          <label for="Car_color">Black</label>
-          <br>
-          <input id="Car_color" type="radio" id="blue" name="color" value="blue">
-          <label for="Car_color">Blue</label>
-          <br>
-          <input for="Car_color" type="radio" id="red" name="color" value="red">
-          <label for="Car_color">Red</label>
-          <br>
-          <input for="Car_color" type="radio" id="grey" name="color" value="grey">
-          <label for="Car_color">Grey</label>
-                 
-          <br>
-          <label for="Add_Feature" id="Add_Feature">Add Feature</label>
-            <br>
-            <input id="Add_Feature" type="checkbox" id="Shaker hood" name="feature" value="Shaker hood">
-            <label for="Add_Feature">Autopilot</label>
-          <br>
-          
-           <input id="Add_Feature" type="checkbox" id="Scat Pack" name="feature" value="Scat Pack">
-            <label for="Add_Feature">Enhanced autopilot</label>
-          <br>
-           <input id="Add_Feature" type="checkbox" id="Dodge High Impact Paint (HIP)" name="feature" value="Dodge High Impact Paint (HIP)">
-            <label for="Add_Feature">Tilhenger</label>
-          <br>
-          <br>
-          <label for="textarea"><b>Additional Comments</b></label><br>
-          <textarea id="textarea" name="instruction" rows="5" columns="1" placeholder="Enter your comment here...">
-          </textarea>
-          <br>
-          <button type="submit" id="submit" class="submit-button">
-            <b> Place Order</b>
-                </button>
-          
-          
-          
-            </form>
-        
+        <br />
 
+        <label for="selv">Selvstendig:</label>
+        <input
+          type="range"
+          name="selv"
+          id="selv"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+        <label for="morg">Mornengful:</label>
+        <input
+          type="range"
+          name="morg"
+          id="morg"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+        <label for="sama">Samarbeid:</label>
+        <input
+          type="range"
+          name="sama"
+          id="sama"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+        <label for="fys">Fysisk:</label>
+        <input
+          type="range"
+          name="fys"
+          id="fys"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+        <label for="hjem">Hjemmekontor</label>
+        <input
+          type="range"
+          name="hjem"
+          id="hjem"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+        <label for="Kul">Kul</label>
+        <input
+          type="range"
+          name="kul"
+          id="kul"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <br />
+
+        <textarea id="message" name="message" required rows="8" cols="51">
+You can write about ur opinions here</textarea
+        >
+        <br />
+
+        <input type="submit" value="Submit" />
+      </form>
+
+      <div class="results">
+        The results:<br />
+        <pre></pre>
       </div>
-
-
-      
-
-      
-
-      <div class="info">
-
-        
-        <hr>
-        <br>
-        <br>
-        <br>
-
-        <div>
-          <h2>Time</h2>
-          <p>speed</p>
-        </div>
-        <div>
-          <h2>something</h2>
-          <p>something</p>
-        </div>
-        <div>
-          <h2>something</h2>
-          <p>something</p>
-        </div>
-        <div class="line"> </div>
-        <div>
-          <h2 id="model">Model S</h2>
-        </div>
-      </div>
-    </div>
+    </section>
 
     <script>
-      var header = document.getElementById("header");
-      var ms = document.getElementById("models");
-      var m3 = document.getElementById("model3");
-      var mx = document.getElementById("modelx");
-      var my = document.getElementById("modely");
-      var model = document.getElementById("model");
+      //Sjekker om skjemaet er fylt ut fra før og skriver ut en melding til div-elementet med ID "localstorage-tekst".
 
-      ms.onclick = function () {
-        header.style.backgroundImage = "url(images/image-1.png)"
-        model.innerHTML = "Model S";
+      // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
+      // Example POST method implementation using fetch:
+      async function postData(url = "", data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache,only-if-cached
+          credentials: "same-origin", // include, *same-origin, omit
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer,*no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: JSON.stringify(data), // body data type must match"Content-Type"header
+        });
+        return response.json(); // parses JSON response into native JavaScriptobjects
       }
-      m3.onclick = function () {
-        header.style.backgroundImage = "url(images/image-2.png)"
-        model.innerHTML = "Model 3";
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const formJSON = Object.fromEntries(data.entries());
+        const results = document.querySelector(".results pre");
+        postData("https://bacit.info/", formJSON).then((data) => {
+          let trxid = JSON.stringify(data.trxid, null, 2).replace(/"/g, "");
+          let time = JSON.stringify(data.time, null, 2).replace(/"/g, "");
+          localStorage.setItem("trxid", trxid);
+          localStorage.setItem("time", time);
+          results.innerText = JSON.stringify(data, null, 2);
+          document.getElementById("form").reset();
+          ScrollDown();
+          return false;
+        });
       }
-      mx.onclick = function () {
-        header.style.backgroundImage = "url(images/image-3.png)"
-        model.innerHTML = "Model X";
+      const form = document.querySelector("form");
+      form.addEventListener("submit", handleSubmit);
+      // just an alert message for when users try to use the search bar
+      function OnlyAPlaceHolder() {
+        alert(
+          "this item doesn't have much functionality yet and is only a placeholder"
+        );
       }
-      my.onclick = function () {
-        header.style.backgroundImage = "url(images/image-4.png)"
-        model.innerHTML = "Model Y";
+
+      function ScrollDown() {
+        window.scrollTo(0, document.body.scrollHeight);
       }
-      
-      
     </script>
   </body>
 </html>
