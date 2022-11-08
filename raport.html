@@ -44,29 +44,45 @@
     <div class="chartCard">
       <div class="chartBox">
         <canvas id="myChart"></canvas>
-        <button onclick="fetchData()">Fetch now</button>
+        
       </div>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
 
-        //Fetch Block
+     /*   //Fetch Block
         async function fetchData() {
             const url = 'https://bacit.info/hwr/20221107214150-921aa5523102d574daba74b0c29c974f.json';
             const response = await fetch (url)
             //wait until the request has been completed)
             const datapoints = await response.json();
             console.log(datapoints);
+            var obj = {
+    key1: "val1",
+    key2: "value2"
+        };
+
+
             return datapoints;
+
         }
 
-        const selv = [];
-        fetchData().then(datapoints => {
-            selv = [fys, hjem, kul, message, morg, sama, selv, time, trxid, user_email, user_name] ;
-            
-        });
+     */
 
 
+     let urls = [
+          'https://bacit.info/hwr/20221107214150-921aa5523102d574daba74b0c29c974f.json',
+          
+      ]
+
+      Promise.all(urls.map(url => fetch(url).then(response => response.json()))).then((data1) => {
+          //Henter ut data for hver enkelt person i en egen variabel/array for å gjøre oversikten i koden bedre. Hadde det vært et dynamisk system så hadde ikke dette vært nødvendig/mulig
+          let burak = data1[0]; 
+          console.log(burak.selv);
+
+      
+        
+      
             
             
 
@@ -75,7 +91,7 @@
       labels: ['Selvstendig', 'Mornengful', 'Hjemmekontor', 'Samarbeid', 'Kul', 'Fysisk'],
       datasets: [{
         label: 'Burak',
-        data: [32, 12, 6, 9, 12, 3, 9],
+        data: [burak.selv, burak.morg, 6, 9, 12, 3, 9],
         backgroundColor: [
           'rgba(255, 26, 104, 0.2)',
           'rgba(54, 162, 235, 0.2)',
@@ -239,7 +255,7 @@
     
 
   
-
+});
        
 
     
