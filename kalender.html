@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <!-- Legger til en ny skrifttype -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"rel="stylesheet"/>
 
-    <link rel="stylesheet" href="kalender.css" />
+    <!-- Legger til en "symbol font" brukt til knappene i selvevaluering-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
+    <!-- Linkes til index.css, slik at det blir mer oversiktlig og får samme stil som alle sidene.-->
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="notes.css" />
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KALENDER</title>
+    <title>AMADEUS</title>
   </head>
 
+  <!-- HTML for headeren som brukes til hver html side -->
   <body>
     <div class="boks">
       <header style="background-color: rgba(255, 255, 255, 0.9)">
@@ -39,11 +35,16 @@
         <nav class="right">
           <a href="survey.html">Survey</a>
           <a href="kalender.html" class="desktop">Kalender</a>
-          <a href="YourPage.html" class="desktop">Your Page</a>
+          <a href="raport.html" class="desktop">Rapport</a>
         </nav>
       </header>
     </div>
-    <br />
+    <br/>
+
+    <!-- Denne siden er mye kopi og ikke gjort etter vår kunnskapsstige. Vi har lært mye av å skrive den og skjønner en del.
+         Hovedformålet var å legge til noe som kunne være nyttig i gruppearbeidet og prosjektet. Vi syns kalender og huskelapper
+        er en genial funksjon og ha i et slikt prosjekt da vi kan skrive opp frister og møter slik at det blir husket. 
+      Og vi kan dele kjappe ideer og gjørmål ved å bruke post-it lappene.  -->
 
     <!-- Kalender. Koden er inspirert av og hentet fra: https://github.com/portexe/VanillaCalendar/blob/master/index.html -->
     <div id="kalender">
@@ -254,6 +255,145 @@
       </script>
     </div>
 
+      <style>
+/* Style til kalenderen */
+/* KALENDER. Koden er inspiret av of hentet fra: https://github.com/portexe/VanillaCalendar/blob/master/style.css */
+#kalender  {
+  display: flex;
+  margin-top: 55px;
+  justify-content: center;
+  background-color:rgb(201, 224, 231);
+}
+
+  button {
+    width: 75px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  #headerkalender {
+    padding: 10px;
+    color: #63264A;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+  }
+  #headerkalender button {
+    background-color:#63264A;
+  }
+  #container {
+    width: 770px;
+  }
+  #weekdays {
+    width: 100%;
+    display: flex;
+    color: #3D0B37;
+    justify-content: space-between;
+  }
+  #weekdays div {
+    width: 100px;
+    padding: 10px;
+  }
+  #calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .day:hover {
+    background-color: #e8faed;
+  }
+  
+  .day + #currentDay {
+    background-color:#e8f4fa;
+  }
+  .event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: #63264A;
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+  }
+
+  .padding {
+    cursor: default !important;
+    background-color: #FFFCFF !important;
+    box-shadow: none !important;
+  }
+  #newEventModal, #deleteEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 350px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: absolute;
+    font-family: sans-serif;
+  }
+  #eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px rgb(201, 224, 231);;
+  }
+  #eventTitleInput.error {
+    border: 2px solid red;
+  }
+  #cancelButton, #deleteButton {
+    background-color: #d36c6c;
+  }
+  #saveButton, #closeButton {
+    background-color: #92a1d1;
+  }
+  #eventText {
+    font-size: 14px;
+  }
+  #modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+  }
+</style>
+
+
+
+
+  <!-- POST_IT LAPPER  -->
+ <!-- Her begynner post-it lappene. Inspirert og hentet fra: https://www.youtube.com/watch?v=_B-54mvPup4&t=365s -->
+
     <section>
       <br />
       <br />
@@ -317,6 +457,8 @@
           </form>
         </div>
       </div>
+
+      <!-- Javascript til post-it lappene -->
       <script>
         var container2 = document.getElementsByClassName("container2")[0];
         var container3 = document.getElementsByClassName("container3")[0];
@@ -414,5 +556,71 @@
         }
       </script>
     </section>
+
+
+    <!-- Stylesheet til post-it lappene -->
+    <style>
+      *{
+       padding: 0;
+       margin: 0;
+     }
+     body{
+       background-color:rgb(201, 224, 231);
+       font-family: "Nunito";
+     }
+   
+     .main-container{
+       width: 95%;
+       margin: auto;
+       margin-top: 5%;
+     }
+   
+     .container1{
+       margin-left: 5%;
+     }
+   
+     .container2{
+       display: flex;
+       justify-content: flex-start;
+       flex-wrap: wrap;
+       margin-top: 20px;
+       margin-left: 5%;
+     }
+   
+     .container3{
+      display: none;
+      position: absolute;
+      top: 90%;
+      left: 40%;
+      margin-top: 300px;
+     }
+   
+     textarea{
+       box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+       outline: none;
+       border: none;
+       width: 275px;
+       height: 275px;
+       padding: 40px 25px 25px 25px;
+     }
+   
+     svg{
+       color: gray;
+     }
+   
+     #check-icon{
+       position: absolute;
+       right: 17%;
+       top: 4%;
+     }
+   
+     #x-icon{
+       position: absolute;
+       right: 5%;
+       top: 4%;
+     }
+   
+     </style>
+   
   </body>
 </html>
