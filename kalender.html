@@ -123,6 +123,7 @@
         function openModal(date) {
           clicked = date;
 
+          /* Gjør at det kommer opp en skriverute når man klikker på en dag i kalenderen. */
           const eventForDay = events.find((e) => e.date === clicked);
 
           if (eventForDay) {
@@ -175,6 +176,7 @@
               daySquare.innerText = i - paddingDays;
               const eventForDay = events.find((e) => e.date === dayString);
 
+              /* Gjør at ruten med dagens dato blir fremhevet. */
               if (i - paddingDays === day && nav === 0) {
                 daySquare.id = "currentDay";
               }
@@ -478,6 +480,7 @@
           typeNote();
         });
 
+        /* Gjør at det kommer opp en skrivelapp når man klikker på knappen */ 
         checkIcon.addEventListener("click", function () {
           createNote();
         });
