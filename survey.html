@@ -54,50 +54,42 @@ på egen html side hos medlemmene. -->
     <!-- Her starter surveyen -->
 
     <section id="main">
-      <h1>Fyll ut sjemaet</h1>
-      <hr />
-      
+      <br>
+      <h1>Vil du bidra i Prosjektet?</h1>
+      <p style="font-weight:200">Fyll ut cv'en og vi tar kontakt</p>
+      <br>
+      <hr style="color:gray">
+      <br>
+
+      <!-- Her fyller man inn navn og email -->
       <form action="story.html" method="GET" class="form">
-        <label for="name">Your Name:</label>
+
+       <div class="infoboks">
+        <label for="name"></label>
         <input
           type="text"
           name="user_name"
           id="name"
-          placeholder="Your Name*"
-          class=""
+          placeholder="Fullt Navn"
         />
-        <br />
-
-        <label for="surname">Your Surname:</label>
-        <input
-          type="text"
-          name="user_surname"
-          id="surname"
-          placeholder="Your Surname*"
-        />
-        <br />
-        <label for="email">Your email:</label>
+        <br/>
+        <label for="email"></label>
         <input
           type="email"
           name="user_email"
           id="email"
-          placeholder="Your Email*"
+          placeholder="Email"
         />
+        <br/>
+       </div>
+       <br>
+       <hr style="color:gray">
+       <br>
+       <h3 style="font-weight:400">Velg Hvordan Du Liker å Jobbe</h3>
 
-        <br />
-
-        <label for="selv">Selvstendig:</label>
-        <input
-          type="range"
-          name="selv"
-          id="selv"
-          min="0"
-          max="100"
-          value="50"
-          class="slider"
-        />
-        <br />
-        <label for="morg">Mornengful:</label>
+       <!-- Dette er de ulike sliderne, som også stemmer med rapporten -->
+       <br/>
+        <label for="morg">Earlybird</label>
         <input
           type="range"
           name="morg"
@@ -107,8 +99,25 @@ på egen html side hos medlemmene. -->
           value="50"
           class="slider"
         />
-        <br />
-        <label for="sama">Samarbeid:</label>
+        <label for="late">Night Owl</label>
+
+       <br>
+       <br>
+        <label for="grup">Gruppearbeid</label>
+        <input
+          type="range"
+          name="selv"
+          id="selv"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <label for="selv">Selvstending</label>
+
+        <br>
+        <br>
+        <label for="sama">Mye optatt</label>
         <input
           type="range"
           name="sama"
@@ -118,8 +127,11 @@ på egen html side hos medlemmene. -->
           value="50"
           class="slider"
         />
-        <br />
-        <label for="fys">Fysisk:</label>
+        <label for="ledig">Mye ledig</label>
+
+        <br>
+        <br>
+        <label for="fys">Fysisk Arbeid</label>
         <input
           type="range"
           name="fys"
@@ -129,7 +141,10 @@ på egen html side hos medlemmene. -->
           value="50"
           class="slider"
         />
-        <br />
+        <label for="kontor">Kontor Arbeid</label>
+
+        <br>
+        <br>
         <label for="hjem">Hjemmekontor:</label>
         <input
           type="range"
@@ -140,8 +155,11 @@ på egen html side hos medlemmene. -->
           value="50"
           class="slider"
         />
-        <br />
-        <label for="Kul">Kul:</label>
+        <label for="kontor">Kontor:</label>
+
+        <br>
+        <br>
+        <label for="Kul">Snakker</label>
         <input
           type="range"
           name="kul"
@@ -151,68 +169,149 @@ på egen html side hos medlemmene. -->
           value="50"
           class="slider"
         />
-        <br />
+        <label for="skriv">Skriver</label>
+        <br>
+        <br>
+        <hr>
+        <br>
 
-        <textarea id="message" name="message" required rows="8" cols="51">
-You can write about ur opinions here</textarea
-        >
-        <br />
+        <h3 style="font-weight:400">Personlighetstrekk</h3>
+<!-- dette er for å velge ut ulike personlighetstrekk, som ikke kommer med i rapporten -->
+        <div class="trekk">
+          <input 
+           type="checkbox"
+           name="struk"
+           id="struk"
+           class="cbox"
+           />
+           <label for="cbox">Struktrurert</label>
+           <br>
 
-        <input type="submit" value="Submit" />
+           <input 
+           type="checkbox"
+           name="demo"
+           id="demo"
+           class="cbox"
+           />
+           <label for="cbox">Demokratisk</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="omt"
+           id="omt"
+           class="cbox"
+           />
+           <label for="cbox">Omtenksom</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="mot"
+           id="mot"
+           class="cbox"
+           />
+           <label for="cbox">Motivert</label>
+           <br>
+        </div>
+
+        <div class="trekk">
+          <input 
+           type="checkbox"
+           name="tål"
+           id="tål"
+           class="cbox"
+           />
+           <label for="cbox">Tålmodig</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="sos"
+           id="sos"
+           class="cbox"
+           />
+           <label for="cbox">Sosial</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="uta"
+           id="uta"
+           class="cbox"
+           />
+           <label for="cbox">Utadvendt</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="ina"
+           id="ina"
+           class="cbox"
+           />
+           <label for="cbox">Innadvendt</label>
+           <br>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3 style="font-weight:400">Hva kan du bidra med i prosjektet?</h3>
+        <br>
+
+        <!-- her kan man skrive inne hva man har eller kan bidra med i prosjektet -->
+
+
+        <textarea id="message" name="message" required rows="8" cols="51"></textarea>
+        <br>
+        <br>
+
+        <input type="submit" value="Submit">
       </form>
 
+      <br>
+      <hr>
+      <br>
+      <!-- Her fremvises resultatet som er henter fra bacit.info -->
       <div class="results">
-        The results:<br />
+        Resultat:<br />
         <pre></pre>
       </div>
     </section>
 
 
-
-
     <!-- css stylesheet for surveyen -->
     <style>
-
+/* Ordner styles i selve boksen på survey */
         #main {
-          background-color: rgba(255,255,255,0.8);
+          background-color: rgba(245, 245, 245, 0.8);
           text-align: center;
-          height: 80vh;
+          height: 150vh;
           border-radius: 15px;
           margin: 7% 19%;
           overflow: auto;
         }
+
+        
+
+        textarea {
+
+          box-sizing: border-box;
+          align-items: center;
+          font:'Nunito';
+        }
+
+    
         
        
-        label {
-          width: 240px;
-          display: inline-block;
-          text-align: right;
-        }
+        
+        
+        
       
-        textarea {
-          display: inline-block;
-          align-items: right;
-        }
       
-        .slider {
-          -webkit-appearance: none;
-          width: 10%;
-          height: 5px;
-          background: #2A9D8F;
-          outline: none;
-          opacity: 0.7;
-          -webkit-transition: .2s;
-          transition: opacity .2s;
-      }
-      
-      .slider:hover {
-          opacity: 1;
-      }
-      
-      header, section  {
-        display: flexbox;
-      }
         </style>
+
 
 
 <!-- Javascript for surveyen, kobler opp mot bacit.info og fremviser informasjonen nedenfor i results: -->
