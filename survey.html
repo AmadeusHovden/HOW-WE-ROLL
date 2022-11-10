@@ -1,129 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Legger til en ny skrifttype -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"rel="stylesheet"/>
+
+    <!-- Legger til en "symbol font" brukt til knappene i selvevaluering-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
+    <!-- Linkes til index.css, slik at det blir mer oversiktlig og får samme stil som alle sidene.-->
+    <link rel="stylesheet" href="index.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Survey</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AMADEUS</title>
   </head>
 
+  <!-- HTML for headeren som brukes til hver html side -->
   <body>
-    <h1>STUDENT SURVEY FORM</h1>
+    <div class="boks">
+      <header style="background-color: rgba(255, 255, 255, 0.9)">
+        <a href="index.html" class="logo">
+          <img class="logo" src="Images/logo.png" />
+        </a>
+        <nav class="navn desktop">
+          <a href="amadeus.html">Amadeus</a>
+          <a href="burak.html">Burak</a>
+          <a href="maria.html">Maria</a>
+          <a href="malin.html">Malin</a>
+          <a href="nicolai.html">Nicolai</a>
+          <a href="sindre.html">Sindre</a>
+        </nav>
+        <nav class="right">
+          <a href="survey.html">Survey</a>
+          <a href="kalender.html" class="desktop">Kalender</a>
+          <a href="raport.html" class="desktop">Rapport</a>
+        </nav>
+      </header>
+    </div>
 
-    <form class="form">
-      <h1>Submit the form</h1>
+    <!-- Vi valgte å ha en survey med mer enn kun arbeidsprefernaser som "early bird osv", 
+    da vi tenkte at i et prosjekt kan det være viktig å vite litt mer om medlemmene. 
+  Derfor har vi starten der man skriver inn navn og mail, så en del der man velger 6 arbeidspreferanser.
+Så velger man noen personlighetstrekk som passer personen. Det er også en "teksboks", og her vil vi at medlemmene 
+skriver hva de har bidratt med i prosjektet. For de utenfra gruppen som tar surveyen har vi tenkt at det kan virke som
+en "cv" der de som vil bli med i gruppen kan fylle ut surveyen slik vi kan sjekke personalia og bestemme om vi 
+vil ha med personen på teamet. For de blir tekstboksen "hva kan du bidra med i gruppen og prosjektarbeidet".
+Det er kun en del av surveyen som blir vist i rapporten, dette er arbeidpreferanser. De andre tingen blit statisk vist
+på en egen html side hos medlemmene. -->
 
-      <fieldset>
-        <legend><span class="number">1</span> Your basic info</legend>
 
-        <input type="text" name="user_name" id="name" placeholder="Your Name*" />
+    <!-- Her starter surveyen -->
+
+    <section id="main">
+      <br>
+      <h1>Vil du bidra i Prosjektet?</h1>
+      <p style="font-weight:200">Fyll ut cv'en og vi tar kontakt</p>
+      <br>
+      <hr style="color:gray">
+      <br>
+
+      <!-- Her fyller man inn navn og email -->
+      <form action="story.html" method="GET" class="form">
+
+       <div class="infoboks">
+        <label for="name"></label>
         <input
           type="text"
-          name="user_surname"
-          id="surname"
-          placeholder="Your Surname*"
+          name="user_name"
+          id="name"
+          placeholder="Fullt navn"
         />
+        <br/>
+        <label for="email"></label>
         <input
           type="email"
           name="user_email"
           id="email"
-          placeholder="Your Email*"
+          placeholder="Email"
         />
-      </fieldset>
+        <br/>
+       </div>
+       <br>
+       <hr style="color:gray">
+       <br>
+       <h3 style="font-weight:400">Velg Hvordan Du Liker å Jobbe</h3>
 
-      <fieldset class="profile">
-        <legend><span class="number">2</span> Your Profile</legend>
+       <!-- Dette er de ulike sliderne, som også stemmer med rapporten -->
+       <br/>
+        <label for="morg">Earlybird</label>
+        <input
+          type="range"
+          name="morg"
+          id="morg"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <label for="late">Night Owl</label>
 
-        <label for="job">Your Goal</label>
-        <select name="user_job" id="job">
-          <optgroup label="Web">
-            <option value="web_designer">Web Designer</option>
-            <option value="frontend_developer">Front-End Developer</option>
-            <option value="php_developer">Back-End Developer</option>
-            <option value="python_developer">Python Developer</option>
-            <option value="rails_developer">PHP Developer</option>
-            <option value="wordpress_developer">WordPress Developer</option>
-          </optgroup>
-          <optgroup label="Mobile">
-            <option value="android_developer">Android Developer</option>
-            <option value="ios_developer">iOS Developer</option>
-            <option value="mobile_designer">Mobile Designer</option>
-          </optgroup>
-          <optgroup label="Business">
-            <option value="business_owner">Business Owner</option>
-            <option value="freelancer">Freelancer</option>
-          </optgroup>
-        </select>
+       <br>
+       <br>
+        <label for="grup">Gruppearbeid</label>
+        <input
+          type="range"
+          name="selv"
+          id="selv"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <label for="selv">Selvstending</label>
 
-        <label for="Your Class"></label>
+        <br>
+        <br>
+        <label for="sama">Mye opptatt</label>
         <input
-          type="checkbox"
-          name="user_class"
-          id="freshman"
-          value="class_freshman"
+          type="range"
+          name="sama"
+          id="sama"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
         />
-        <label class="light" for="freshman">Freshman</label><br />
+        <label for="ledig">Mye ledig</label>
+
+        <br>
+        <br>
+        <label for="fys">Fysisk arbeid</label>
         <input
-          type="checkbox"
-          name="user_class"
-          id="sophomores"
-          value="class_sophomores"
+          type="range"
+          name="fys"
+          id="fys"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
         />
-        <label class="light" for="sophomores">Sophomores</label><br />
+        <label for="kontor">Kontorarbeid</label>
+
+        <br>
+        <br>
+        <label for="hjem">Hjemmekontor:</label>
         <input
-          type="checkbox"
-          name="user_class"
-          id="juniors"
-          value="class_juniors"
+          type="range"
+          name="hjem"
+          id="hjem"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
         />
-        <label class="light" for="juniors">Juniors</label><br />
+        <label for="kontor">Kontor:</label>
+
+        <br>
+        <br>
+        <label for="Kul">Snakker</label>
+        <input
+          type="range"
+          name="kul"
+          id="kul"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <label for="skriv">Skriver</label>
+        <br>
+        <br>
+        <hr>
+        <br>
+
+        <h3 style="font-weight:400">Personlighetstrekk</h3>
+<!-- dette er for å velge ut ulike personlighetstrekk, som ikke kommer med i rapporten -->
+        <div class="trekk">
+          <input 
+           type="checkbox"
+           name="struk"
+           id="struk"
+           class="cbox"
+           />
+           <label for="cbox">Struktrurert</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="demo"
+           id="demo"
+           class="cbox"
+           />
+           <label for="cbox">Demokratisk</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="omt"
+           id="omt"
+           class="cbox"
+           />
+           <label for="cbox">Omtenksom</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="mot"
+           id="mot"
+           class="cbox"
+           />
+           <label for="cbox">Motivert</label>
+           <br>
+        </div>
+
+        <div class="trekk">
+          <input 
+           type="checkbox"
+           name="tål"
+           id="tål"
+           class="cbox"
+           />
+           <label for="cbox">Tålmodig</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="sos"
+           id="sos"
+           class="cbox"
+           />
+           <label for="cbox">Sosial</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="uta"
+           id="uta"
+           class="cbox"
+           />
+           <label for="cbox">Utadvendt</label>
+           <br>
+
+           <input 
+           type="checkbox"
+           name="ina"
+           id="ina"
+           class="cbox"
+           />
+           <label for="cbox">Innadvendt</label>
+           <br>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3 style="font-weight:400">Hva kan du bidra med i prosjektet?</h3>
+        <br>
+
+        <!-- her kan man skrive inn hva man har eller kan bidra med i prosjektet -->
+
+
+        <textarea id="message" name="message" required rows="8" cols="51"></textarea>
+        <br>
+        <br>
+
+        <input type="submit" value="Send inn">
+      </form>
+
+      <br>
+      <hr>
+      <br>
+      <!-- Her fremvises resultatet som er henter fra bacit.info -->
+      <div class="results">
+        Resultat:<br />
+        <pre></pre>
+      </div>
+    </section>
+
+
+    <!-- css stylesheet for surveyen -->
+    <style>
+/* Ordner styles i selve boksen på survey */
+        #main {
+          background-color: rgba(245, 245, 245, 0.8);
+          text-align: center;
+          height: 150vh;
+          border-radius: 15px;
+          margin: 7% 19%;
+          overflow: auto;
+        }
+
         
-        <input
-          type="checkbox"
-          name="user_class"
-          id="senior"
-          value="class_senior"
-        />
-        <label class="light" for="senior">Senior</label>
-      </fieldset>
 
-      <button type="submit">Submit</button>
-    </form>
+        textarea {
 
+          box-sizing: border-box;
+          align-items: center;
+          font:'Nunito';
+        }
+
+      
+        </style>
 
 
+
+<!-- Javascript for surveyen, kobler opp mot bacit.info og fremviser informasjonen nedenfor i results: -->
     <script>
-
-        /* connected form to js */
-        const formEl = document.querySelector(".form");
-
-        /* addEventListener wakens upon submitting */
-      formEl.addEventListener("submit", (event) => {
-
-        /* prevents refreshing */
-        event.preventDefault();
-
-        /* passing formEl, we have the object */
-        /* makes it easier to work with the object */
-        const formData = new FormData(formEl);
-
-        /* JS form data */
-        const data = Object.fromEntries(formData);
-        console.log(data);
-
-
-        /* fetch data method to POST */
-        fetch("https://bacit.info/", {
+      
+      async function postData(url = "", data = {}) { //sending the data
+        const response = await fetch(url, {
           method: "POST", 
+          mode: "cors", //cors by defeault
+          cache: "no-cache", // no-cache by default
+          credentials: "same-origin", //same origin by default
           headers: {
-            "Content-Type": "application/json", /* the format i want to have */
-          },
-          body: JSON.stringify(data), /* the actual data i want to send */
-        }).then((res) => res.json()); /* the response i want */
-      });
-    </script>
+            "Content-Type": "application/json",}, //JSON
+          redirect: "follow", 
+          referrerPolicy: "no-referrer", 
+          body: JSON.stringify(data), 
+        });
+        return response.json(); // RETURNS JSON
+      }
 
+      function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const formJSON = Object.fromEntries(data.entries());
+        const results = document.querySelector(".results pre");
+        postData("https://bacit.info/", formJSON).then((data) => {
+          let trxid = JSON.stringify(data.trxid, null, 2).replace(/"/g, "");
+          let time = JSON.stringify(data.time, null, 2).replace(/"/g, "");
+          localStorage.setItem("trxid", trxid);
+          localStorage.setItem("time", time);
+          results.innerText = JSON.stringify(data, null, 2);
+          document.getElementById("form").reset();
+          ScrollDown();
+          return false;
+        });
+      }
+      const form = document.querySelector("form");
+      form.addEventListener("submit", handleSubmit);
+      
+      
+
+      function ScrollDown() {
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+    </script>
 
   </body>
 </html>
