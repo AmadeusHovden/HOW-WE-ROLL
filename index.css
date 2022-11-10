@@ -1,7 +1,7 @@
-/* Noe av denne css filen går igjen på alle html sidene. dette for å få et likt design og for å beholde "headeren". 
+/* Noe av denne css filen går igjen på alle html sidene. Dette for å få et likt design og for å beholde "headeren". 
 Section styles går igjen på alle "navn.html" sidene. 
-Inspirasjon til designet er tesla, men css'en bruker kun simple funkjsoner for stilen den har. Det har opstått noen 
-problemer med designet og utseende. dette har gruppen teste ut og løst sammen i gruppe timene samt brukt hjelpe midler som: stackoverflow 
+Inspirasjon til designet er Tesla, men css'en bruker kun simple funkjsoner for stilen den har. Det har opstått noen 
+problemer med designet og utseende. dette har gruppen teste ut og løst sammen i gruppetimene samt brukt hjelpemidler som: stackoverflow 
 og w3schools til hjelp.*/
 
 
@@ -30,7 +30,7 @@ img.logo{
   color:inherit;
 }
   
-/* Gjør om dispalyet slik, at noen knapper forsvinner når siden minimeres */
+/* Gjør om dispalyet slik at noen knapper forsvinner når siden minimeres */
 .desktop{
     display:none;
 }
@@ -131,7 +131,7 @@ img.pb{
 
 
 /* Knappene i ulike seksjonene, "media" endrer knappene når siden minskes
-gir knappene en viss stil og ulike farge, knappene blir plassert over hvernadre npr siden minskes */
+gir knappene en viss stil og ulike farge, knappene blir plassert over hvernadre når siden minskes */
 section .buttons a{
     display: block;
     background-color: lightgrey;
@@ -169,9 +169,9 @@ section .buttons{
 
 
 
-/* Styles til info som vises på egen profil html på første section. bestemmer hvor dette skal plasseres
-og skal også "fade in" her vil ulike arbeidsmteoder og ting slik som "early bird" og personilghestrekke vises, 
-mtp hva en har svart på surveyen. */
+/* Styles til info som vises på egen profil html på første section. Bestemmer hvor dette skal plasseres
+og skal også "fade in". Her vil ulike arbeidsmteoder og ting slik som "early bird" og personilghestrekke vises, 
+mtp. hva en har svart på surveyen. */
 .info {
     width: 100%;
     padding: 0 7%;
@@ -215,10 +215,10 @@ mtp hva en har svart på surveyen. */
     width:40%;
     
   }
-/*  Bestmmer hvor mye av secytion bilde skal være, og hvor stort bilde blir*/
+/*  Bestmmer hvor mye av section bildet skal være, og hvor stort bildet blir*/
   section.image-section {
     width: 60%;
-    height: 600px;
+    height: 660px;
 
   }
 
@@ -242,7 +242,7 @@ section .knapper{
     row-gap: 10px;
     margin:0 60px;
 }
-/* legger knappene inder hverandre når siden minskes */
+/* legger knappene under hverandre når siden minskes */
 @media (min-width: 768px) {
   section .knapper{
       max-width: 640px;
