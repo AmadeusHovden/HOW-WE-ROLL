@@ -213,14 +213,12 @@ mtp. hva en har svart på surveyen. */
 /* bestemmer hvor mye av section teksten skal være. */
   aside.text-section{
     width:40%;
-    margin-top: -50px;
     
   }
 /*  Bestmmer hvor mye av section bildet skal være, og hvor stort bildet blir*/
   section.image-section {
     width: 60%;
-    height: 600px;
-    margin-top: -50px;
+    height: 660px;
 
   }
 
