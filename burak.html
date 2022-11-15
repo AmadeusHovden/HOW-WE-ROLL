@@ -68,24 +68,25 @@
       </div>
 
       <div class="info">
-        <div>
-          <h2 id="early"></h2>
-          <p>asd</p>
+        <div class="info">
+          <div>
+            <h2 id="early">Early Bird</h2>
+            <p id="fys"></p>
+          </div>
+          <div>
+            <h2 id="sama">Gruppearbeid</h2>
+            <p id="hjem">Motivert</p>
+          </div>
+          <div>
+            <h2 id="selv">Fysisk Arbeid</h2>
+            <p id="snakk">Sosial</p>
+          </div>
+          <div class="line"></div>
+          <div>
+            <h2 id="kul">Medlem</h2>
+            <p id="rask">Stilling</p>
+          </div>
         </div>
-        <div>
-          <h2 id="fys"></h2>
-          <p>qwewqe</p>
-        </div>
-        <div>
-          <h2 id="sama"></h2>
-          <p>Sosial</p>
-        </div>
-        <div class="line"></div>
-        <div>
-          <h2 id="hjem"></h2>
-          <p>qweqwe</p>
-        </div>
-      </div>
     </section>
 
     <section>
@@ -111,60 +112,11 @@
           <!-- https://developers.google.com/fonts/docs/material_symbols
               *hjelp til fonts og radio button -->
 
-          <div class="evaluering">
-            <p>Oppmøte</p>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_unchecked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-          </div>
+         <p id="checkboxes">
 
-          <div class="evaluering">
-            <p>Arbeidsmoral</p>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_unchecked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-          </div>
+         </p>
 
-          <div class="evaluering">
-            <p>HowWeRoll Arbeid</p>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined"
-              >radio_button_unchecked</span
-            >
-          </div>
-
-          <div class="evaluering">
-            <p>Flaggoppgave Arbeid</p>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_unchecked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined"
-              >radio_button_unchecked</span
-            >
-            <span class="material-symbols-outlined"
-              >radio_button_unchecked</span
-            >
-          </div>
-
-          <div class="evaluering">
-            <p>Programmeringsforståelse</p>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined"
-              >radio_button_unchecked</span
-            >
-            <span class="material-symbols-outlined"
-              >radio_button_unchecked</span
-            >
-          </div>
+          
         </aside>
 
         <section
@@ -178,7 +130,7 @@
   <script>
 
 let urls = [
-          'https://bacit.info/hwr/20221115132535-c404cc06ecce2dc2bc4c0c290ce7e129.json',
+          'https://bacit.info/hwr/20221115144359-b4a5a525a39fa131d500b2b55ebd2340.json',
          
           
       ]
@@ -194,30 +146,25 @@ let urls = [
           
           let burak = dataJSON[0]; 
          
-          document.getElementById("early").innerHTML = "Early Bird<" + burak.early + ">";
-          document.getElementById("fys").innerHTML ="Fysisk Arbeid<" + burak.fys + ">";
+          document.getElementById("early").innerHTML = "Early Bird<" + burak.early + ">";    
+          document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + burak.fys + ">";   
           document.getElementById("sama").innerHTML = "Samarbeid<" + burak.sama + ">";
           document.getElementById("hjem").innerHTML = "Hjemmekontor<" + burak.hjem + ">";
           document.getElementById("selv").innerHTML = "Selvstendig<" + burak.selv + ">";
           document.getElementById("snakk").innerHTML = "Snakker<" + burak.snakk + ">";
-         
-       
-          
+          document.getElementById("rask").innerHTML = "Rask<" + burak.rask + ">";
+          document.getElementById("kul").innerHTML = "Kul<" + burak.kul + ">";
+
+          const checkbox = [burak.struk, burak.demo, burak.omt, burak.mot, burak.tål, burak.sos, burak.uta, burak.ina];
+           const reduced = checkbox.filter(x => x !== undefined);
+          console.log(reduced);
+
+          document.getElementById("checkboxes").innerHTML = reduced ;
+
+          document.getElementById("message").innerHTML = burak.message ;
+
+
         
-
-          
-          
-      
-
-          document.getElementById("fys").innerHTML = burak.fys;
-          
-       
-
-        document.getElementById("message").innerHTML = burak.message ;
-
-    
-    ;
-
 
   });
   </script>
