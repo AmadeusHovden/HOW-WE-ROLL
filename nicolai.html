@@ -65,21 +65,21 @@
         <div class="info">
 
             <div>
-              <h2 style="color:white;">Night Owl</h2>
-              <p style="color:white;">Strukturert</p>
+              <h2 style="color:white;" id="early">Night Owl</h2>
+              <p style="color:white;" id="fys">Strukturert</p>
             </div>
             <div>
-              <h2 style="color:white;">Selvstendig</h2>
-              <p style="color:white;">Motivert</p>
+              <h2 style="color:white;" id="sama">Selvstendig</h2>
+              <p style="color:white;" id="hjem">Motivert</p>
             </div>
             <div>
-              <h2 style="color:white;">Fysisk Arbeid</h2>
-              <p style="color:white;">Sosial</p>
+              <h2 style="color:white;" id="selv">Fysisk Arbeid</h2>
+              <p style="color:white;" id="snakk">Sosial</p>
             </div>
             <div class="line" style="background-color:white;"> </div>
             <div>
-              <h2 style="color:white;" id="model">Medlem</h2>
-              <p style="color:white;">Stilling</p>
+              <h2 style="color:white;" id="kul">Medlem</h2>
+              <p style="color:white;" id="rask">Stilling</p>
             </div>
           </div>
   
@@ -95,7 +95,7 @@
                 <h1>Prosjekt bidrag</h1>
                  
                 <div style="width:300px;">
-                    <p>Nicolai har bidratt i prosjektarbeidet hele veien.Han møter alltid opp til timer, 
+                    <p id="message">Nicolai har bidratt i prosjektarbeidet hele veien.Han møter alltid opp til timer, 
                         men ikke alltid helt tidsnok. Oppfører seg respektfull 
                       og er ikke redd for å komme med nye ideer. Ikke alltid verdens mest positive,
                        men jobber med saken. Gruppearbeid er noe jeg er blitt mer glad i gjennom semesteret.
@@ -110,50 +110,10 @@
                 <!-- https://developers.google.com/fonts/docs/material_symbols
                 *hjelp til fonts og radio button -->
     
-                <div class="evaluering">
-                  <p>Oppmøte</p>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_unchecked</span>
-                </div>
-    
-                <div class="evaluering">
-                  <p>Arbeidsmoral</p>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_unchecked</span>
-                  <span class="material-symbols-outlined">radio_button_unchecked</span>
-                </div>
-    
-                <div class="evaluering">
-                  <p>HowWeRoll Arbeid</p>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_unchecked</span>
-                </div>
-    
-                <div class="evaluering">
-                  <p>Flaggoppgave Arbeid</p>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                </div>
-    
-                <div class="evaluering">
-                  <p>Programmeringsforståelse</p>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_unchecked</span>
-                </div>
+                <p id="checkboxes">
+
+                </p>
+       
     
               </aside>
               
@@ -164,6 +124,46 @@
     
 
   </body>
+  <script>
+  let urls = [
+          'https://bacit.info/hwr/20221115144359-b4a5a525a39fa131d500b2b55ebd2340.json',
+         
+          
+      ]
+
+      // gets multiple inputs and returns a single promise
+      Promise.all
+      //.map() creates a new array from the input
+      (urls.map(url => 
+      //fetches a resource from the external network
+      fetch(url)
+            //getting a response as json
+      .then(response => response.json()))).then((dataJSON) => {
+          
+          let nicolai = dataJSON[0]; 
+         
+          document.getElementById("early").innerHTML = "Early Bird<" + nicolai.early + ">";    
+          document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + nicolai.fys + ">";   
+          document.getElementById("sama").innerHTML = "Samarbeid<" + nicolai.sama + ">";
+          document.getElementById("hjem").innerHTML = "Hjemmekontor<" + nicolai.hjem + ">";
+          document.getElementById("selv").innerHTML = "Selvstendig<" + nicolai.selv + ">";
+          document.getElementById("snakk").innerHTML = "Snakker<" + nicolai.snakk + ">";
+          document.getElementById("rask").innerHTML = "Rask<" + nicolai.rask + ">";
+          document.getElementById("kul").innerHTML = "Kul<" + nicolai.kul + ">";
+
+          const checkbox = [nicolai.struk, nicolai.demo, nicolai.omt, nicolai.mot, nicolai.tål, nicolai.sos, nicolai.uta, nicolai.ina];
+           const reduced = checkbox.filter(x => x !== undefined);
+          console.log(reduced);
+
+          document.getElementById("checkboxes").innerHTML = reduced ;
+
+          document.getElementById("message").innerHTML = nicolai.message ;
+
+
+        
+
+  });
+  </script>
 </html>
 <!-- 
 Resultat:
