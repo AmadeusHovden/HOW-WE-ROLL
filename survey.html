@@ -14,7 +14,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AMADEUS</title>
+    <title>Survey</title>
+
+    <style>
+      
+
+      .sliderDiv label{
+       width: 100%;
+       
+       position: relative;
+       text-align: left;
+      }
+
+      .slider {
+       text-align: left;
+      }
+    </style>
   </head>
 
   <!-- HTML for headeren som brukes til hver html side -->
@@ -62,7 +77,7 @@ på en egen html side hos medlemmene. -->
       <br>
 
       <!-- Her fyller man inn navn og email -->
-      <form action="story.html" method="GET" class="form">
+      <form class="form">
 
        <div class="infoboks">
         <label for="name"></label>
@@ -85,104 +100,56 @@ på en egen html side hos medlemmene. -->
        <br>
        <hr style="color:gray">
        <br>
-       <h3 style="font-weight:400">Velg Hvordan Du Liker å Jobbe</h3>
+       <h3 style="font-weight:400">Velg Hvordan Du Liker å Jobbe: </h3>
 
        <!-- Dette er de ulike sliderne, som også stemmer med rapporten -->
        <br/>
-        <label for="morg">Night Owl</label>
-        <input
-          type="range"
-          name="morg"
-          id="morg"
-          min="0"
-          max="100"
-          value="50"
-          class="slider"
-        />
-        <label for="late">Early Bird</label>
-
-       <br>
-       <br>
-        <label for="grup">Selvstendig</label>
-        <input
-          type="range"
-          name="selv"
-          id="selv"
-          min="0"
-          max="100"
-          value="50"
-          class="slider"
-        />
-        <label for="selv">Gruppearbeid</label>
-
+       <div class="sliderDiv">
+        <label for="morg">Early Bird: </label>
+        <input type="range" name="early" id="early" min="0" max="100" value="50" class="slider"/>
+       
+        
         <br>
+        <label for="grup">Selvstendig: </label>
+        <input type="range" name="selv" id="selv" min="0" max="100" value="50" class="slider"/>
+        
         <br>
-        <label for="sama">Mye optatt</label>
-        <input
-          type="range"
-          name="sama"
-          id="sama"
-          min="0"
-          max="100"
-          value="50"
-          class="slider"
-        />
-        <label for="ledig">Mye ledig </label>
+        <label for="sama">Samarbeid: </label>
+        <input type="range" name="sama" id="sama" min="0" max="100" value="50" class="slider"/>
+        
+        <br>
+        <label for="fys">Fysisk Arbeid: </label>
+        <input type="range" name="fys" id="fys" min="0" max="100" value="50" class="slider"/>
+        
+        <br>
+        <label for="hjem">Hjemmekontor: </label>
+        <input type="range" name="hjem" id="hjem" min="0" max="100" value="50" class="slider"/>
+       
+        <br>
+        <label for="Kul">Snakker:  </label>
+        <input type="range" name="snakk" id="snakk" min="0" max="100" value="50" class="slider" />
 
         <br>
-        <br>
-        <label for="fys">Kontorarbeid</label>
-        <input
-          type="range"
-          name="fys"
-          id="fys"
-          min="0"
-          max="100"
-          value="50"
-          class="slider"
-        />
-        <label for="kontor">Fysisk Arbeid</label>
+        <label for="sama">Kul: </label>
+        <input type="range" name="kul" id="kul" min="0" max="100" value="50" class="slider"/>
 
         <br>
-        <br>
-        <label for="hjem">Kontor:</label>
-        <input
-          type="range"
-          name="hjem"
-          id="hjem"
-          min="0"
-          max="100"
-          value="50"
-          class="slider"
-        />
-        <label for="kontor">Hjemmekontor:</label>
-
-        <br>
-        <br>
-        <label for="Kul">Skriver</label>
-        <input
-          type="range"
-          name="kul"
-          id="kul"
-          min="0"
-          max="100"
-          value="50"
-          class="slider"
-        />
-        <label for="skriv">Snakker</label>
-        <br>
+        <label for="sama">Rask: </label>
+        <input type="range" name="rask" id="rask" min="0" max="100" value="50" class="slider"/>
+      </div>
         <br>
         <hr>
         <br>
 
-        <h3 style="font-weight:400">Personlighetstrekk</h3>
+        <h3 style="font-weight:400">Personlighetstrekk: </h3>
 <!-- dette er for å velge ut ulike personlighetstrekk, som ikke kommer med i rapporten -->
         <div class="trekk">
           <input 
            type="checkbox"
            name="struk"
            id="struk"
-           class="cbox"
+           class="cbox" 
+           value="Struktrurert"
            />
            <label for="cbox">Struktrurert</label>
            <br>
@@ -192,6 +159,7 @@ på en egen html side hos medlemmene. -->
            name="demo"
            id="demo"
            class="cbox"
+           value="Demokratisk"
            />
            <label for="cbox">Demokratisk</label>
            <br>
@@ -201,6 +169,7 @@ på en egen html side hos medlemmene. -->
            name="omt"
            id="omt"
            class="cbox"
+           value="Omtenksom"
            />
            <label for="cbox">Omtenksom</label>
            <br>
@@ -210,6 +179,7 @@ på en egen html side hos medlemmene. -->
            name="mot"
            id="mot"
            class="cbox"
+           value="Motivert"
            />
            <label for="cbox">Motivert</label>
            <br>
@@ -221,6 +191,7 @@ på en egen html side hos medlemmene. -->
            name="tål"
            id="tål"
            class="cbox"
+           value="Tålmodig"
            />
            <label for="cbox">Tålmodig</label>
            <br>
@@ -230,6 +201,7 @@ på en egen html side hos medlemmene. -->
            name="sos"
            id="sos"
            class="cbox"
+           value="Sosial"
            />
            <label for="cbox">Sosial</label>
            <br>
@@ -239,6 +211,7 @@ på en egen html side hos medlemmene. -->
            name="uta"
            id="uta"
            class="cbox"
+           value="Utadvendt"
            />
            <label for="cbox">Utadvendt</label>
            <br>
@@ -248,6 +221,7 @@ på en egen html side hos medlemmene. -->
            name="ina"
            id="ina"
            class="cbox"
+           value="Innadvendt"
            />
            <label for="cbox">Innadvendt</label>
            <br>
@@ -257,7 +231,7 @@ på en egen html side hos medlemmene. -->
         <hr>
         <br>
 
-        <h3 style="font-weight:400">Hva kan du bidra med i prosjektet?</h3>
+        <h3 style="font-weight:400">Hva kan du bidra med i prosjektet?: </h3>
         <br>
 
         <!-- her kan man skrive inn hva man har eller kan bidra med i prosjektet -->
