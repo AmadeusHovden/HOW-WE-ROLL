@@ -69,7 +69,7 @@
 
       <div class="info">
         <div>
-          <h2>Early Bird</h2>
+          <h2 id="early">`${burak.user_name}`</h2>
           <p>Strukturert</p>
         </div>
         <div>
@@ -98,7 +98,7 @@
           <h1>Prosjekt bidrag</h1>
 
           <div style="width: 450px">
-            <p>
+            <p id="message">
               Her kommer teksten fra surveyen
             </p>
           </div>
@@ -174,4 +174,40 @@
       </div>
     </section>
   </body>
+
+  <script>
+
+let urls = [
+          'https://bacit.info/hwr/20221115132535-c404cc06ecce2dc2bc4c0c290ce7e129.json',
+         
+          
+      ]
+
+      // gets multiple inputs and returns a single promise
+      Promise.all
+      //.map() creates a new array from the input
+      (urls.map(url => 
+      //fetches a resource from the external network
+      fetch(url)
+            //getting a response as json
+      .then(response => response.json()))).then((dataJSON) => {
+          
+          let burak = dataJSON[0]; 
+         
+          if(burak.selv < 50) {
+          document.getElementById("early").innerHTML = burak.selv;
+          
+        } else {
+          document.getElementById("early").innerHTML = "Not so good" ;
+        };
+
+
+        document.getElementById("message").innerHTML = burak.message ;
+
+    
+    ;
+
+
+  });
+  </script>
 </html>
