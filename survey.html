@@ -15,6 +15,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey</title>
+
+    <style>
+      
+
+      .sliderDiv label{
+       width: 100%;
+       
+       position: relative;
+       text-align: left;
+      }
+
+      .slider {
+       text-align: left;
+      }
+    </style>
   </head>
 
   <!-- HTML for headeren som brukes til hver html side -->
@@ -89,79 +104,31 @@ på en egen html side hos medlemmene. -->
 
        <!-- Dette er de ulike sliderne, som også stemmer med rapporten -->
        <br/>
-        <label for="morg">Night Owl: </label>
-        <input
-          type="range"
-          name="morg"
-          id="morg"
-          min="-100"
-          max="100"
-          value="0"
-          class="slider"
-        />
+       <div class="sliderDiv">
+        <label for="morg">Early Bird: </label>
+        <input type="range" name="morg" id="morg" min="0" max="100" value="50" class="slider"/>
        
-
-       <br>
-       <br>
-        <label for="grup">Selvstendig: </label>
-        <input
-          type="range"
-          name="selv"
-          id="selv"
-          min="-100"
-          max="100"
-          value="0"
-          class="slider"
-        />
+        
+        <br>
+        <label for="grup">Gruppearbeid: </label>
+        <input type="range" name="selv" id="selv" min="0" max="100" value="50" class="slider"/>
         
         <br>
         <label for="sama">Mye optatt: </label>
-        <input
-          type="range"
-          name="sama"
-          id="sama"
-          min="-100"
-          max="100"
-          value="0"
-          class="slider"
-        />
+        <input type="range" name="sama" id="sama" min="0" max="100" value="50" class="slider"/>
         
         <br>
-        <label for="fys">Kontorarbeid: </label>
-        <input
-          type="range"
-          name="fys"
-          id="fys"
-          min="-100"
-          max="100"
-          value="0"
-          class="slider"
-        />
+        <label for="fys">Fysisk Arbeid: </label>
+        <input type="range" name="fys" id="fys" min="0" max="100" value="50" class="slider"/>
         
         <br>
         <label for="hjem">Kontor: </label>
-        <input
-          type="range"
-          name="hjem"
-          id="hjem"
-          min="-100"
-          max="100"
-          value="0"
-          class="slider"
-        />
+        <input type="range" name="hjem" id="hjem" min="0" max="100" value="50" class="slider"/>
        
         <br>
-        <label for="Kul">Skriver: </label>
-        <input
-          type="range"
-          name="kul"
-          id="kul"
-          min="-100"
-          max="100"
-          value="0"
-          class="slider"
-        />
-       
+        <label for="Kul">Snakker: </label>
+        <input type="range" name="kul" id="kul" min="0" max="100" value="50" class="slider" />
+      </div>
         <br>
         <hr>
         <br>
