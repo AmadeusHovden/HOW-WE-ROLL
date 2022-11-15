@@ -14,7 +14,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AMADEUS</title>
+    <title>Burak Seymen</title>
   </head>
 
   <!-- HTML for headeren som brukes til hver html side -->
@@ -69,21 +69,21 @@
 
       <div class="info">
         <div>
-          <h2 id="early">`${burak.user_name}`</h2>
-          <p>Strukturert</p>
+          <h2 id="early"></h2>
+          <p>asd</p>
         </div>
         <div>
-          <h2>Fysisk arbeid</h2>
-          <p>Utadvendt</p>
+          <h2 id="fys"></h2>
+          <p>qwewqe</p>
         </div>
         <div>
-          <h2>Travel mann</h2>
+          <h2 id="sama"></h2>
           <p>Sosial</p>
         </div>
         <div class="line"></div>
         <div>
-          <h2 id="model">Medlem</h2>
-          <p>Stilling</p>
+          <h2 id="hjem"></h2>
+          <p>qweqwe</p>
         </div>
       </div>
     </section>
@@ -194,13 +194,24 @@ let urls = [
           
           let burak = dataJSON[0]; 
          
-          if(burak.selv < 50) {
-          document.getElementById("early").innerHTML = burak.selv;
+          document.getElementById("early").innerHTML = "Early Bird<" + burak.early + ">";
+          document.getElementById("fys").innerHTML ="Fysisk Arbeid<" + burak.fys + ">";
+          document.getElementById("sama").innerHTML = "Samarbeid<" + burak.sama + ">";
+          document.getElementById("hjem").innerHTML = "Hjemmekontor<" + burak.hjem + ">";
+          document.getElementById("selv").innerHTML = "Selvstendig<" + burak.selv + ">";
+          document.getElementById("snakk").innerHTML = "Snakker<" + burak.snakk + ">";
+         
+       
           
-        } else {
-          document.getElementById("early").innerHTML = "Not so good" ;
-        };
+        
 
+          
+          
+      
+
+          document.getElementById("fys").innerHTML = burak.fys;
+          
+       
 
         document.getElementById("message").innerHTML = burak.message ;
 
