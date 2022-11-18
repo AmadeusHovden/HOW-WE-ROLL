@@ -78,6 +78,8 @@ header nav.right{
     margin-top: 5px;
     text-align: right;
 }
+
+
 /* Alle styles over ^går igjen på hver side slik at man kan navigere
 seg rundt hele tiden. */
 
@@ -218,7 +220,7 @@ mtp. hva en har svart på surveyen. */
 /*  Bestmmer hvor mye av section bildet skal være, og hvor stort bildet blir*/
   section.image-section {
     width: 60%;
-    height: 660px;
+    height: 600px;
 
   }
 

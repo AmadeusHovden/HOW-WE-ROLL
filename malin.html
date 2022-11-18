@@ -14,7 +14,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AMADEUS</title>
+    <title>MALIN</title>
   </head>
 
   <!-- HTML for headeren som brukes til hver html side -->
@@ -43,28 +43,24 @@
     <!-- Brukt denne linke til hjelp:
     *https://stackoverflow.com/questions/58649239/position-image-in-left-side-of-screen-aside -->
 
-    <section style="background-image: url('Images/jada.jpg')">
+    <section style="background-image: url('Images/Beach.jpg')">
       <div class="content">
-        <h1>Maria Flaa</h1>
-        <p>Gruppas sørlending</p>
+        <h1>Malin Marcussen</h1>
+        <p>Gruppas snegle</p>
 
         <div class="knapper">
+          
           <a 
-          href="https://www.linkedin.com/in/maria-flaa-296a641b5/" 
-          target=_blank
-          >LinkedIn</a
-          >
-          <a 
-          href="https://www.facebook.com/maria.flaa97/"
+          href="https://www.facebook.com/malin.marcussen.94/"
           target=_blank>
           Facebook</a
           >
-          <a href="mailto:marief17@uia.no">Send Mail</a>
-          <a href="https://github.com/mafl97" target=_blank>Github</a>
+          <a href="mailto:malinm@uia.no">Send Mail</a>
+          <a href="https://github.com/maliima1" target=_blank>Github</a>
         </div>
 
         <div>
-          <img class="pb" src="Images/tesst.png" />
+          <img class="pb" src="Images/Cat.jpg" />
         </div>
       </div>
     
@@ -98,15 +94,11 @@
           <div class="tekst">
             <aside class="text-section" style="margin-bottom: -20px;">
 
-              <h3>Maria Sitt</h3>
+              <h3>Malin Sitt</h3>
               <h1>Prosjekt bidrag</h1>
                
               <div style="width:300px;">
-                <p id="message">Maria har bidratt i prosjektarbeidet og vært til stede i alle grupptimene. 
-                  Hun hadde ingen forkunnskaper innen programmering fra før, men lærer stadig mer 
-                  og synes det er spennende. Glad i nye utfordringer, selv om det til tider kan 
-                  oppleves stressende. Ellers har hun en god arbedsmoral, er positiv og 
-                  fornøyd med gruppearbeidet. 
+                <p id="message">Malin har.... 
               </p>
               </div>
   
@@ -121,6 +113,7 @@
               <p id="checkboxes">
 
               </p>
+     
   
             </aside>
             
@@ -149,24 +142,24 @@
                 //getting a response as json
           .then(response => response.json()))).then((dataJSON) => {
               
-              let maria = dataJSON[0]; 
+              let malin = dataJSON[0]; 
              
-              document.getElementById("early").innerHTML = "Early Bird<" + maria.early + ">";    
-              document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + maria.fys + ">";   
-              document.getElementById("sama").innerHTML = "Samarbeid<" + maria.sama + ">";
-              document.getElementById("hjem").innerHTML = "Hjemmekontor<" + maria.hjem + ">";
-              document.getElementById("selv").innerHTML = "Selvstendig<" + maria.selv + ">";
-              document.getElementById("snakk").innerHTML = "Snakker<" + maria.snakk + ">";
-              document.getElementById("rask").innerHTML = "Rask<" + maria.rask + ">";
-              document.getElementById("kul").innerHTML = "Kul<" + maria.kul + ">";
+              document.getElementById("early").innerHTML = "Early Bird<" + malin.early + ">";    
+              document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + malin.fys + ">";   
+              document.getElementById("sama").innerHTML = "Samarbeid<" + malin.sama + ">";
+              document.getElementById("hjem").innerHTML = "Hjemmekontor<" + malin.hjem + ">";
+              document.getElementById("selv").innerHTML = "Selvstendig<" + malin.selv + ">";
+              document.getElementById("snakk").innerHTML = "Snakker<" + malin.snakk + ">";
+              document.getElementById("rask").innerHTML = "Rask<" + malin.rask + ">";
+              document.getElementById("kul").innerHTML = "Kul<" + malin.kul + ">";
     
-              const checkbox = [maria.struk, maria.demo, maria.omt, maria.mot, maria.tål, maria.sos, maria.uta, maria.ina];
+              const checkbox = [malin.struk, malin.demo, malin.omt, malin.mot, malin.tål, malin.sos, malin.uta, malin.ina];
                const reduced = checkbox.filter(x => x !== undefined);
               console.log(reduced);
     
               document.getElementById("checkboxes").innerHTML = reduced ;
     
-              document.getElementById("message").innerHTML = maria.message ;
+              document.getElementById("message").innerHTML = malin.message ;
     
     
             
@@ -174,26 +167,3 @@
       });
       </script>
 </html>
-
-<!-- Dette er svarene og id fra surveyen, som stemmer med informasjonen på amadeus sin html side.
-: 
-{
-    "user_name": "Maria Flaa",
-  "user_email": "maria-flaa@hotmail.com",
-  "morg": "3",
-  "selv": "50",
-  "sama": "36",
-  "fys": "88",
-  "hjem": "50",
-  "kul": "94",
-  "struk": "on",
-  "demo": "on",
-  "omt": "on",
-  "mot": "on",
-  "sos": "on",
-  "message": "Maria har bidratt i prosjektarbeidet og vært til stede i alle grupptimene. 
-  Hun hadde ingen forkunnskaper innen programmering fra før, men lærer stadig mer og synes 
-  det er spennende. Glad i nye utfordringer, selv om det til tider kan oppleves stressende.
-  Ellers har hun en god arbedsmoral, er positiv og fornøyd med gruppearbeidet.", 
-  "trxid": "27d94b219a3413b943a9647865edf46d", "time": "20221110105624"
-}
