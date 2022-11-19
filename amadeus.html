@@ -156,7 +156,7 @@
   <script>
 
     let urls = [
-              'https://bacit.info/hwr/20221115144359-b4a5a525a39fa131d500b2b55ebd2340.json',
+              'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json',
              
               
           ]
@@ -173,13 +173,13 @@
               let amadeus = dataJSON[0]; 
              
               document.getElementById("early").innerHTML = "Early Bird<" + amadeus.early + ">";    
-              document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + amadeus.fys + ">";   
-              document.getElementById("sama").innerHTML = "Samarbeid<" + amadeus.sama + ">";
-              document.getElementById("hjem").innerHTML = "Hjemmekontor<" + amadeus.hjem + ">";
-              document.getElementById("selv").innerHTML = "Selvstendig<" + amadeus.selv + ">";
-              document.getElementById("snakk").innerHTML = "Snakker<" + amadeus.snakk + ">";
-              document.getElementById("rask").innerHTML = "Rask<" + amadeus.rask + ">";
-              document.getElementById("kul").innerHTML = "Kul<" + amadeus.kul + ">";
+          document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + amadeus.fys + ">";   
+          document.getElementById("sama").innerHTML = "Samarbeid<" + amadeus.sama + ">";
+          document.getElementById("hjem").innerHTML = "Hjemmekontor<" + amadeus.hjem + ">";
+          document.getElementById("selv").innerHTML = "Fleksibel<" + amadeus.fleks + ">";
+          document.getElementById("snakk").innerHTML = "Snakker<" + amadeus.snakk + ">";
+          document.getElementById("rask").innerHTML = "Rask Tenker<" + amadeus.rask + ">";
+          document.getElementById("kul").innerHTML = "Leder<" + amadeus.led + ">";
     
               const checkbox = [amadeus.struk, amadeus.demo, amadeus.omt, amadeus.mot, amadeus.tål, amadeus.sos, amadeus.uta, amadeus.ina];
                const reduced = checkbox.filter(x => x !== undefined);

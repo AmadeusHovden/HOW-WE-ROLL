@@ -14,7 +14,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AMADEUS</title>
+    <title>Sindre</title>
   </head>
 
   <!-- HTML for headeren som brukes til hver html side -->
@@ -131,7 +131,7 @@
   <script>
 
     let urls = [
-              'https://bacit.info/hwr/20221115144359-b4a5a525a39fa131d500b2b55ebd2340.json',
+              'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json',
              
               
           ]
@@ -148,13 +148,13 @@
               let sindre = dataJSON[0]; 
              
               document.getElementById("early").innerHTML = "Early Bird<" + sindre.early + ">";    
-              document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + sindre.fys + ">";   
-              document.getElementById("sama").innerHTML = "Samarbeid<" + sindre.sama + ">";
-              document.getElementById("hjem").innerHTML = "Hjemmekontor<" + sindre.hjem + ">";
-              document.getElementById("selv").innerHTML = "Selvstendig<" + sindre.selv + ">";
-              document.getElementById("snakk").innerHTML = "Snakker<" + sindre.snakk + ">";
-              document.getElementById("rask").innerHTML = "Rask<" + sindre.rask + ">";
-              document.getElementById("kul").innerHTML = "Kul<" + sindre.kul + ">";
+          document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + sindre.fys + ">";   
+          document.getElementById("sama").innerHTML = "Samarbeid<" + sindre.sama + ">";
+          document.getElementById("hjem").innerHTML = "Hjemmekontor<" + sindre.hjem + ">";
+          document.getElementById("selv").innerHTML = "Fleksibel<" + sindre.fleks + ">";
+          document.getElementById("snakk").innerHTML = "Snakker<" + sindre.snakk + ">";
+          document.getElementById("rask").innerHTML = "Rask Tenker<" + sindre.rask + ">";
+          document.getElementById("kul").innerHTML = "Leder<" + sindre.led + ">";
     
               const checkbox = [sindre.struk, sindre.demo, sindre.omt, sindre.mot, sindre.tål, sindre.sos, sindre.uta, sindre.ina];
                const reduced = checkbox.filter(x => x !== undefined);
