@@ -99,8 +99,8 @@
         </div>
         <div class="line"></div>
         <div>
-          <h2 id="kul">Medlem</h2>
-          <p id="rask">Stilling</p>
+          <h2>Medlem</h2>
+          <p>Stilling</p>
         </div>
       </div>
     </section>
@@ -123,25 +123,20 @@
         
           <div style="width: 300px">
             <p id="message">
-              Amadeus har bidratt i prosjektarbeidet hele veien. Han har alltid
-              møtt til planlagte tider og timer. Oppfører seg respektfull og er
-              ikke redd for å komme med nye ideer. Han er positiv, jovial og
-              liker gruppearbeid. Lærer fort og er alltid gira på en ny
-              utfodring
+             teksboks
             </p>
+            <br>
+            <h3>Mine personlighetstrekk</h3>
+            <p id="checkboxes"></p>
           </div>
-
-          <br />
           <br />
           <h3>Selvevaluering</h3>
-          <br />
+          <br>
 
           <!-- https://developers.google.com/fonts/docs/material_symbols
             *hjelp til fonts og radio button -->
 
-            <p id="checkboxes">
-
-            </p>
+          
         </aside>
 
         <!-- bilde seksjon -->
@@ -156,7 +151,7 @@
   <script>
 
     let urls = [
-              'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json',
+              'https://bacit.info/hwr/20221119131326-5e938f94310026880b4ac459b4c1f4bf.json',
              
               
           ]
@@ -178,8 +173,7 @@
           document.getElementById("hjem").innerHTML = "Hjemmekontor<" + amadeus.hjem + ">";
           document.getElementById("selv").innerHTML = "Fleksibel<" + amadeus.fleks + ">";
           document.getElementById("snakk").innerHTML = "Snakker<" + amadeus.snakk + ">";
-          document.getElementById("rask").innerHTML = "Rask Tenker<" + amadeus.rask + ">";
-          document.getElementById("kul").innerHTML = "Leder<" + amadeus.led + ">";
+          
     
               const checkbox = [amadeus.struk, amadeus.demo, amadeus.omt, amadeus.mot, amadeus.tål, amadeus.sos, amadeus.uta, amadeus.ina];
                const reduced = checkbox.filter(x => x !== undefined);
