@@ -78,8 +78,8 @@
             </div>
             <div class="line" style="background-color:white;"> </div>
             <div>
-              <h2 style="color:white;" id="kul">Medlem</h2>
-              <p style="color:white;" id="rask">Stilling</p>
+              <h2 style="color:white;" id="">Medlem</h2>
+              <p style="color:white;" id="">Stilling</p>
             </div>
           </div>
   
@@ -95,25 +95,80 @@
                 <h1>Prosjekt bidrag</h1>
                  
                 <div style="width:300px;">
-                    <p id="message">Nicolai har bidratt i prosjektarbeidet hele veien.Han møter alltid opp til timer, 
-                        men ikke alltid helt tidsnok. Oppfører seg respektfull 
-                      og er ikke redd for å komme med nye ideer. Ikke alltid verdens mest positive,
-                       men jobber med saken. Gruppearbeid er noe jeg er blitt mer glad i gjennom semesteret.
+                    <p id="message">
+
                   </p>
+
+                  <br>
+
+
+                  
                 </div>
     
                 <br>
                 <br>
-                <h3>Selvevaluering</h3>
+                <h3>Mine personlighetstrekk</h3>
+                <p id="checkboxes"></p>
                 <br>
+                <h3>Selvevaluering:</h3>
+
     
                 <!-- https://developers.google.com/fonts/docs/material_symbols
                 *hjelp til fonts og radio button -->
-    
-                <p id="checkboxes">
-
-                </p>
-       
+                  
+                <div class="evaluering">
+                  <p>Oppmøte</p>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                </div>
+      
+                <div class="evaluering">
+                  <p>Arbeidsmoral</p>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_unchecked</span>
+                </div>
+      
+                <div class="evaluering">
+                  <p>HowWeRoll Arbeid</p>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_unchecked</span>
+                </div>
+      
+                <div class="evaluering">
+                  <p>Flaggoppgave Arbeid</p>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_unchecked</span>
+                </div>
+      
+                <div class="evaluering">
+                  <p>Programmeringsforståelse</p>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_unchecked</span>
+                  <span class="material-symbols-outlined">radio_button_unchecked</span>
+                </div>
+              </aside>
+      
+              <!-- bilde seksjon -->
+              <section
+                class="image-section"
+                style="background-image: url(#)"
+              ></section>
+            </div>
+          </section>
     
               </aside>
               
@@ -148,8 +203,6 @@
           document.getElementById("hjem").innerHTML = "Hjemmekontor<" + nicolai.hjem + ">";
           document.getElementById("selv").innerHTML = "Fleksibel<" + nicolai.fleks + ">";
           document.getElementById("snakk").innerHTML = "Snakker<" + nicolai.snakk + ">";
-          document.getElementById("rask").innerHTML = "Rask Tenker<" + nicolai.rask + ">";
-          document.getElementById("kul").innerHTML = "Leder<" + nicolai.led + ">";
 
           const checkbox = [nicolai.struk, nicolai.demo, nicolai.omt, nicolai.mot, nicolai.tål, nicolai.sos, nicolai.uta, nicolai.ina];
            const reduced = checkbox.filter(x => x !== undefined);
