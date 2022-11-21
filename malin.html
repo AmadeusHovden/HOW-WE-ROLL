@@ -81,8 +81,8 @@
       </div>
       <div class="line"></div>
       <div>
-        <h2 id="kul">Medlem</h2>
-        <p id="rask">Stilling</p>
+        <h2>Medlem</h2>
+        <p>Stilling</p>
       </div>
     </div>
     </section>
@@ -98,22 +98,61 @@
               <h1>Prosjekt bidrag</h1>
                
               <div style="width:300px;">
-                <p id="message">Malin har.... 
-              </p>
+                <p id="message"></p>
+
+                <br>
+              <h3>Mine personlighetstrekk</h3>
+              <p id="checkboxes"></p>
+              <br>
               </div>
-  
-              <br>
-              <br>
               <h3>Selvevaluering</h3>
-              <br>
-  
               <!-- https://developers.google.com/fonts/docs/material_symbols
               *hjelp til fonts og radio button -->
-  
-              <p id="checkboxes">
 
-              </p>
-     
+              <div class="evaluering">
+                <p>Oppmøte</p>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_unchecked</span>
+                <span class="material-symbols-outlined">radio_button_unchecked</span>
+                <span class="material-symbols-outlined">radio_button_unchecked</span>
+                <span class="material-symbols-outlined">radio_button_unchecked</span>
+              </div>
+    
+              <div class="evaluering">
+                <p>Arbeidsmoral</p>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+              </div>
+    
+              <div class="evaluering">
+                <p>HowWeRoll Arbeid</p>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+              </div>
+    
+              <div class="evaluering">
+                <p>Flaggoppgave Arbeid</p>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_unchecked</span>
+                <span class="material-symbols-outlined">radio_button_unchecked</span>
+              </div>
+    
+              <div class="evaluering">
+                <p>Programmeringsforståelse</p>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_unchecked</span>
+              </div>
   
             </aside>
             
@@ -150,8 +189,7 @@
           document.getElementById("hjem").innerHTML = "Hjemmekontor<" + malin.hjem + ">";
           document.getElementById("selv").innerHTML = "Fleksibel<" + malin.fleks + ">";
           document.getElementById("snakk").innerHTML = "Snakker<" + malin.snakk + ">";
-          document.getElementById("rask").innerHTML = "Rask Tenker<" + malin.rask + ">";
-          document.getElementById("kul").innerHTML = "Leder<" + malin.led + ">";
+          
     
               const checkbox = [malin.struk, malin.demo, malin.omt, malin.mot, malin.tål, malin.sos, malin.uta, malin.ina];
                const reduced = checkbox.filter(x => x !== undefined);
