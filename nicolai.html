@@ -14,7 +14,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AMADEUS</title>
+    <title>Nicolai</title>
   </head>
 
   <!-- HTML for headeren som brukes til hver html side -->
@@ -65,21 +65,21 @@
         <div class="info">
 
             <div>
-              <h2 style="color:white;">Night Owl</h2>
-              <p style="color:white;">Strukturert</p>
+              <h2 style="color:white;" id="early">Night Owl</h2>
+              <p style="color:white;" id="fys">Strukturert</p>
             </div>
             <div>
-              <h2 style="color:white;">Fysisk arbeid</h2>
-              <p style="color:white;">Introvert</p>
+              <h2 style="color:white;" id="sama">Selvstendig</h2>
+              <p style="color:white;" id="hjem">Motivert</p>
             </div>
             <div>
-              <h2 style="color:white;">Mye Opptatt</h2>
-              <p style="color:white;">Sosial</p>
+              <h2 style="color:white;" id="selv">Fysisk Arbeid</h2>
+              <p style="color:white;" id="snakk">Sosial</p>
             </div>
             <div class="line" style="background-color:white;"> </div>
             <div>
-              <h2 style="color:white;" id="model">Medlem</h2>
-              <p style="color:white;">Stilling</p>
+              <h2 style="color:white;" id="">Medlem</h2>
+              <p style="color:white;" id="">Stilling</p>
             </div>
           </div>
   
@@ -95,21 +95,27 @@
                 <h1>Prosjekt bidrag</h1>
                  
                 <div style="width:300px;">
-                    <p>Nicolai har bidratt i prosjektarbeidet hele veien.Han møter alltid opp til timer, 
-                        men ikke alltid helt tidsnok. Oppfører seg respektfull 
-                      og er ikke redd for å komme med nye ideer. Ikke alltid verdens mest positive,
-                       men jobber med saken. Gruppearbeid er noe jeg er blitt mer glad i gjennom semesteret.
+                    <p id="message">
+
                   </p>
+
+                  <br>
+
+
+                  
                 </div>
     
                 <br>
                 <br>
-                <h3>Selvevaluering</h3>
+                <h3>Mine personlighetstrekk</h3>
+                <p id="checkboxes"></p>
                 <br>
+                <h3>Selvevaluering:</h3>
+
     
                 <!-- https://developers.google.com/fonts/docs/material_symbols
                 *hjelp til fonts og radio button -->
-    
+                  
                 <div class="evaluering">
                   <p>Oppmøte</p>
                   <span class="material-symbols-outlined">radio_button_checked</span>
@@ -118,50 +124,114 @@
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                 </div>
-    
+      
                 <div class="evaluering">
                   <p>Arbeidsmoral</p>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_unchecked</span>
                 </div>
-    
+      
                 <div class="evaluering">
                   <p>HowWeRoll Arbeid</p>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_unchecked</span>
                 </div>
-    
+      
                 <div class="evaluering">
                   <p>Flaggoppgave Arbeid</p>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_unchecked</span>
+                  <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_unchecked</span>
                 </div>
-    
+      
                 <div class="evaluering">
                   <p>Programmeringsforståelse</p>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
                   <span class="material-symbols-outlined">radio_button_checked</span>
-                  <span class="material-symbols-outlined">radio_button_checked</span>
+                  <span class="material-symbols-outlined">radio_button_unchecked</span>
                   <span class="material-symbols-outlined">radio_button_unchecked</span>
                 </div>
-    
               </aside>
+      
               
-              <section class="image-section" style="background-image:url(bakgrunner/#)">
-              </section>
-    
             </div>
+  
+    </section>
     
 
   </body>
+  <script>
+  let urls = [
+          'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json',
+         
+          
+      ]
+
+      // gets multiple inputs and returns a single promise
+      Promise.all
+      //.map() creates a new array from the input
+      (urls.map(url => 
+      //fetches a resource from the external network
+      fetch(url)
+            //getting a response as json
+      .then(response => response.json()))).then((dataJSON) => {
+          
+          let nicolai = dataJSON[0]; 
+         
+          document.getElementById("early").innerHTML = "Early Bird<" + nicolai.early + ">";    
+          document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + nicolai.fys + ">";   
+          document.getElementById("sama").innerHTML = "Samarbeid<" + nicolai.sama + ">";
+          document.getElementById("hjem").innerHTML = "Hjemmekontor<" + nicolai.hjem + ">";
+          document.getElementById("selv").innerHTML = "Fleksibel<" + nicolai.fleks + ">";
+          document.getElementById("snakk").innerHTML = "Snakker<" + nicolai.snakk + ">";
+
+          const checkbox = [nicolai.struk, nicolai.demo, nicolai.omt, nicolai.mot, nicolai.tål, nicolai.sos, nicolai.uta, nicolai.ina];
+           const reduced = checkbox.filter(x => x !== undefined);
+          console.log(reduced);
+
+          document.getElementById("checkboxes").innerHTML = reduced ;
+
+          document.getElementById("message").innerHTML = nicolai.message ;
+
+
+        
+
+  });
+  </script>
 </html>
+<!-- 
+
+
+Resultat:
+
+{
+  "user_name": "Nicolai Bjerregård",
+  "user_email": "nabjerrega@uia.no",
+  "early": "0",
+  "fleks": "100",
+  "sama": "65",
+  "fys": "100",
+  "hjem": "100",
+  "snakk": "26",
+  "rask": "100",
+  "led": "24",
+  "omt": "Omtenksom",
+  "tål": "Tålmodig",
+  "ina": "Innadvendt",
+  "message": "Nicolai har bidratt i prosjektarbeidet hele veien.Han møter alltid opp til timer, \nmen ikke alltid helt tidsnok. Oppfører seg respektfull \nog er ikke redd for å komme med nye ideer. Ikke alltid verdens mest positive,\nmen jobber med saken. Gruppearbeid er noe jeg er blitt mer glad i gjennom semesteret.\n",
+  "trxid": "7783bf02c040ca46207550d859367808",
+  "time": "20221121102405"
+}
+
+
+
+-->

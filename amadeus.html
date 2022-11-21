@@ -86,20 +86,20 @@
       <!-- Fremviser info om arbeidspreferanser og personlighetstrekk fra survey. Ikke dynamisk -->
       <div class="info">
         <div>
-          <h2>Early Bird</h2>
-          <p>Strukturert</p>
+          <h2 id="early"></h2>
+          <p id="fys"></p>
         </div>
         <div>
-          <h2>Gruppearbeid</h2>
-          <p>Motivert</p>
+          <h2 id="sama"></h2>
+          <p id="hjem"></p>
         </div>
         <div>
-          <h2>Fysisk Arbeid</h2>
-          <p>Sosial</p>
+          <h2 id="selv"></h2>
+          <p id="snakk"></p>
         </div>
         <div class="line"></div>
         <div>
-          <h2 id="model">Medlem</h2>
+          <h2>Medlem</h2>
           <p>Stilling</p>
         </div>
       </div>
@@ -122,20 +122,16 @@
 
         
           <div style="width: 300px">
-            <p>
-              Amadeus har bidratt i prosjektarbeidet hele veien. Han har alltid
-              møtt til planlagte tider og timer. Oppfører seg respektfull og er
-              ikke redd for å komme med nye ideer. Han er positiv, jovial og
-              liker gruppearbeid. Lærer fort og er alltid gira på en ny
-              utfodring
+            <p id="message">
+             teksboks
             </p>
+            <br>
+            <h3>Mine personlighetstrekk</h3>
+            <p id="checkboxes"></p>
           </div>
-
-          <br />
           <br />
           <h3>Selvevaluering</h3>
-          <br />
-
+      
           <!-- https://developers.google.com/fonts/docs/material_symbols
             *hjelp til fonts og radio button -->
 
@@ -171,12 +167,8 @@
             <span class="material-symbols-outlined">radio_button_checked</span>
             <span class="material-symbols-outlined">radio_button_checked</span>
             <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined"
-              >radio_button_unchecked</span
-            >
-            <span class="material-symbols-outlined"
-              >radio_button_unchecked</span
-            >
+            <span class="material-symbols-outlined">radio_button_unchecked</span>
+            <span class="material-symbols-outlined">radio_button_unchecked</span>
           </div>
 
           <div class="evaluering">
@@ -185,9 +177,7 @@
             <span class="material-symbols-outlined">radio_button_checked</span>
             <span class="material-symbols-outlined">radio_button_checked</span>
             <span class="material-symbols-outlined">radio_button_checked</span>
-            <span class="material-symbols-outlined"
-              >radio_button_unchecked</span
-            >
+            <span class="material-symbols-outlined">radio_button_unchecked</span>
           </div>
         </aside>
 
@@ -199,26 +189,68 @@
       </div>
     </section>
   </body>
+
+  <script>
+
+    let urls = [
+              'https://bacit.info/hwr/20221119131326-5e938f94310026880b4ac459b4c1f4bf.json',
+             
+              
+          ]
+    
+          // gets multiple inputs and returns a single promise
+          Promise.all
+          //.map() creates a new array from the input
+          (urls.map(url => 
+          //fetches a resource from the external network
+          fetch(url)
+                //getting a response as json
+          .then(response => response.json()))).then((dataJSON) => {
+              
+              let amadeus = dataJSON[0]; 
+             
+              document.getElementById("early").innerHTML = "Early Bird<" + amadeus.early + ">";    
+          document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + amadeus.fys + ">";   
+          document.getElementById("sama").innerHTML = "Samarbeid<" + amadeus.sama + ">";
+          document.getElementById("hjem").innerHTML = "Hjemmekontor<" + amadeus.hjem + ">";
+          document.getElementById("selv").innerHTML = "Fleksibel<" + amadeus.fleks + ">";
+          document.getElementById("snakk").innerHTML = "Snakker<" + amadeus.snakk + ">";
+          
+    
+              const checkbox = [amadeus.struk, amadeus.demo, amadeus.omt, amadeus.mot, amadeus.tål, amadeus.sos, amadeus.uta, amadeus.ina];
+               const reduced = checkbox.filter(x => x !== undefined);
+              console.log(reduced);
+    
+              document.getElementById("checkboxes").innerHTML = reduced ;
+    
+              document.getElementById("message").innerHTML = amadeus.message ;
+    
+    
+            
+    
+      });
+      </script>
 </html>
 <!-- Dette er svarene og id fra surveyen, som stemmer med informasjonen på amadeus sin html side.
 : 
-{
-    "user_name": "Amadeus Hovden",
-    "user_email": "amadeusmh@uia.no",
-    "morg": "2",
-    "selv": "2",
-    "sama": "5",
-    "fys": "13",
-    "hjem": "98",
-    "kul": "8",
-    "struk": "on",
-    "mot": "on",
-    "sos": "on",
-    "uta": "on",
-    "message": "Amadeus har bidratt i prosjektarbeidet hele veien. 
-    Han har alltid møtt til planlagte tider og timer. Oppfører seg respektfull og
-     er ikke redd for å komme med nye ideer. Han er positiv, jovial og liker gruppearbeid. 
-     Lærer fort og er alltid gira på en ny utfodring\n",
-    "trxid": "48d4f378855689f2c3ff8572c2b6a4d9",
-    "time": "20221109181041"
+   "user_name": "Amadeus Hovden",
+  "user_email": "amadeusmh@uia.no",
+  "early": "81",
+  "fleks": "85",
+  "sama": "89",
+  "fys": "93",
+  "hjem": "5",
+  "snakk": "96",
+  "rask": "80",
+  "led": "85",
+  "struk": "Struktrurert",
+  "mot": "Motivert",
+  "sos": "Sosial",
+  "message": "Amadeus har bidratt i prosjektarbeidet hele veien. Han har alltid møtt til planlagte tider og timer. Oppfører seg respektfull og er ikke redd for å komme med nye ideer. Han er positiv, jovial og liker gruppearbeid. Lærer fort og er alltid gira på en ny utfodring",
+  "trxid": "5e938f94310026880b4ac459b4c1f4bf",
+  "time": "20221119131326"
+}
+
+
+  link: https://bacit.info/hwr/20221119131326-5e938f94310026880b4ac459b4c1f4bf.json
 }  -->

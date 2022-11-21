@@ -4,7 +4,10 @@
     <!-- Legger til en ny skrifttype -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Linkes til index.css, slik at det blir mer oversiktlig og får samme stil som alle sidene.-->
     <link rel="stylesheet" href="index.css" />
@@ -37,17 +40,14 @@
       </header>
     </div>
 
-
-    
     <!-- Styles til canvasen som viser raporten til medlemmene. Arebidstypene står nederst der grafen går til 100,
     der 100 vil bety uenig i påstanden, f.eks "sevstending" på 96, vil si at medlemmet er ikke gald i å jobbe selvstending, 
   men det motsatte, altså med gruppe arbeid.-->
 
-
     <style>
       .chartMenu {
         width: 100vw;
-        background: #1A1A1A;
+        background: #1a1a1a;
         margin-top: -35px;
         color: rgba(255, 26, 104, 1);
       }
@@ -71,224 +71,299 @@
         background: white;
       }
     </style>
-  
-     <h1 style="font-weight:200; text-align: center; margin-top: 80px;;">
-      Arbeidspreferanser til medlemmene</h1>
-    <div class="chartMenu">
-     
-    </div>
+
+    <h1 style="font-weight: 200; text-align: center; margin-top: 80px ;">
+      Arbeidspreferanser til medlemmene
+    </h1>
+    <div class="chartMenu"></div>
     <div class="chartCard">
       <div class="chartBox">
         <canvas id="myChart" width="500px" height="400px"></canvas>
-        
       </div>
     </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/chart.js"
+    ></script>
     <script>
-
-     
-     let urls = [
-          'https://bacit.info/hwr/20221108173955-80aae3b6170bec8e991b3c25387e7472.json',
-          'https://bacit.info/hwr/20221108174401-7a69992fba469aed0de67319199ead62.json',
-          'https://bacit.info/hwr/20221108174648-ed8fda68c71cef0bd4b37b7d6aec7832.json',
-          'https://bacit.info/hwr/20221108175041-484731356d18df6bf8577cb04b338a27.json',
-          'https://bacit.info/hwr/20221108175253-f15c4ff00536fc505068e94e227ca024.json',
-          'https://bacit.info/hwr/20221108175455-ac91985e9f8d8a40314b994ea1c10e09.json',
-          
-      ]
+      let urls = [
+        "https://bacit.info/hwr/20221119131326-5e938f94310026880b4ac459b4c1f4bf.json", //AMASIN
+        "https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json", //BurakSIN
+        "https://bacit.info/hwr/20221120191711-c25c1f71df2704ff2e76953c3391746c.json", //MariaSIN
+        "https://bacit.info/hwr/20221121095302-3ef5f443dcc57902f3107c10241e6214.json", //SindreSIN
+        "https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json",
+        "https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json",
+        "https://bacit.info/hwr/20221121145701-69babe55828f815b218f6ebed73a3c66.json", //MalinSIN
+      ];
 
       // gets multiple inputs and returns a single promise
-      Promise.all
-      //.map() creates a new array from the input
-      (urls.map(url => 
-      //fetches a resource from the external network
-      fetch(url)
+      Promise.all(
+        //.map() creates a new array from the input
+        urls.map((url) =>
+          //fetches a resource from the external network
+          fetch(url)
             //getting a response as json
-      .then(response => response.json()))).then((dataJSON) => {
-          
-          let burak = dataJSON[0]; 
-          let amadeus = dataJSON[1]; 
-          let maria = dataJSON[2];          //getting data from jsonS to variables
-          let nicolai = dataJSON[3];
-          let sindre = dataJSON[4];
-          let malin = dataJSON[5];
-          console.log(burak);
+            .then((response) => response.json())
+        )
+      ).then((dataJSON) => {
+        let burak = dataJSON[0];
+        let amadeus = dataJSON[1];
+        let maria = dataJSON[2]; //getting data from jsonS to local variables
+        let nicolai = dataJSON[3];
+        let sindre = dataJSON[4];
+        let malin = dataJSON[5];
+        console.log(burak);
 
-      
-        
-      
-            
-            
+        // setup
+        const data = {
+          labels: [
+            "Early Bird",
+            "Fleksibel",
+            "Samearbeid",
+            "Fysisk arbeid",
+            "Hjemmekontor",
+            "Snakker",
+            "Rask Tenker",
+            "Leder",
+          ],
+          datasets: [
+            {
+              label: `${burak.user_name}`,
+              data: [
+                burak.early,
+                burak.fleks,
+                burak.sama,
+                burak.fys,
+                burak.hjem,
+                burak.snakk,
+                burak.rask,
+                burak.led,
+              ],
+              backgroundColor: [
+                "rgba(253, 255, 44, 0.2)",
+                "rgba(253, 255, 44, 0.2)",
+                "rgba(253, 255, 44, 0.2)",
+                "rgba(253, 255, 44, 0.2)",
+                "rgba(253, 255, 44, 0.2)",
+                "rgba(253, 255, 44, 0.2)",
+                "rgba(253, 255, 44, 0.2)",
+                "rgba(253, 255, 44, 0.2)",
+                "rgba(0, 0, 0, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(0, 0, 0, 1)",
+              ],
+              borderWidth: 1,
+            },
+            {
+              label: `${amadeus.user_name}`,
+              data: [
+                amadeus.early,
+                amadeus.fleks,
+                amadeus.sama,
+                amadeus.fys,
+                amadeus.hjem,
+                amadeus.snakk,
+                amadeus.rask,
+                amadeus.led,
+              ],
+              backgroundColor: [
+                "rgba(253, 143, 220, 0.65)",
+                "rgba(253, 143, 220, 0.65)",
+                "rgba(253, 143, 220, 0.65)",
+                "rgba(253, 143, 220, 0.65)",
+                "rgba(253, 143, 220, 0.65)",
+                "rgba(253, 143, 220, 0.65)",
+                "rgba(253, 143, 220, 0.65)",
+                "rgba(0, 0, 0, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(0, 0, 0, 1)",
+              ],
+              borderWidth: 1,
+            },
+            {
+              label: `${sindre.user_name}`,
+              data: [
+                sindre.early,
+                sindre.fleks,
+                sindre.sama,
+                sindre.fys,
+                sindre.hjem,
+                sindre.snakk,
+                sindre.rask,
+                sindre.led,
+              ],
+              backgroundColor: [
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(0, 0, 0, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(0, 0, 0, 1)",
+              ],
+              borderWidth: 1,
+            },
+            {
+              label: `${maria.user_name}`,
+              data: [
+                maria.early,
+                maria.fleks,
+                maria.sama,
+                maria.fys,
+                maria.hjem,
+                maria.snakk,
+                maria.rask,
+                maria.led,
+              ],
+              backgroundColor: [
+                "rgba(227, 20, 20, 0.65)",
+                "rgba(227, 20, 20, 0.65)",
+                "rgba(227, 20, 20, 0.65)",
+                "rgba(227, 20, 20, 0.65)",
+                "rgba(227, 20, 20, 0.65)",
+                "rgba(227, 20, 20, 0.65)",
+                "rgba(227, 20, 20, 0.65)",
+                "rgba(227, 20, 20, 0.65)",
+              ],
+              borderColor: [
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(0, 0, 0, 1)",
+              ],
+              borderWidth: 1,
+            },
+            {
+              label: `${nicolai.user_name}`,
+              data: [
+                nicolai.early,
+                nicolai.fleks,
+                nicolai.sama,
+                nicolai.fys,
+                nicolai.hjem,
+                nicolai.snakk,
+                nicolai.rask,
+                nicolai.led,
+              ],
+              backgroundColor: [
+                "rgba(0, 248, 248, 0.86)",
+                "rgba(0, 248, 248, 0.86)",
+                "rgba(0, 248, 248, 0.86)",
+                "rgba(0, 248, 248, 0.86)",
+                "rgba(0, 248, 248, 0.86)",
+                "rgba(0, 248, 248, 0.86)",
+                "rgba(0, 248, 248, 0.86)",
+                "rgba(0, 248, 248, 0.86)",
+              ],
+              borderColor: [
+                "rgba(255, 26, 104, 2)",
+                "rgba(255, 26, 104, 2)",
+                "rgba(255, 26, 104, 2)",
+                "rgba(255, 26, 104, 2)",
+                "rgba(255, 26, 104, 2)",
+                "rgba(255, 26, 104, 2)",
+                "rgba(255, 26, 104, 2)",
+                "rgba(255, 26, 104, 2)",
+                "rgba(0, 0, 0, 1)",
+              ],
+              borderWidth: 1,
+            },
+            {
+              label: `${malin.user_name}`,
+              data: [
+                malin.early,
+                malin.fleks,
+                malin.sama,
+                malin.fys,
+                malin.hjem,
+                malin.snakk,
+                malin.rask,
+                malin.led,
+              ],
+              backgroundColor: [
+                "rgba(132, 139, 248, 0.79)",
+                "rgba(132, 139, 248, 0.79)",
+                "rgba(132, 139, 248, 0.79)",
+                "rgba(132, 139, 248, 0.79)",
+                "rgba(132, 139, 248, 0.79)",
+                "rgba(132, 139, 248, 0.79)",
+                "rgba(132, 139, 248, 0.79)",
+                "rgba(132, 139, 248, 0.79)",
+                "rgba(0, 0, 0, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(255, 26, 104, 1)",
+                "rgba(0, 0, 0, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        };
 
-            // setup 
-    const data = {
-      labels: ['Early Bird', 'Gruppearbeid', 'Mye optatt', 'Fysisk arbeid', 'Hjemmekontor', 'Snakker'],
-      datasets: [{
-        label: `${burak.user_name}`,
-        data: [burak.selv, burak.morg, burak.hjem, burak.sama, burak.kul, burak.fys],
-        backgroundColor: [
-          'rgba(253, 255, 44, 0.2)',
-          'rgba(253, 255, 44, 0.2)',
-          'rgba(253, 255, 44, 0.2)',
-          'rgba(253, 255, 44, 0.2)',
-          'rgba(253, 255, 44, 0.2)',
-          'rgba(253, 255, 44, 0.2)',
-          'rgba(0, 0, 0, 0.2)'
-        ],
-        borderColor: [
-          'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-          'rgba(0, 0, 0, 1)'
-        ],
-        borderWidth: 1
-      } , {
-        label: `${amadeus.user_name}`,
-        data: [amadeus.selv, amadeus.morg, amadeus.hjem, amadeus.sama, amadeus.kul, amadeus.fys],
-        backgroundColor: [
-          'rgba(253, 143, 220, 0.65)',
-          'rgba(253, 143, 220, 0.65)',
-          'rgba(253, 143, 220, 0.65)',
-          'rgba(253, 143, 220, 0.65)',
-          'rgba(253, 143, 220, 0.65)',
-          'rgba(253, 143, 220, 0.65)',
-          'rgba(0, 0, 0, 0.2)'
-        ],
-        borderColor: [
-          'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-          'rgba(0, 0, 0, 1)'
-        ],
-        borderWidth: 1
-      } , {
-        label: `${sindre.user_name}`,
-        data: [sindre.selv, sindre.morg, sindre.hjem, sindre.sama, sindre.kul, sindre.fys],
-        backgroundColor: [
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(0, 0, 0, 0.2)'
-        ],
-        borderColor: [
-          'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-          'rgba(0, 0, 0, 1)'
-        ],
-        borderWidth: 1
-      } , {
-        label: `${maria.user_name}`,
-        data: [maria.selv, maria.morg, maria.hjem, maria.sama, maria.kul, maria.fys],
-        backgroundColor: [
-          'rgba(227, 20, 20, 0.65)',
-          'rgba(227, 20, 20, 0.65)',
-          'rgba(227, 20, 20, 0.65)',
-          'rgba(227, 20, 20, 0.65)',
-          'rgba(227, 20, 20, 0.65)',
-          'rgba(227, 20, 20, 0.65)',
-          'rgba(227, 20, 20, 0.65)'
-        ],
-        borderColor: [
-          'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-          'rgba(0, 0, 0, 1)'
-        ],
-        borderWidth: 1
-      }, {
-        label: `${nicolai.user_name}`,
-        data: [nicolai.selv, nicolai.morg, nicolai.hjem, nicolai.sama, nicolai.kul, nicolai.fys],
-        backgroundColor: [
-          'rgba(0, 248, 248, 0.86)',
-          'rgba(0, 248, 248, 0.86)',
-          'rgba(0, 248, 248, 0.86)',
-          'rgba(0, 248, 248, 0.86)',
-          'rgba(0, 248, 248, 0.86)',
-          'rgba(0, 248, 248, 0.86)',
-          'rgba(0, 248, 248, 0.86)',
-        ],
-        borderColor: [
-          'rgba(255, 26, 104, 2)',
-          'rgba(54, 162, 235, 2)',
-          'rgba(255, 206, 86, 2)',
-          'rgba(75, 192, 192, 2)',
-          'rgba(153, 102, 255, 2)',
-          'rgba(255, 159, 64, 2)',
-          'rgba(0, 0, 0, 1)'
-        ],
-        borderWidth: 1
-      }, {
-        label: `${malin.user_name}`,
-        data: [malin.selv, malin.morg, malin.hjem, malin.sama, malin.kul, malin.fys],
-        backgroundColor: [
-          'rgba(132, 139, 248, 0.79)',
-          'rgba(132, 139, 248, 0.79)',
-          'rgba(132, 139, 248, 0.79)',
-          'rgba(132, 139, 248, 0.79)',
-          'rgba(132, 139, 248, 0.79)',
-          'rgba(132, 139, 248, 0.79)',
-          'rgba(0, 0, 0, 0.2)'
-        ],
-        borderColor: [
-          'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-          'rgba(0, 0, 0, 1)'
-        ],
-        borderWidth: 1
-      }  ]
-    };
+        // config
+        const config = {
+          type: "bar",
+          data,
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
 
-    // config 
-    const config = {
-      type: 'bar',
-      data,
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,
-            max: 100, //max value in the chart. Cant see 100 though ?????
-            ticks: {
-                stepSize: 1   //stepsize in chart. 
-            }
-            
-          }
-        }
-      }
-    };
+                max: 100, //max value in the chart. Cant see 100 though ?????
+                ticks: {
+                  stepSize: 1, //stepsize in chart.
+                },
+              },
+            },
+          },
+        };
 
-    // render init block
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
-            
-
-});
-       
-
-    
+        // render init block
+        const myChart = new Chart(document.getElementById("myChart"), config);
+      });
     </script>
-
   </body>
 </html>
