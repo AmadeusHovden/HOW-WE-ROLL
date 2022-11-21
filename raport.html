@@ -88,12 +88,12 @@
 
      
      let urls = [
-          'https://bacit.info/hwr/20221115144359-b4a5a525a39fa131d500b2b55ebd2340.json',
-          'https://bacit.info/hwr/20221110111825-cf7d6b49f737df44d674bec6877118d9.json',
-          'https://bacit.info/hwr/20221108174648-ed8fda68c71cef0bd4b37b7d6aec7832.json',
-          'https://bacit.info/hwr/20221108175041-484731356d18df6bf8577cb04b338a27.json',
-          'https://bacit.info/hwr/20221108175253-f15c4ff00536fc505068e94e227ca024.json',
-          'https://bacit.info/hwr/20221108175455-ac91985e9f8d8a40314b994ea1c10e09.json',
+          'https://bacit.info/hwr/20221119131326-5e938f94310026880b4ac459b4c1f4bf.json', //AMASIN
+          'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json', //BurakSIN
+          'https://bacit.info/hwr/20221120191711-c25c1f71df2704ff2e76953c3391746c.json', //MariaSIN
+          'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json',
+          'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json',
+          'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json',
           
       ]
 
@@ -122,12 +122,12 @@
 
             // setup 
     const data = {
-      labels: ['Early Bird', 'Selvstendig', 'Samearbeid', 'Fysisk arbeid', 'Hjemmekontor', 'Snakker'],
+      labels: ['Early Bird', 'Fleksibel', 'Samearbeid', 'Fysisk arbeid', 'Hjemmekontor', 'Snakker', 'Rask Tenker', 'Leder'],
       datasets: [{
         label: `${burak.user_name}`,
         data: [
           
-        burak.selv, burak.morg, burak.hjem, burak.sama, burak.kul, burak.fys
+        burak.early, burak.fleks, burak.sama, burak.fys, burak.hjem, burak.snakk, burak.rask, burak.led
       
       
       ],
@@ -138,15 +138,19 @@
           'rgba(253, 255, 44, 0.2)',
           'rgba(253, 255, 44, 0.2)',
           'rgba(253, 255, 44, 0.2)',
+          'rgba(253, 255, 44, 0.2)',
+          'rgba(253, 255, 44, 0.2)',
           'rgba(0, 0, 0, 0.2)'
         ],
         borderColor: [
           'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
           'rgba(0, 0, 0, 1)'
         ],
         borderWidth: 1
@@ -154,7 +158,7 @@
         label: `${amadeus.user_name}`,
         data: [
           
-        amadeus.selv, amadeus.morg, amadeus.hjem, amadeus.sama, amadeus.kul, amadeus.fys
+        amadeus.early, amadeus.fleks, amadeus.sama, amadeus.fys, amadeus.hjem, amadeus.snakk, amadeus.rask, amadeus.led
       
       ],
         backgroundColor: [
@@ -164,15 +168,18 @@
           'rgba(253, 143, 220, 0.65)',
           'rgba(253, 143, 220, 0.65)',
           'rgba(253, 143, 220, 0.65)',
+          'rgba(253, 143, 220, 0.65)',
           'rgba(0, 0, 0, 0.2)'
         ],
         borderColor: [
-          'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
           'rgba(0, 0, 0, 1)'
         ],
         borderWidth: 1
@@ -180,7 +187,7 @@
         label: `${sindre.user_name}`,
         data: [
           
-        sindre.selv, sindre.morg, sindre.hjem, sindre.sama, sindre.kul, sindre.fys
+        sindre.early, sindre.fleks, sindre.sama, sindre.fys, sindre.hjem, sindre.snakk, sindre.rask, sindre.led
       
       ],
         backgroundColor: [
@@ -190,15 +197,19 @@
           'rgba(54, 162, 235, 0.2)',
           'rgba(54, 162, 235, 0.2)',
           'rgba(54, 162, 235, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
           'rgba(0, 0, 0, 0.2)'
         ],
         borderColor: [
-          'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
           'rgba(0, 0, 0, 1)'
         ],
         borderWidth: 1
@@ -206,8 +217,7 @@
         label: `${maria.user_name}`,
         data: [
           
-        maria.selv, maria.morg, maria.hjem, maria.sama, maria.kul, maria.fys
-      
+        maria.early, maria.fleks, maria.sama, maria.fys, maria.hjem, maria.snakk, maria.rask, maria.led
       ],
         backgroundColor: [
           'rgba(227, 20, 20, 0.65)',
@@ -216,15 +226,18 @@
           'rgba(227, 20, 20, 0.65)',
           'rgba(227, 20, 20, 0.65)',
           'rgba(227, 20, 20, 0.65)',
-          'rgba(227, 20, 20, 0.65)'
+          'rgba(227, 20, 20, 0.65)',
+          'rgba(227, 20, 20, 0.65)',
         ],
         borderColor: [
           'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
+          'rgba(255, 26, 104, 1)',
           'rgba(0, 0, 0, 1)'
         ],
         borderWidth: 1
@@ -232,10 +245,11 @@
         label: `${nicolai.user_name}`,
         data: [
           
-        nicolai.selv, nicolai.morg, nicolai.hjem, nicolai.sama, nicolai.kul, nicolai.fys
+        nicolai.early, nicolai.fleks, nicolai.sama, nicolai.fys, nicolai.hjem, nicolai.snakk, nicolai.rask, nicolai.led
       
       ],
         backgroundColor: [
+          'rgba(0, 248, 248, 0.86)',
           'rgba(0, 248, 248, 0.86)',
           'rgba(0, 248, 248, 0.86)',
           'rgba(0, 248, 248, 0.86)',
@@ -245,12 +259,14 @@
           'rgba(0, 248, 248, 0.86)',
         ],
         borderColor: [
-          'rgba(255, 26, 104, 2)',
-          'rgba(54, 162, 235, 2)',
-          'rgba(255, 206, 86, 2)',
-          'rgba(75, 192, 192, 2)',
-          'rgba(153, 102, 255, 2)',
-          'rgba(255, 159, 64, 2)',
+        'rgba(255, 26, 104, 2)',
+        'rgba(255, 26, 104, 2)',
+        'rgba(255, 26, 104, 2)',
+        'rgba(255, 26, 104, 2)',
+        'rgba(255, 26, 104, 2)',
+        'rgba(255, 26, 104, 2)',
+        'rgba(255, 26, 104, 2)',
+        'rgba(255, 26, 104, 2)',
           'rgba(0, 0, 0, 1)'
         ],
         borderWidth: 1
@@ -258,10 +274,12 @@
         label: `${malin.user_name}`,
         data: [
           
-        malin.selv, malin.morg, malin.hjem, malin.sama, malin.kul, malin.fys
+        malin.early, malin.fleks, malin.sama, malin.fys, malin.hjem, malin.snakk, malin.rask, malin.led
       
       ],
         backgroundColor: [
+          'rgba(132, 139, 248, 0.79)',
+          'rgba(132, 139, 248, 0.79)',
           'rgba(132, 139, 248, 0.79)',
           'rgba(132, 139, 248, 0.79)',
           'rgba(132, 139, 248, 0.79)',
@@ -271,12 +289,14 @@
           'rgba(0, 0, 0, 0.2)'
         ],
         borderColor: [
-          'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 26, 104, 1)',
           'rgba(0, 0, 0, 1)'
         ],
         borderWidth: 1
