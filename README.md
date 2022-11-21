@@ -18,3 +18,12 @@
 - Gruppestilling, hva bidrar du til mest i gruppa.
 
 
+##### Ting vi må legge til huske:  (noe mer??)
+- Gjøre surveyen, og så matcha informasjonen på    
+sin egen side. Slik jeg har gjort på Amadeus.html
+
+-endre rapport søyler slik at de stemmer med survey.
+
+
+
+- Endre på gruppe stillinger!!!
