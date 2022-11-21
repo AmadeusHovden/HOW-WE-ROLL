@@ -80,8 +80,8 @@
         </div>
         <div class="line"></div>
         <div>
-          <h2 id="kul">Medlem</h2>
-          <p id="rask">Stilling</p>
+          <h2>Medlem</h2>
+          <p>Stilling</p>
         </div>
     </section>
 
@@ -96,28 +96,71 @@
 
           <div style="width: 450px">
             <p id="message">
-              Sindre har bidratt mer og mer i prosjektarbeidet. Han startet med
-              ingen kunnskaper innen programmering, men har lært veldig mye og
-              lærer stadig mer og har med det tatt større del i
-              programmeringsdelen. Sindre har alltid godt oppmøte og stiller
-              alltid med god arbeidsmoral. Han har alltid godt humør og er
-              positivt innstilt til arbeidet. Viser respekt til medlemmene i
-              gruppen og lar alle komme til. Han synes det er utfordrende og gøy
-              å jobbe med prosjektarbeid.
+          
             </p>
+          <br>
+            <h3>Mine personlighetstrekk</h3>
+            <p id="checkboxes"></p>
           </div>
-
-          <br />
           <br />
           <h3>Selvevaluering</h3>
-          <br />
+          
 
           <!-- https://developers.google.com/fonts/docs/material_symbols
               *hjelp til fonts og radio button -->
 
-              <p id="checkboxes">
+              <div class="evaluering">
+                <p>Oppmøte</p>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+              </div>
+    
+              <div class="evaluering">
+                <p>Arbeidsmoral</p>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+              </div>
+    
+              <div class="evaluering">
+                <p>HowWeRoll Arbeid</p>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_unchecked</span>
+              </div>
+    
+              <div class="evaluering">
+                <p>Flaggoppgave Arbeid</p>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined"
+                  >radio_button_unchecked</span
+                >
+                <span class="material-symbols-outlined"
+                  >radio_button_unchecked</span
+                >
+              </div>
+    
+              <div class="evaluering">
+                <p>Programmeringsforståelse</p>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_checked</span>
+                <span class="material-symbols-outlined">radio_button_unchecked</span>
+                <span class="material-symbols-outlined"
+                  >radio_button_unchecked</span
+                >
+              </div>
 
-              </p>
+              
         </aside>
 
         <section
@@ -131,7 +174,7 @@
   <script>
 
     let urls = [
-              'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json',
+              'https://bacit.info/hwr/20221121095302-3ef5f443dcc57902f3107c10241e6214.json',
              
               
           ]
@@ -153,8 +196,7 @@
           document.getElementById("hjem").innerHTML = "Hjemmekontor<" + sindre.hjem + ">";
           document.getElementById("selv").innerHTML = "Fleksibel<" + sindre.fleks + ">";
           document.getElementById("snakk").innerHTML = "Snakker<" + sindre.snakk + ">";
-          document.getElementById("rask").innerHTML = "Rask Tenker<" + sindre.rask + ">";
-          document.getElementById("kul").innerHTML = "Leder<" + sindre.led + ">";
+       
     
               const checkbox = [sindre.struk, sindre.demo, sindre.omt, sindre.mot, sindre.tål, sindre.sos, sindre.uta, sindre.ina];
                const reduced = checkbox.filter(x => x !== undefined);
