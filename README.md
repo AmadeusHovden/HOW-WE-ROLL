@@ -1,6 +1,6 @@
 #### OPPGAVER SOM MÅ SVARES PÅ!!!
 
-1)Kartlegge deres kunnskap og ferdigheter om prosjektarbeid så langt (dokument
+1) Kartlegge deres kunnskap og ferdigheter om prosjektarbeid så langt (dokument
 GR-KUNN-FERD) og beskrive hva er relevant for denne oppgaven (f. eks. bruk av verktøy
 som Git og Github i prosjektplanleggingen og gjennomføringen, bruke av
 programmeringsverktøy som HTML5, Canvas, CSS, JavaScript osv.).
