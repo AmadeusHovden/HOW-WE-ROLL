@@ -50,6 +50,10 @@ For å kartlegge gruppearbeidet, tenkte gruppen det var lurt å lage en survey f
 Brukerhistorie Kalender.
 Planlegging av gruppearbeid var ikke alltid like lett, og kontrollen på ulike innleveringer kunne gå i surr. Gruppen så et behov som møtte løses. Derfor kom gruppen fram til ideen om en kalender. Denne skulle hjelpe gruppen med å holde orden på arbeidet, frister og kunne brukes til planlegging av gruppemøter. Dette kunne gi oss en stor verdi og ville være til stor hjelp hos gruppen. For å implementerer dette, måtte medlemmene finne løsninger og funksjoner som kunne gjøre denne til realitet via progarmmeringen. Dette var en veldig god ide, men vi var usikre på om dette kunne fullføres med vårt kompetansenivå (EnTur, u.å).
 
+Brukerhistorie Design.
+Prosjektmandatet var at gruppen skulle lage en webapplikasjon, der vi skulle fremstå som et konsulentfirma. Av den forstand var det viktig for oss at vår applikasjon skulle bli brukervennlig, være oversiktlig og ha et stylish design. Gruppen skjønte fort at dette ville kreve mer tid, og derfor var det viktig at alle bidro og kom med ideer samt skisser. Skissene til design og oppsett blir vist nedenfor. Gruppen så for seg en meny i header der man kunne navigere seg rundt, som skulle bli viktig i sluttproduktet. 
+
+
 
 3) ....
 
