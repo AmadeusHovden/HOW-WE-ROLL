@@ -1,4 +1,4 @@
-# OPPGAVER SOM SKAL GJØRES OG NOEN MÅ SVARES PÅ!!!
+## OPPGAVER SOM SKAL GJØRES OG NOEN MÅ SVARES PÅ!!!
 
 1) Kartlegge deres kunnskap og ferdigheter om prosjektarbeid så langt (dokument
 GR-KUNN-FERD) og beskrive hva er relevant for denne oppgaven (f. eks. bruk av verktøy
@@ -36,7 +36,8 @@ beskriv måten dere bruker Github for dokumentasjon og samarbeid under deres arb
 oppgaven. Reflekter over samarbeidet.
 
 
-# SVAR:
+# “Felles-skapet: HowWeRoll”-oppgaven
+##SVAR
 
 ## 1) 
 Etter flaggoppgaven har gruppen bygd en viss forståelse av hvordan man skal drive et prosjektarbeid. Det var litt vanskelig å jobbe som et prosjekt i en så liten oppgave. De fleste av gruppen føler de har mer å lære og oppleve innenfor prosjektarbeid, noe forhåpentligvis HWR-oppgaven vil bidra med. Men vi har alle bygd en liten kunnskap og har lært noe nytt og nyttig som vi vil ta i bruk på HWR-oppgaven. Av dette kan Kanban Board nevnes, som var nytt for flere av oss. Dette ser vi nå som et viktig hjelpemiddel som det er nyttig å mestre. Vi har så vidt fått brukt det og må derfor bygge litt mer kunnskap rundt smartere bruk, slik at vi kan fordele oppgaver på best mulig måte i HWR. 
