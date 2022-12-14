@@ -83,8 +83,8 @@
           </div>
           <div class="line"></div>
           <div>
-            <h2 id="kul">Medlem</h2>
-            <p id="rask">Stilling</p>
+            <h2>Medlem</h2>
+            <p>Stilling</p>
           </div>
         </div>
     </section>
@@ -106,7 +106,7 @@
 
           <br />
           <br />
-          <h3>Selvevaluering</h3>
+          <h3>Mine personlighetstrekk</h3>
           <br />
 
           <!-- https://developers.google.com/fonts/docs/material_symbols
@@ -115,6 +115,54 @@
          <p id="checkboxes">
 
          </p>
+         <br>
+         <br>
+
+         <h3>Selvevaluering</h3>
+         <div class="evaluering">
+          <p>Oppmøte</p>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_unchecked</span>
+        </div>
+
+        <div class="evaluering">
+          <p>Arbeidsmoral</p>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </div>
+
+        <div class="evaluering">
+          <p>HowWeRoll Arbeid</p>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </div>
+
+        <div class="evaluering">
+          <p>Flaggoppgave Arbeid</p>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </div>
+
+        <div class="evaluering">
+          <p>Programmeringsforståelse</p>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+          <span class="material-symbols-outlined">radio_button_checked</span>
+        </div>
 
           
         </aside>
@@ -130,7 +178,7 @@
   <script>
 
 let urls = [
-          'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json',
+          'https://bacit.info/hwr/20221214154026-b8a39fc57695af85cde302760ca76091.json',
          
           
       ]
@@ -139,7 +187,7 @@ let urls = [
       Promise.all
       //.map() creates a new array from the input
       (urls.map(url => 
-      //fetches a resource from the external network
+      //fetches a resource from the external networ
       fetch(url)
             //getting a response as json
       .then(response => response.json()))).then((dataJSON) => {
@@ -152,16 +200,18 @@ let urls = [
           document.getElementById("hjem").innerHTML = "Hjemmekontor<" + burak.hjem + ">";
           document.getElementById("selv").innerHTML = "Fleksibel<" + burak.fleks + ">";
           document.getElementById("snakk").innerHTML = "Snakker<" + burak.snakk + ">";
-          document.getElementById("rask").innerHTML = "Rask Tenker<" + burak.rask + ">";
-          document.getElementById("kul").innerHTML = "Leder<" + burak.led + ">";
+          
+    
+              const checkbox = [burak.struk, burak.demo, burak.omt, burak.mot, burak.tål, burak.sos, burak.uta, burak.ina];
 
-          const checkbox = [burak.struk, burak.demo, burak.omt, burak.mot, burak.tål, burak.sos, burak.uta, burak.ina];
-           const reduced = checkbox.filter(x => x !== undefined);
-          console.log(reduced);
-
-          document.getElementById("checkboxes").innerHTML = reduced ;
-
-          document.getElementById("message").innerHTML = burak.message ;
+              // bruker .filter to redusere array en å unnga undefined verdier hvis noen av checkboxes er ikke checked.
+               const reduced = checkbox.filter(x => x !== undefined);
+              console.log(reduced);
+    
+              document.getElementById("checkboxes").innerHTML = reduced ;
+    
+              document.getElementById("message").innerHTML = burak.message ;
+    
 
 
         

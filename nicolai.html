@@ -195,6 +195,8 @@
           document.getElementById("snakk").innerHTML = "Snakker<" + nicolai.snakk + ">";
 
           const checkbox = [nicolai.struk, nicolai.demo, nicolai.omt, nicolai.mot, nicolai.tål, nicolai.sos, nicolai.uta, nicolai.ina];
+
+          // bruker .filter to redusere array en å unnga undefined verdier hvis noen av checkboxes er ikke checked.
            const reduced = checkbox.filter(x => x !== undefined);
           console.log(reduced);
 
