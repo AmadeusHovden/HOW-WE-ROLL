@@ -122,7 +122,7 @@ section a{
     color: inherit;
 }
 
-/* Velger størrelse på bildet, får lik bredde men hlyde avhenger av eget bilde, legger også til skygge */
+/* Velger størrelse på bildet, får lik bredde men høyde avhenger av eget bilde, legger også til skygge */
 img.pb{
     height: auto;
     width: 200px;
