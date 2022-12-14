@@ -1,4 +1,4 @@
-#### OPPGAVER SOM SKAL GJØRES OG NOEN MÅ SVARES PÅ!!!
+# OPPGAVER SOM SKAL GJØRES OG NOEN MÅ SVARES PÅ!!!
 
 1) Kartlegge deres kunnskap og ferdigheter om prosjektarbeid så langt (dokument
 GR-KUNN-FERD) og beskrive hva er relevant for denne oppgaven (f. eks. bruk av verktøy
@@ -36,14 +36,14 @@ beskriv måten dere bruker Github for dokumentasjon og samarbeid under deres arb
 oppgaven. Reflekter over samarbeidet.
 
 
-#### SVAR:
+# SVAR:
 
-1) 
+## 1) 
 Etter flaggoppgaven har gruppen bygd en viss forståelse av hvordan man skal drive et prosjektarbeid. Det var litt vanskelig å jobbe som et prosjekt i en så liten oppgave. De fleste av gruppen føler de har mer å lære og oppleve innenfor prosjektarbeid, noe forhåpentligvis HWR-oppgaven vil bidra med. Men vi har alle bygd en liten kunnskap og har lært noe nytt og nyttig som vi vil ta i bruk på HWR-oppgaven. Av dette kan Kanban Board nevnes, som var nytt for flere av oss. Dette ser vi nå som et viktig hjelpemiddel som det er nyttig å mestre. Vi har så vidt fått brukt det og må derfor bygge litt mer kunnskap rundt smartere bruk, slik at vi kan fordele oppgaver på best mulig måte i HWR. 
 
 De fleste av oss hadde heller ikke erfaring med programmering. Etter prosjektet har vi fortsatt mye å lære når det kommer til HTML, CSS, Canvas, og JavaScript. Et par på gruppen hadde drevet med dette før. Så en kombinasjon av hjelp fra disse, samt jevn deltagelse på flaggoppgaven gjorde at vi begynte å forstå hvordan programmering fungerte og hva det kunne brukes til i denne oppgaven. For å fullføre HWR-oppgaven har vi satt oss som mål å jobbe mye på egen hånd, slik at alle får en god nok forståelse til å gjennomføre. 
 
-2) 
+## 2) 
 Brukerhistorie Survey og Rapport.
 For å kartlegge gruppearbeidet, tenkte gruppen det var lurt å lage en survey for å innhente informasjon og en rapport som fremviste resultatene. Dette for å optimalisere og tilpasse gruppearbeidet til oss medlemmer. Bestillingen fra how we roll var å inkludere arbeids-preferanser i surveyen. Gruppen syns dette var litt lite informasjon og vi hadde lyst til å inkludere en til funksjon for å hente mer informasjon om hverandre. Derfor kom vi fram til at vi ville inkludere personlighetstrekk som kunne implementeres ved bruk av «checkboxes», samt et tekstbidrag ved å bruke «textboks»,der man kunne forklare hva en hadde jobbet med før og eventuell erfaring tidligere prosjekter. Slik kunne vi få en større verdi ut av surveyen og kunne bruke denne informasjonen til å kartlegge videre arbeid med prosjektet (EnTur, u.å).
 
@@ -55,17 +55,86 @@ Prosjektmandatet var at gruppen skulle lage en webapplikasjon, der vi skulle fre
 
 
 
-3) 
+## 3) 
 En prosjektgruppe kan bruke flere metoder for å hente inn informasjon om hvert enkelt medlem. I HWR skal vi hente inn informasjon om hvert enkelt gruppemedlem slik at vi kan forbedre og spesifisere arbeid. Dette kan gjøres så lett som et kort gruppemøte der vi alle snakker og forklarer hvordan vi liker å jobbe, men dette er ikke veldig oversiktlig og kan være vanskelig å huske. Derfor har vi valgt å gjøre dette via en ‘WEB-FORM’ der vi lager et skjema som hvert medlem kan fylle ut. Da blir dataen lagret ved hjelp av server "bacit.info". Disse svarene skal vi fremvise i en ‘WEB-RAPPORT’. Slik kan gruppen sammenligne hverandre lett og vi kan planlegge gruppemøtene deretter. Vi har også planlagt å gjøre noe litt annerledes i tillegg,  på selve ‘FORMEN’. Eventuelt inkludere noen andre ting som kan være lurt for å bli bedre kjent og planlegge arbeid. Ikke kun ha en form med arbeidspreferanser som: «EARLY BIRD» osv, slik bestillingen fra how we roll antydet 
 Skissene vi har laget for å siden vår er veldig varierte og selve siden endte opp med å bli ganske så annerledes, da nye ideer og inspirasjon dukket opp underveis. Skissene blir visst i Sluttrapporten. 
 
-4) ....
 
-5) ....
+## 4)og 5) (SLÅ DISSE SAMMEN?)
 
-6) ....
+Kodene er kommentert i selve filene. Elementer og funskjoner som er brukt er kommentert kort ved bruk av kommentar funksjonen. (noe er skrevet på engelsk, da et av gruppemedlemmene forstår dette bedre. Spesielt javascript er skrevet mye engelsk) Dette forklarer hva koden gjør, eller hva den betyr og hva som skjer. Starten av koden på index.html altså headeren og designet går igjen på alle HTML sidene. Alle 'navn'.html sidene er også helt like og det er kun "amadeus.html" som er kommentert da det samme er tatt i bruk. Koden er godt kommentert i html og css filene. Men her er også en ytterligere forklaring av tankengangen og hva vi har implementert, disse sto opptinnelig i selve koden. Men lange beskrivelser og kommentarer i en kode kan gjøre det veldig uoversiktlig. derfor blir de skrevet her i oppgaveteksten:
 
-7) 
+### KILDER:
+Kilder som er generelt brukt til programmeringen:
+* https://www.orbitmedia.com/blog/what-to-put-on-your-homepage/ 
+forklarer hva som er viktig å ha i en hjemmeside.
+* https://www.pexels.com/search/4k%20light/
+brukt til ulike bakgrunnsbilder for bra kvalitet og free too use.
+* https://www.youtube.com/playlist?list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3
+sett disse videone for en generell forståelse, og eksempler på hva skriver for ulike elementer
+* https://www.tesla.com
+brukt som inpsirasjon til hvordan vi vil få en stylish nettside. 
+* https://developer.mozilla.org/en-US/
+for eksempler og hjelp til nesten alt vi lurer på.
+*https://stackoverflow.com
+hjelp fra "community" til ulike løsninger
+
+### HTML HEADER:
+HTML for headeren som brukes til hver html side. 
+Slik kan man lettere navigere seg rundt og dette er noe alle moderne nettsider har. 
+Dette gjør også at man lett får oversikt over alle gruppemedlemene. Vi har valgt å ikke
+bruke vissitkort som vi førts planla. Vi bruker heller headeren for å lett se medlemmene, og informasjon slik som bilde, fullt navn og mail tilgjengelig. Dette er kun en kort fremsvining av medlemmene og mer informasjon kan ses under "se mer" eller ved å trykke på et navn i headeren. 
+Dette er ganske annerledes, men stylish og lettvint og gjør at vi kan vise mer informasjon fra hvert gruppemedlem, som 
+ville vært ganske nødvendig i et prosjektarbeid. Mer tekst om dette senere. 
+Logoen har vi laget selv og fungerer som en "hjem knapp" og tar deg til forsiden.
+Funksjonen <div> gåt mye igjen og er det vi bruker for å plassere de ulike tingene der de skal og ikke rett under hverandre. 
+I headeren har vi en div med logo, en med alle navnene og en med survey osv. til høyre. Når nettsiden minimeres forsvinner 
+nesten alt i headeren utenom logo og "survey.html" dette for at ikke gjenstandenen skal bli skvist sammen og ødelegge uteseende. 
+Dette via '@media' som kan ses i index.css filen
+
+### SEKJSONENE PÅ INDEX:
+For å fremvise de ulike medlemmene har vi egen "sections" til hvert medlem. Her velger medlemmet et bakgrunnsbilde, 
+enten et personlig eller et fra internett. De velger også et "profilbilde" eller et noe annet hvis ansikt ikke vil vises.
+personen sin mail er linket på deres seksjon, noe som er nyttig i et gruppearbeid for å lett nå ut til medlemmet. 
+Den første sekjsonen viser selve gruppen med et bilde av oss og gruppenavn. Her er også flaggoppgave.html siden linket 
+samt github repositorien våres. 
+Gruppen syns en slik løsning var kul og annerledes, og vi droppet vissitkort slik vi først planla. Problemet her med dette
+er kanskje at noen gruppemedlemmer blir vist sist og har mindre sjans for å bli sett. Men er ikke et problem for oss.
+Den samme sectionen og koden blir brukt, men informasjonen inni blir spesifisert hvert gruppemedlem. 
+
+### INNHOLD 'navn.html' :
+ Gruppen har som sagt valgt å fremvise medlemmene i hver sin side kontra et visittkort.
+    På den perosnlige siden kan vi se et bakgrunnsbilde som personen velger, dette passer med interesser og personligheten til 
+    brukeren, dette vises også på index siden.
+    Det samme er det med porfilbildet som også blir valgt av medlemmet og også vises på indexen. 
+    Her er det også 4 knapper, der den ene tar deg til vedkommende sin mail likt fra index siden. De tre andre viser Facebook, Github konto, og Linkedin bruker.
+    Vi tenkte dette var nyttig å ha med slik at man kan sjekke ut medlemmene og blir bedre kjent med de, som gruppen føler er viktig i et prosjekt.
+    Nederst på første sekjson står det gruppestilling: om man er gruppemedlem, leder osv. I tilleg til dette står det 6 preferanser av arbeidpreferanser
+    som gjenspeiler det vedkommende svarte på "survey", tre av 6 dukker opp som stor skrift. Under vil det fremvises personlioghetstrekk, også 
+    med utgangsounkt i det personen svarte på rapporten ved bruk ac checkboxene. 
+  
+   I neste seksjon er det mer info om medlemmet og deltagelsen i prosjektarbeidet. Her kan vi se enda et bilde (hvis man vil ha med det)
+    og en tekst som sier noe om hva vedkommende har gjort for å utføre prosjektet og hva de bidrar med. 
+    det er også en "selvevaluering" der medlemmet velger 1-5 der 5 er høyest i kategorier som "oppmøte". Har personen møtt opp hver gang
+    vil dette vise 5 av 5 checks.
+    
+ ### SURVEY:
+ Vi valgte å ha en survey med mer enn kun arbeidsprefernaser som "early bird osv", 
+ da vi tenkte at i et prosjekt kan det være viktig å vite litt mer om medlemmene. 
+Derfor har vi starten der man skriver inn navn og mail, så en del der man velger 6 arbeidspreferanser.
+Så velger man noen personlighetstrekk som passer personen. Det er også en "teksboks", og her vil vi at medlemmene 
+skriver hva de har bidratt med i prosjektet. For de utenfra gruppen som tar surveyen har vi tenkt at det kan virke som
+en "cv" der de som vil bli med i gruppen kan fylle ut surveyen slik vi kan sjekke personalia og bestemme om vi 
+vil ha med personen på teamet. For de blir tekstboksen "hva kan du bidra med i gruppen og prosjektarbeidet".
+Det er kun en del av surveyen som blir vist i rapporten, dette er arbeidpreferanser. De andre tingen kommer automatisk inn
+på en egen html side hos medlemmene etter utfyllt ‘WEB-FORM’.
+
+
+Koden til kalender og postitlappene er ikke super kommentert da dette er mye inspirert fra youtube og er ikke noe vi hadde klart på egenhånd. Disse funksjonene er mest med i HWR prosjektet vårt som en god ide til funksjoner et prosjektarbeid burde ha.
+
+ ## 6) ....
+
+## 7) 
 Github var et sentralt verktøy og hjelpemiddel i HWR-prosjektet, og gjorde det mulig for alle medlemmene å jobbe sammen via branches. Når noen gjorde endringer på sin personlige branch, brukte vi push- og merge metoden til main branch. Før pull-requests ble godkjent, sjekket vi alltid gjennom endringen. Dette for å forhindre eventuelle feil før de ble lagt inn i main-branch. Når endringer ble godkjent, måtte alle hente de fra main-branch til sin personlige branch ved bruk av pull-metoden. På den måten sørget vi for at alle holdt seg oppdatert kontinuerlig. Github fungerte svært bra for å holde kontroll over programmeringen og forhindre feil. 
 
 I Github Projects brukte vi Kanban Board som en metode for å optimalisere arbeidsflyten. Vi valgte "bord"- som fremviser gjøremål, hva som er i arbeid og hva som er utført. Denne metoden fungerte bra for å få en oversikt over arbeidet, da oppgavenes fremgang ble godt dokumentert via de tre kolonnene. Det gjorde det enklere for gruppen å samarbeide om målet, ettersom det forhindret usikkerhet rundt hva som skulle gjøres. I tillegg unngikk vi at noen jobbet på samme oppgave uten å være klar over det, noe som sannsynligvis har spart oss for mye tid. Arbeidsflyten ble enda bedre da vi fant ut at vi kunne tildele personer oppgaver ved bruk av "tags". På den måten var det alltid sikkert hvem som skulle gjøre hva, og om noen trengte hjelp opprettet vi "issues".

@@ -1,3 +1,5 @@
+<!--KOMMENTARENE I DENNE KODEN GÅR IGJEN PÅ ALLE navn.html SIDENE.-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,20 +44,7 @@
 
 
     <!-- Denne teksten går igjen for hver "navn.html" side.  -->
-    <!-- Gruppen har som sagt valgt å fremvise medlemmene i hver sin side kontra et visittkort.
-    På den perosnlige siden kan vi se et bakgrunnsbilde som personen velger, dette passer med interesser og personligheten til 
-    brukeren, dette vises også på index siden.
-    Det samme er det med porfilbildet som også blir valgt av medlemmet og også vises på indexen. 
-    Her er det også 4 knapper, der den ene tar deg til vedkommende sin mail likt fra index siden. De tre andre viser Facebook, Github konto, og Linkedin bruker.
-    Vi tenkte dette var nyttig å ha med slik at man kan sjekke ut medlemmene og blir bedre kjent med de, som gruppen føler er viktig i et prosjekt.
-    Nederst på første sekjson står det gruppestilling: om man er gruppemedlem, leder osv. I tilleg til dette står det 3 preferanser av arbeid
-    som gjenspeiler det vedkommende svarte på "survey", tre av 6 dukker opp som stor skrift. Under vil det fremvises 3 personlioghetstrekk, også 
-    med utgangsounkt i det personen svarte på rapporten. 
-  
-   I neste seksjon er det mer info om medlemmet og deltagelsen i prosjektarbeidet. Her kan vi se enda et bilde (hvis man vil ha med det)
-    og en tekst som sier noe om hva vedkommende har gjort for å utføre prosjektet og hva de bidrar med. 
-    det er også en "selvevaluering" der medlemmet velger 1-5 der 5 er høyest i kategorier som "oppmøte". Har personen møtt opp hver gang
-    vil dette vise 5 av 5 checks.-->
+   
 
     <section style="background-image: url('Images/the\ rock.jpg')">
       <div class="content">
@@ -83,7 +72,7 @@
         </div>
       </div>
 
-      <!-- Fremviser info om arbeidspreferanser og personlighetstrekk fra survey. Ikke dynamisk -->
+      <!-- Fremviser info om arbeidspreferanser som er valgt i WEB-FORM. hentest inn ved "ID" brukt i FORMEN -->
       <div class="info">
         <div>
           <h2 id="early"></h2>
@@ -120,12 +109,13 @@
           <h3>Amadeus Sitt</h3>
           <h1>Prosjekt bidrag</h1>
 
-        
+        <!--Henter inn det som er skrevet i 'teksboks' på "WEB_FORM" henter data fra server med id= message.-->
           <div style="width: 300px">
             <p id="message">
              teksboks
             </p>
             <br>
+            <!--Henter inn perosnlighetstrekke valgt i "WEB-FORM, ved id= checkboxes"-->
             <h3>Mine personlighetstrekk</h3>
             <p id="checkboxes"></p>
           </div>
@@ -135,6 +125,7 @@
           <!-- https://developers.google.com/fonts/docs/material_symbols
             *hjelp til fonts og radio button -->
 
+            <!--I evaluering velger medlemmet selv hvor mange buttons skal være checked mtp bidrag-->
           <div class="evaluering">
             <p>Oppmøte</p>
             <span class="material-symbols-outlined">radio_button_checked</span>
@@ -208,7 +199,7 @@
           .then(response => response.json()))).then((dataJSON) => {
               
               let amadeus = dataJSON[0]; 
-             
+             //gets data and value from "WEB-FORM" and puts the value and text where the ID, is in 'div= class: info'.
               document.getElementById("early").innerHTML = "Early Bird<" + amadeus.early + ">";    
           document.getElementById("fys").innerHTML = "Fysisk Arbeid<" + amadeus.fys + ">";   
           document.getElementById("sama").innerHTML = "Samarbeid<" + amadeus.sama + ">";
@@ -216,19 +207,18 @@
           document.getElementById("selv").innerHTML = "Fleksibel<" + amadeus.fleks + ">";
           document.getElementById("snakk").innerHTML = "Snakker<" + amadeus.snakk + ">";
           
-    
+    //find which checboxes are marked
               const checkbox = [amadeus.struk, amadeus.demo, amadeus.omt, amadeus.mot, amadeus.tål, amadeus.sos, amadeus.uta, amadeus.ina];
 
               // bruker .filter to redusere array en å unnga undefined verdier hvis noen av checkboxes er ikke checked.
                const reduced = checkbox.filter(x => x !== undefined);
               console.log(reduced);
-    
+    // inserts the marked checboxes in the section with the id= "checkboxes"
               document.getElementById("checkboxes").innerHTML = reduced ;
-    
+    // gets the data from the texbox and inserts the data to the id= message in the section above.
               document.getElementById("message").innerHTML = amadeus.message ;
     
     
-            
     
       });
       </script>
@@ -248,7 +238,9 @@
   "struk": "Struktrurert",
   "mot": "Motivert",
   "sos": "Sosial",
-  "message": "Amadeus har bidratt i prosjektarbeidet hele veien. Han har alltid møtt til planlagte tider og timer. Oppfører seg respektfull og er ikke redd for å komme med nye ideer. Han er positiv, jovial og liker gruppearbeid. Lærer fort og er alltid gira på en ny utfodring",
+  "message": "Amadeus har bidratt i prosjektarbeidet hele veien. Han har alltid møtt 
+  til planlagte tider og timer. Oppfører seg respektfull og er ikke redd for å komme med nye ideer. 
+  Han er positiv, jovial og liker gruppearbeid. Lærer fort og er alltid gira på en ny utfodring",
   "trxid": "5e938f94310026880b4ac459b4c1f4bf",
   "time": "20221119131326"
 }
