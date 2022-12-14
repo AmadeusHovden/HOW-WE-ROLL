@@ -62,9 +62,9 @@ Skissene vi har laget for å siden vår er veldig varierte og selve siden endte 
 
 ### 4)og 5) (SLÅ DISSE SAMMEN?)
 
-Kodene er kommentert i selve filene. Elementer og funskjoner som er brukt er kommentert kort ved bruk av kommentar funksjonen. (noe er skrevet på engelsk, da et av gruppemedlemmene forstår dette bedre. Spesielt javascript er skrevet mye engelsk) Dette forklarer hva koden gjør, eller hva den betyr og hva som skjer. Starten av koden på index.html altsp headeren og designet går igjen på alle HTML sidene. Alle 'navn'.html sidene er også helt like og det er kun "amadeus.html" som er kommentert da det samme er tatt i bruk. Koden er godt kommentert i html og css filene. Men her er også en ytterligere forklaring av tankengangen og hva vi har implementert, disse sto opptinnelig i selve koden. Men lange beskrivelser og kommentarer i en kode kan gjøre det veldig uoversiktlig. derfor blir de skrevet her i oppgaveteksten:
+Kodene er kommentert i selve filene. Elementer og funskjoner som er brukt er kommentert kort ved bruk av kommentar funksjonen. (noe er skrevet på engelsk, da et av gruppemedlemmene forstår dette bedre. Spesielt javascript er skrevet mye engelsk) Dette forklarer hva koden gjør, eller hva den betyr og hva som skjer. Starten av koden på index.html altså headeren og designet går igjen på alle HTML sidene. Alle 'navn'.html sidene er også helt like og det er kun "amadeus.html" som er kommentert da det samme er tatt i bruk. Koden er godt kommentert i html og css filene. Men her er også en ytterligere forklaring av tankengangen og hva vi har implementert, disse sto opptinnelig i selve koden. Men lange beskrivelser og kommentarer i en kode kan gjøre det veldig uoversiktlig. derfor blir de skrevet her i oppgaveteksten:
 
-KILDER:
+# KILDER:
 Kilder som er generelt brukt til programmeringen:
 * https://www.orbitmedia.com/blog/what-to-put-on-your-homepage/ 
 forklarer hva som er viktig å ha i en hjemmeside.
@@ -79,7 +79,7 @@ for eksempler og hjelp til nesten alt vi lurer på.
 *https://stackoverflow.com
 hjelp fra "community" til ulike løsninger
 
-HTML HEADER:
+# HTML HEADER:
 HTML for headeren som brukes til hver html side. 
 Slik kan man lettere navigere seg rundt og dette er noe alle moderne nettsider har. 
 Dette gjør også at man lett får oversikt over alle gruppemedlemene. Vi har valgt å ikke
@@ -92,7 +92,7 @@ I headeren har vi en div med logo, en med alle navnene og en med survey osv. til
 nesten alt i headeren utenom logo og "survey.html" dette for at ikke gjenstandenen skal bli skvist sammen og ødelegge uteseende. 
 Dette via '@media' som kan ses i index.css filen
 
-SEKJSONENE PÅ INDEX:
+# SEKJSONENE PÅ INDEX:
 For å fremvise de ulike medlemmene har vi egen "sections" til hvert medlem. Her velger medlemmet et bakgrunnsbilde, 
 enten et personlig eller et fra internett. De velger også et "profilbilde" eller et noe annet hvis ansikt ikke vil vises.
 personen sin mail er linket på deres seksjon, noe som er nyttig i et gruppearbeid for å lett nå ut til medlemmet. 
@@ -102,7 +102,7 @@ Gruppen syns en slik løsning var kul og annerledes, og vi droppet vissitkort sl
 er kanskje at noen gruppemedlemmer blir vist sist og har mindre sjans for å bli sett. Men er ikke et problem for oss.
 Den samme sectionen og koden blir brukt, men informasjonen inni blir spesifisert hvert gruppemedlem. 
 
-INNHOLD 'navn.html' :
+# INNHOLD 'navn.html' :
  Gruppen har som sagt valgt å fremvise medlemmene i hver sin side kontra et visittkort.
     På den perosnlige siden kan vi se et bakgrunnsbilde som personen velger, dette passer med interesser og personligheten til 
     brukeren, dette vises også på index siden.
@@ -118,7 +118,7 @@ INNHOLD 'navn.html' :
     det er også en "selvevaluering" der medlemmet velger 1-5 der 5 er høyest i kategorier som "oppmøte". Har personen møtt opp hver gang
     vil dette vise 5 av 5 checks.
     
- ### SURVEY:
+ # SURVEY:
  Vi valgte å ha en survey med mer enn kun arbeidsprefernaser som "early bird osv", 
  da vi tenkte at i et prosjekt kan det være viktig å vite litt mer om medlemmene. 
 Derfor har vi starten der man skriver inn navn og mail, så en del der man velger 6 arbeidspreferanser.
