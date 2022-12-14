@@ -41,7 +41,7 @@ oppgaven. Reflekter over samarbeidet.
 1) 
 Etter flaggoppgaven har gruppen bygd en viss forståelse av hvordan man skal drive et prosjektarbeid. Det var litt vanskelig å jobbe som et prosjekt i en så liten oppgave. De fleste av gruppen føler de har mer å lære og oppleve innenfor prosjektarbeid, noe forhåpentligvis HWR-oppgaven vil bidra med. Men vi har alle bygd en liten kunnskap og har lært noe nytt og nyttig som vi vil ta i bruk på HWR-oppgaven. Av dette kan Kanban Board nevnes, som var nytt for flere av oss. Dette ser vi nå som et viktig hjelpemiddel som det er nyttig å mestre. Vi har så vidt fått brukt det og må derfor bygge litt mer kunnskap rundt smartere bruk, slik at vi kan fordele oppgaver på best mulig måte i HWR. 
 
-De fleste av oss hadde heller ikke erfaring med programmering. Etter prosjektet har vi har fortsatt mye å lære når det kommer til HTML, CSS, Canvas, og JavaScript. Et par på gruppen hadde drevet med dette før. Så en kombinasjon av hjelp fra disse, samt jevn deltagelse på flaggoppgaven gjorde at vi begynte å forstå hvordan programmering fungerte og hva det kunne brukes til i denne oppgaven. For å fullføre HWR-oppgaven har vi satt oss som mål å jobbe mye på egen hånd, slik at alle får en god nok forståelse til å gjennomføre. 
+De fleste av oss hadde heller ikke erfaring med programmering. Etter prosjektet har vi fortsatt mye å lære når det kommer til HTML, CSS, Canvas, og JavaScript. Et par på gruppen hadde drevet med dette før. Så en kombinasjon av hjelp fra disse, samt jevn deltagelse på flaggoppgaven gjorde at vi begynte å forstå hvordan programmering fungerte og hva det kunne brukes til i denne oppgaven. For å fullføre HWR-oppgaven har vi satt oss som mål å jobbe mye på egen hånd, slik at alle får en god nok forståelse til å gjennomføre. 
 
 2) 
 Brukerhistorie Survey og Rapport.
@@ -55,7 +55,9 @@ Prosjektmandatet var at gruppen skulle lage en webapplikasjon, der vi skulle fre
 
 
 
-3) ....
+3) 
+En prosjektgruppe kan bruke flere metoder for å hente inn informasjon om hvert enkelt medlem. I HWR skal vi hente inn informasjon om hvert enkelt gruppemedlem slik at vi kan forbedre og spesifisere arbeid. Dette kan gjøres så lett som et kort gruppemøte der vi alle snakker og forklarer hvordan vi liker å jobbe, men dette er ikke veldig oversiktlig og kan være vanskelig å huske. Derfor har vi valgt å gjøre dette via en ‘WEB-FORM’ der vi lager et skjema som hvert medlem kan fylle ut. Da blir dataen lagret ved hjelp av server "bacit.info". Disse svarene skal vi fremvise i en ‘WEB-RAPPORT’. Slik kan gruppen sammenligne hverandre lett og vi kan planlegge gruppemøtene deretter. Vi har også planlagt å gjøre noe litt annerledes i tillegg,  på selve ‘FORMEN’. Eventuelt inkludere noen andre ting som kan være lurt for å bli bedre kjent og planlegge arbeid. Ikke kun ha en form med arbeidspreferanser som: «EARLY BIRD» osv, slik bestillingen fra how we roll antydet 
+Skissene vi har laget for å siden vår er veldig varierte og selve siden endte opp med å bli ganske så annerledes, da nye ideer og inspirasjon dukket opp underveis. Skissene blir visst i Sluttrapporten. 
 
 4) ....
 
