@@ -59,9 +59,13 @@ Prosjektmandatet var at gruppen skulle lage en webapplikasjon, der vi skulle fre
 En prosjektgruppe kan bruke flere metoder for å hente inn informasjon om hvert enkelt medlem. I HWR skal vi hente inn informasjon om hvert enkelt gruppemedlem slik at vi kan forbedre og spesifisere arbeid. Dette kan gjøres så lett som et kort gruppemøte der vi alle snakker og forklarer hvordan vi liker å jobbe, men dette er ikke veldig oversiktlig og kan være vanskelig å huske. Derfor har vi valgt å gjøre dette via en ‘WEB-FORM’ der vi lager et skjema som hvert medlem kan fylle ut. Da blir dataen lagret ved hjelp av server "bacit.info". Disse svarene skal vi fremvise i en ‘WEB-RAPPORT’. Slik kan gruppen sammenligne hverandre lett og vi kan planlegge gruppemøtene deretter. Vi har også planlagt å gjøre noe litt annerledes i tillegg,  på selve ‘FORMEN’. Eventuelt inkludere noen andre ting som kan være lurt for å bli bedre kjent og planlegge arbeid. Ikke kun ha en form med arbeidspreferanser som: «EARLY BIRD» osv, slik bestillingen fra how we roll antydet 
 Skissene vi har laget for å siden vår er veldig varierte og selve siden endte opp med å bli ganske så annerledes, da nye ideer og inspirasjon dukket opp underveis. Skissene blir visst i Sluttrapporten. 
 
-4) ....
 
-5) ....
+4) og 5) (SLÅ DISSE SAMMEN?)
+Kodene er kommentert i selve filene. Elementer og funskjoner som er brukt er kommentert kort ved bruk av kommentar funksjonen. (noe er skrevet på engelsk, da et av gruppemedlemmene forstår dette bedre. Spesielt javascript er skrevet mye engelsk) Dette forklarer hva koden gjør, eller hva den betyr og hva som skjer. Starten av koden på index.html altsp headeren og designet går igjen på alle HTML sidene. Alle 'navn'.html sidene er også helt like og det er kun "amadeus.html" som er kommentert da det samme er tatt i bruk. Koden er godt kommentert i html og css filene. Men her er også en ytterligere forklaring av tankengangen og hva vi har implementert, disse sto opptinnelig i selve koden. Men lange beskrivelser og kommentarer i en kode kan gjøre det veldig uoversiktlig. derfor blir de skrevet her i oppgaveteksten:
+
+
+
+Koden til kalender og postitlappene er ikke super kommentert da dette er mye inspirert fra youtube og er ikke noe vi hadde klart på egenhånd. Disse funksjonene er mest med i HWR prosjektet vårt som en god ide til funksjoner et prosjektarbeid burde ha.
 
 6) ....
 
