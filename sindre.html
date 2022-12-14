@@ -199,6 +199,8 @@
        
     
               const checkbox = [sindre.struk, sindre.demo, sindre.omt, sindre.mot, sindre.tål, sindre.sos, sindre.uta, sindre.ina];
+
+              // bruker .filter to redusere array en å unnga undefined verdier hvis noen av checkboxes er ikke checked.
                const reduced = checkbox.filter(x => x !== undefined);
               console.log(reduced);
     
