@@ -83,8 +83,8 @@
           </div>
           <div class="line"></div>
           <div>
-            <h2 id="kul">Medlem</h2>
-            <p id="rask">Stilling</p>
+            <h2>Medlem</h2>
+            <p>Stilling</p>
           </div>
         </div>
     </section>
@@ -130,7 +130,7 @@
   <script>
 
 let urls = [
-          'https://bacit.info/hwr/20221119113520-97a5ba4d14682be03ba3a7b5a4ec32f7.json',
+          'https://bacit.info/hwr/20221214152254-51db73702ef0fa3e2a82c3acec052e4d.json',
          
           
       ]
@@ -156,6 +156,8 @@ let urls = [
           document.getElementById("kul").innerHTML = "Leder<" + burak.led + ">";
 
           const checkbox = [burak.struk, burak.demo, burak.omt, burak.mot, burak.tål, burak.sos, burak.uta, burak.ina];
+
+        // bruker .filter to redusere array en å unnga undefined verdier hvis noen av checkboxes er ikke checked.
            const reduced = checkbox.filter(x => x !== undefined);
           console.log(reduced);
 
