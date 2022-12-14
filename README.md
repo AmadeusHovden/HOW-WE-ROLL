@@ -134,6 +134,8 @@ på en egen html side hos medlemmene etter utfyllt ‘WEB-FORM’.
 Koden til kalender og postitlappene er ikke super kommentert da dette er mye inspirert fra youtube og er ikke noe vi hadde klart på egenhånd. Disse funksjonene er mest med i HWR prosjektet vårt som en god ide til funksjoner et prosjektarbeid burde ha.
 
  ## 6) ....
+ Kan være lurt å bruke denne fra Janis:
+ https://is114janisg.github.io/test/ 
 
 ## 7) 
 Github var et sentralt verktøy og hjelpemiddel i HWR-prosjektet, og gjorde det mulig for alle medlemmene å jobbe sammen via branches. Når noen gjorde endringer på sin personlige branch, brukte vi push- og merge metoden til main branch. Før pull-requests ble godkjent, sjekket vi alltid gjennom endringen. Dette for å forhindre eventuelle feil før de ble lagt inn i main-branch. Når endringer ble godkjent, måtte alle hente de fra main-branch til sin personlige branch ved bruk av pull-metoden. På den måten sørget vi for at alle holdt seg oppdatert kontinuerlig. Github fungerte svært bra for å holde kontroll over programmeringen og forhindre feil. 
