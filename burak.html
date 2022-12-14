@@ -130,7 +130,7 @@
   <script>
 
 let urls = [
-          'https://bacit.info/hwr/20221214152254-51db73702ef0fa3e2a82c3acec052e4d.json',
+          'https://bacit.info/hwr/20221214153841-d07b01e12b962e8dcbb04320bcbffc68.json',
          
           
       ]
@@ -152,18 +152,18 @@ let urls = [
           document.getElementById("hjem").innerHTML = "Hjemmekontor<" + burak.hjem + ">";
           document.getElementById("selv").innerHTML = "Fleksibel<" + burak.fleks + ">";
           document.getElementById("snakk").innerHTML = "Snakker<" + burak.snakk + ">";
-          document.getElementById("rask").innerHTML = "Rask Tenker<" + burak.rask + ">";
-          document.getElementById("kul").innerHTML = "Leder<" + burak.led + ">";
+          
+    
+              const checkbox = [burak.struk, burak.demo, burak.omt, burak.mot, burak.tål, burak.sos, burak.uta, burak.ina];
 
-          const checkbox = [burak.struk, burak.demo, burak.omt, burak.mot, burak.tål, burak.sos, burak.uta, burak.ina];
-
-        // bruker .filter to redusere array en å unnga undefined verdier hvis noen av checkboxes er ikke checked.
-           const reduced = checkbox.filter(x => x !== undefined);
-          console.log(reduced);
-
-          document.getElementById("checkboxes").innerHTML = reduced ;
-
-          document.getElementById("message").innerHTML = burak.message ;
+              // bruker .filter to redusere array en å unnga undefined verdier hvis noen av checkboxes er ikke checked.
+               const reduced = checkbox.filter(x => x !== undefined);
+              console.log(reduced);
+    
+              document.getElementById("checkboxes").innerHTML = reduced ;
+    
+              document.getElementById("message").innerHTML = burak.message ;
+    
 
 
         
