@@ -79,6 +79,8 @@ brukt som inpsirasjon til hvordan vi vil få en stylish nettside.
 for eksempler og hjelp til nesten alt vi lurer på.
 *https://stackoverflow.com
 hjelp fra "community" til ulike løsninger
+*https://www.chartjs.org/
+charts source
 
 ### HTML HEADER:
 HTML for headeren som brukes til hver html side. 
